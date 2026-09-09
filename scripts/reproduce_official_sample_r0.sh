@@ -31,7 +31,14 @@ do
   cp "$repo_root/$source_name" "$run_root/$source_name"
 done
 
-unzip -q "$repo_root/datasets/sample.zip" -d "$run_root/datasets"
+"$python_bin" - "$repo_root/datasets/sample.zip" "$run_root/datasets" <<'PY'
+import sys
+import zipfile
+
+archive_path, output_directory = sys.argv[1:]
+with zipfile.ZipFile(archive_path, "r") as archive:
+    archive.extractall(output_directory)
+PY
 
 export DGLBACKEND=pytorch
 
