@@ -1,0 +1,33 @@
+{
+  "adaptive_parameter_separation_activated": false,
+  "checkpoint": {
+    "epoch": 30,
+    "parameter_numel": 1081604,
+    "state_tensor_count": 26,
+    "task_groups": {}
+  },
+  "decision": {
+    "independent_test_evidence": "INVALID_BY_UPSTREAM_PROTOCOL",
+    "official_sample_source_replay": "COMPLETE",
+    "paper_table_reproduction": "NOT_ESTABLISHED"
+  },
+  "executed_epoch_count": 42,
+  "frozen_upstream_commit": "3d74d70c852c56adcc09d907488410be5eda2744",
+  "reproduction_commit": "c723862aa39ca0aeaba11aabf0501bb13ca0d215",
+  "requested_epoch_count": 100,
+  "sample": {
+    "dataset_argument": "NYC",
+    "poi_count_in_released_sample": 6870,
+    "seed": 2023,
+    "test_trajectory_count": 943,
+    "train_trajectory_count": 2418,
+    "user_count": 159
+  },
+  "schema": "msahg.official-sample-replay.r0r2.result.v1",
+  "upstream_checkpoint_criterion": {
+    "best_observed_epoch": 5,
+    "best_observed_value": 17.777,
+    "forced_saved_epoch": 30,
+    "forced_saved_epoch_value": 17.171
+  }
+}

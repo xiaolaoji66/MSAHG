@@ -1,0 +1,37 @@
+dataset: NYC
+seed: 2023
+distance_threshold: 2.5
+num_epochs: 100
+batch_size: 200
+emb_dim: 128
+decay: 0.0005
+dropout: 0.5
+deviceID: 0
+lambda_cl: 0.1
+num_mv_layers: 3
+num_geo_layers: 3
+num_di_layers: 3
+temperature: 0.1
+keep_rate: 1
+keep_rate_poi: 1
+lr_scheduler_factor: 0.1
+save_dir: /mnt/data4t/wyh/msahg_runs/msahg_official_sample_r0r2-c723862a-gpu0/result
+lr: 0.001
+divide_lr: 5.0e-05
+finetune_batch_size: 20
+divide_epoch: 20
+divide_group:
+  User: 2
+  Time: 2
+  POI: 2
+lrdecay: 0.75
+patience: 10
+time_embed_dim: 32
+transformer_nhid: 1024
+transformer_nlayers: 2
+transformer_nhead: 2
+transformer_dropout: 0.3
+accu_loss: 20
+device: !!python/object/apply:torch.device
+- cuda
+- 0

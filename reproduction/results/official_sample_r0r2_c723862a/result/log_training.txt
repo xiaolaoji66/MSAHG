@@ -1,0 +1,2180 @@
+2026-09-09 19:36:31 1. Parse Arguments
+2026-09-09 19:36:31 Namespace(dataset='NYC', seed=2023, distance_threshold=2.5, num_epochs=100, batch_size=200, emb_dim=128, decay=0.0005, dropout=0.5, deviceID=0, lambda_cl=0.1, num_mv_layers=3, num_geo_layers=3, num_di_layers=3, temperature=0.1, keep_rate=1, keep_rate_poi=1, lr_scheduler_factor=0.1, save_dir='/mnt/data4t/wyh/msahg_runs/msahg_official_sample_r0r2-c723862a-gpu0/result', lr=0.001, divide_lr=5e-05, finetune_batch_size=20, divide_epoch=20, divide_group={'User': 2, 'Time': 2, 'POI': 2}, lrdecay=0.75, patience=10, time_embed_dim=32, transformer_nhid=1024, transformer_nlayers=2, transformer_nhead=2, transformer_dropout=0.3, accu_loss=20, device=device(type='cuda', index=0))
+2026-09-09 19:36:31 device: cuda:0
+2026-09-09 19:36:31 2. Load Dataset
+2026-09-09 19:36:45 3. Construct User DataLoader
+2026-09-09 19:36:46 3. Construct Time DataLoader
+2026-09-09 19:36:46 3. Construct POI DataLoader
+2026-09-09 19:36:46 4. Load Model
+2026-09-09 19:36:49 5. Start Training
+2026-09-09 19:36:49 Reload model
+2026-09-09 19:36:49 epoch: 0 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:37:02 Training finishes at this epoch. It takes 0.21201901038487753 min
+2026-09-09 19:37:02 Training Epoch 1/100 training loss: 67.25197073129507
+2026-09-09 19:37:02 Validation
+2026-09-09 19:37:12 Validation finishes
+2026-09-09 19:37:12 Validation results:
+2026-09-09 19:37:12 User Group 0: Recall@1: 0.2250
+2026-09-09 19:37:12 User Group 0: Recall@5: 0.5229
+2026-09-09 19:37:12 User Group 0: Recall@10: 0.6396
+2026-09-09 19:37:12 User Group 0: Recall@20: 0.6937
+2026-09-09 19:37:12 User Group 0: MRR : 0.3626
+2026-09-09 19:37:12 
+
+2026-09-09 19:37:12 User Group 1: Recall@1: 0.1583
+2026-09-09 19:37:12 User Group 1: Recall@5: 0.4479
+2026-09-09 19:37:12 User Group 1: Recall@10: 0.5229
+2026-09-09 19:37:12 User Group 1: Recall@20: 0.5646
+2026-09-09 19:37:12 User Group 1: MRR : 0.2864
+2026-09-09 19:37:12 
+
+2026-09-09 19:37:12 Time Group 0: Recall@1: 0.1583
+2026-09-09 19:37:12 Time Group 0: Recall@5: 0.5042
+2026-09-09 19:37:12 Time Group 0: Recall@10: 0.6250
+2026-09-09 19:37:12 Time Group 0: Recall@20: 0.6813
+2026-09-09 19:37:12 Time Group 0: MRR : 0.3081
+2026-09-09 19:37:12 
+
+2026-09-09 19:37:12 Time Group 1: Recall@1: 0.1979
+2026-09-09 19:37:12 Time Group 1: Recall@5: 0.4354
+2026-09-09 19:37:12 Time Group 1: Recall@10: 0.5042
+2026-09-09 19:37:12 Time Group 1: Recall@20: 0.5687
+2026-09-09 19:37:12 Time Group 1: MRR : 0.3009
+2026-09-09 19:37:12 
+
+2026-09-09 19:37:12 POI Group 0: Recall@1: 0.2646
+2026-09-09 19:37:12 POI Group 0: Recall@5: 0.6708
+2026-09-09 19:37:12 POI Group 0: Recall@10: 0.8063
+2026-09-09 19:37:12 POI Group 0: Recall@20: 0.8417
+2026-09-09 19:37:12 POI Group 0: MRR : 0.4405
+2026-09-09 19:37:12 
+
+2026-09-09 19:37:12 POI Group 1: Recall@1: 0.1187
+2026-09-09 19:37:12 POI Group 1: Recall@5: 0.3438
+2026-09-09 19:37:12 POI Group 1: Recall@10: 0.4521
+2026-09-09 19:37:12 POI Group 1: Recall@20: 0.5146
+2026-09-09 19:37:12 POI Group 1: MRR : 0.2229
+2026-09-09 19:37:12 
+
+2026-09-09 19:37:12 Update validation results and save model at epoch0
+2026-09-09 19:37:12 Reload model
+2026-09-09 19:37:12 epoch: 1 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:37:21 Training finishes at this epoch. It takes 0.1519050717353821 min
+2026-09-09 19:37:21 Training Epoch 2/100 training loss: 65.50692983774039
+2026-09-09 19:37:21 Validation
+2026-09-09 19:37:31 Validation finishes
+2026-09-09 19:37:31 Validation results:
+2026-09-09 19:37:31 User Group 0: Recall@1: 0.1812
+2026-09-09 19:37:31 User Group 0: Recall@5: 0.4896
+2026-09-09 19:37:31 User Group 0: Recall@10: 0.6021
+2026-09-09 19:37:31 User Group 0: Recall@20: 0.6521
+2026-09-09 19:37:31 User Group 0: MRR : 0.3192
+2026-09-09 19:37:31 
+
+2026-09-09 19:37:31 User Group 1: Recall@1: 0.1729
+2026-09-09 19:37:31 User Group 1: Recall@5: 0.4583
+2026-09-09 19:37:31 User Group 1: Recall@10: 0.5208
+2026-09-09 19:37:31 User Group 1: Recall@20: 0.5625
+2026-09-09 19:37:31 User Group 1: MRR : 0.3008
+2026-09-09 19:37:31 
+
+2026-09-09 19:37:31 Time Group 0: Recall@1: 0.2062
+2026-09-09 19:37:31 Time Group 0: Recall@5: 0.5771
+2026-09-09 19:37:31 Time Group 0: Recall@10: 0.6812
+2026-09-09 19:37:31 Time Group 0: Recall@20: 0.7250
+2026-09-09 19:37:31 Time Group 0: MRR : 0.3672
+2026-09-09 19:37:31 
+
+2026-09-09 19:37:31 Time Group 1: Recall@1: 0.1938
+2026-09-09 19:37:31 Time Group 1: Recall@5: 0.4354
+2026-09-09 19:37:31 Time Group 1: Recall@10: 0.5062
+2026-09-09 19:37:31 Time Group 1: Recall@20: 0.5625
+2026-09-09 19:37:31 Time Group 1: MRR : 0.2958
+2026-09-09 19:37:31 
+
+2026-09-09 19:37:31 POI Group 0: Recall@1: 0.2500
+2026-09-09 19:37:31 POI Group 0: Recall@5: 0.6646
+2026-09-09 19:37:31 POI Group 0: Recall@10: 0.7938
+2026-09-09 19:37:31 POI Group 0: Recall@20: 0.8375
+2026-09-09 19:37:31 POI Group 0: MRR : 0.4260
+2026-09-09 19:37:31 
+
+2026-09-09 19:37:31 POI Group 1: Recall@1: 0.1604
+2026-09-09 19:37:31 POI Group 1: Recall@5: 0.4021
+2026-09-09 19:37:31 POI Group 1: Recall@10: 0.5125
+2026-09-09 19:37:31 POI Group 1: Recall@20: 0.5708
+2026-09-09 19:37:31 POI Group 1: MRR : 0.2760
+2026-09-09 19:37:31 
+
+2026-09-09 19:37:31 Update validation results and save model at epoch1
+2026-09-09 19:37:31 Reload model
+2026-09-09 19:37:31 epoch: 2 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:37:40 Training finishes at this epoch. It takes 0.15241580009460448 min
+2026-09-09 19:37:40 Training Epoch 3/100 training loss: 63.77654823890099
+2026-09-09 19:37:40 Validation
+2026-09-09 19:37:50 Validation finishes
+2026-09-09 19:37:50 Validation results:
+2026-09-09 19:37:50 User Group 0: Recall@1: 0.1625
+2026-09-09 19:37:50 User Group 0: Recall@5: 0.5021
+2026-09-09 19:37:50 User Group 0: Recall@10: 0.6292
+2026-09-09 19:37:50 User Group 0: Recall@20: 0.6937
+2026-09-09 19:37:50 User Group 0: MRR : 0.3110
+2026-09-09 19:37:50 
+
+2026-09-09 19:37:50 User Group 1: Recall@1: 0.1833
+2026-09-09 19:37:50 User Group 1: Recall@5: 0.4479
+2026-09-09 19:37:50 User Group 1: Recall@10: 0.5542
+2026-09-09 19:37:50 User Group 1: Recall@20: 0.5979
+2026-09-09 19:37:50 User Group 1: MRR : 0.3016
+2026-09-09 19:37:50 
+
+2026-09-09 19:37:50 Time Group 0: Recall@1: 0.1583
+2026-09-09 19:37:50 Time Group 0: Recall@5: 0.4813
+2026-09-09 19:37:50 Time Group 0: Recall@10: 0.6021
+2026-09-09 19:37:50 Time Group 0: Recall@20: 0.6625
+2026-09-09 19:37:50 Time Group 0: MRR : 0.3087
+2026-09-09 19:37:50 
+
+2026-09-09 19:37:50 Time Group 1: Recall@1: 0.1937
+2026-09-09 19:37:50 Time Group 1: Recall@5: 0.4500
+2026-09-09 19:37:50 Time Group 1: Recall@10: 0.5438
+2026-09-09 19:37:50 Time Group 1: Recall@20: 0.6000
+2026-09-09 19:37:50 Time Group 1: MRR : 0.3110
+2026-09-09 19:37:50 
+
+2026-09-09 19:37:50 POI Group 0: Recall@1: 0.2208
+2026-09-09 19:37:50 POI Group 0: Recall@5: 0.6500
+2026-09-09 19:37:50 POI Group 0: Recall@10: 0.7875
+2026-09-09 19:37:50 POI Group 0: Recall@20: 0.8229
+2026-09-09 19:37:50 POI Group 0: MRR : 0.4116
+2026-09-09 19:37:50 
+
+2026-09-09 19:37:50 POI Group 1: Recall@1: 0.1521
+2026-09-09 19:37:50 POI Group 1: Recall@5: 0.4083
+2026-09-09 19:37:50 POI Group 1: Recall@10: 0.5104
+2026-09-09 19:37:50 POI Group 1: Recall@20: 0.5687
+2026-09-09 19:37:50 POI Group 1: MRR : 0.2730
+2026-09-09 19:37:50 
+
+2026-09-09 19:37:50 Update validation results and save model at epoch2
+2026-09-09 19:37:50 Reload model
+2026-09-09 19:37:50 epoch: 3 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:37:59 Training finishes at this epoch. It takes 0.15361404021581013 min
+2026-09-09 19:37:59 Training Epoch 4/100 training loss: 62.447920285738434
+2026-09-09 19:37:59 Validation
+2026-09-09 19:38:09 Validation finishes
+2026-09-09 19:38:09 Validation results:
+2026-09-09 19:38:09 User Group 0: Recall@1: 0.1854
+2026-09-09 19:38:09 User Group 0: Recall@5: 0.4938
+2026-09-09 19:38:09 User Group 0: Recall@10: 0.6208
+2026-09-09 19:38:09 User Group 0: Recall@20: 0.6812
+2026-09-09 19:38:09 User Group 0: MRR : 0.3210
+2026-09-09 19:38:09 
+
+2026-09-09 19:38:09 User Group 1: Recall@1: 0.2000
+2026-09-09 19:38:09 User Group 1: Recall@5: 0.4917
+2026-09-09 19:38:09 User Group 1: Recall@10: 0.5667
+2026-09-09 19:38:09 User Group 1: Recall@20: 0.6063
+2026-09-09 19:38:09 User Group 1: MRR : 0.3258
+2026-09-09 19:38:09 
+
+2026-09-09 19:38:09 Time Group 0: Recall@1: 0.1313
+2026-09-09 19:38:09 Time Group 0: Recall@5: 0.4521
+2026-09-09 19:38:09 Time Group 0: Recall@10: 0.5958
+2026-09-09 19:38:09 Time Group 0: Recall@20: 0.6667
+2026-09-09 19:38:09 Time Group 0: MRR : 0.2829
+2026-09-09 19:38:09 
+
+2026-09-09 19:38:09 Time Group 1: Recall@1: 0.1917
+2026-09-09 19:38:09 Time Group 1: Recall@5: 0.4688
+2026-09-09 19:38:09 Time Group 1: Recall@10: 0.5229
+2026-09-09 19:38:09 Time Group 1: Recall@20: 0.5625
+2026-09-09 19:38:09 Time Group 1: MRR : 0.3100
+2026-09-09 19:38:09 
+
+2026-09-09 19:38:09 POI Group 0: Recall@1: 0.2396
+2026-09-09 19:38:09 POI Group 0: Recall@5: 0.6583
+2026-09-09 19:38:09 POI Group 0: Recall@10: 0.7875
+2026-09-09 19:38:09 POI Group 0: Recall@20: 0.8313
+2026-09-09 19:38:09 POI Group 0: MRR : 0.4225
+2026-09-09 19:38:09 
+
+2026-09-09 19:38:09 POI Group 1: Recall@1: 0.1250
+2026-09-09 19:38:09 POI Group 1: Recall@5: 0.4208
+2026-09-09 19:38:09 POI Group 1: Recall@10: 0.4979
+2026-09-09 19:38:09 POI Group 1: Recall@20: 0.5646
+2026-09-09 19:38:09 POI Group 1: MRR : 0.2594
+2026-09-09 19:38:09 
+
+2026-09-09 19:38:09 At epoch 3  Stop Counter is 0 
+2026-09-09 19:38:09 Reload model
+2026-09-09 19:38:09 epoch: 4 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:38:18 Training finishes at this epoch. It takes 0.15294342041015624 min
+2026-09-09 19:38:18 Training Epoch 5/100 training loss: 62.61672240037184
+2026-09-09 19:38:18 Validation
+2026-09-09 19:38:28 Validation finishes
+2026-09-09 19:38:28 Validation results:
+2026-09-09 19:38:28 User Group 0: Recall@1: 0.1625
+2026-09-09 19:38:28 User Group 0: Recall@5: 0.5021
+2026-09-09 19:38:28 User Group 0: Recall@10: 0.6312
+2026-09-09 19:38:28 User Group 0: Recall@20: 0.6833
+2026-09-09 19:38:28 User Group 0: MRR : 0.3176
+2026-09-09 19:38:28 
+
+2026-09-09 19:38:28 User Group 1: Recall@1: 0.1687
+2026-09-09 19:38:28 User Group 1: Recall@5: 0.4437
+2026-09-09 19:38:28 User Group 1: Recall@10: 0.5292
+2026-09-09 19:38:28 User Group 1: Recall@20: 0.5687
+2026-09-09 19:38:28 User Group 1: MRR : 0.2889
+2026-09-09 19:38:28 
+
+2026-09-09 19:38:28 Time Group 0: Recall@1: 0.1625
+2026-09-09 19:38:28 Time Group 0: Recall@5: 0.5187
+2026-09-09 19:38:28 Time Group 0: Recall@10: 0.6562
+2026-09-09 19:38:28 Time Group 0: Recall@20: 0.7104
+2026-09-09 19:38:28 Time Group 0: MRR : 0.3193
+2026-09-09 19:38:28 
+
+2026-09-09 19:38:28 Time Group 1: Recall@1: 0.2042
+2026-09-09 19:38:28 Time Group 1: Recall@5: 0.4521
+2026-09-09 19:38:28 Time Group 1: Recall@10: 0.5083
+2026-09-09 19:38:28 Time Group 1: Recall@20: 0.5708
+2026-09-09 19:38:28 Time Group 1: MRR : 0.3122
+2026-09-09 19:38:28 
+
+2026-09-09 19:38:28 POI Group 0: Recall@1: 0.2521
+2026-09-09 19:38:28 POI Group 0: Recall@5: 0.6688
+2026-09-09 19:38:28 POI Group 0: Recall@10: 0.7833
+2026-09-09 19:38:28 POI Group 0: Recall@20: 0.8292
+2026-09-09 19:38:28 POI Group 0: MRR : 0.4244
+2026-09-09 19:38:28 
+
+2026-09-09 19:38:28 POI Group 1: Recall@1: 0.1625
+2026-09-09 19:38:28 POI Group 1: Recall@5: 0.3875
+2026-09-09 19:38:28 POI Group 1: Recall@10: 0.5021
+2026-09-09 19:38:28 POI Group 1: Recall@20: 0.5750
+2026-09-09 19:38:28 POI Group 1: MRR : 0.2668
+2026-09-09 19:38:28 
+
+2026-09-09 19:38:28 Update validation results and save model at epoch4
+2026-09-09 19:38:28 Reload model
+2026-09-09 19:38:28 epoch: 5 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:38:37 Training finishes at this epoch. It takes 0.15312499205271404 min
+2026-09-09 19:38:37 Training Epoch 6/100 training loss: 61.39803754366361
+2026-09-09 19:38:37 Validation
+2026-09-09 19:38:47 Validation finishes
+2026-09-09 19:38:47 Validation results:
+2026-09-09 19:38:47 User Group 0: Recall@1: 0.1646
+2026-09-09 19:38:47 User Group 0: Recall@5: 0.5062
+2026-09-09 19:38:47 User Group 0: Recall@10: 0.6167
+2026-09-09 19:38:47 User Group 0: Recall@20: 0.6896
+2026-09-09 19:38:47 User Group 0: MRR : 0.3162
+2026-09-09 19:38:47 
+
+2026-09-09 19:38:47 User Group 1: Recall@1: 0.2229
+2026-09-09 19:38:47 User Group 1: Recall@5: 0.5042
+2026-09-09 19:38:47 User Group 1: Recall@10: 0.5771
+2026-09-09 19:38:47 User Group 1: Recall@20: 0.6000
+2026-09-09 19:38:47 User Group 1: MRR : 0.3449
+2026-09-09 19:38:47 
+
+2026-09-09 19:38:47 Time Group 0: Recall@1: 0.2188
+2026-09-09 19:38:47 Time Group 0: Recall@5: 0.5104
+2026-09-09 19:38:47 Time Group 0: Recall@10: 0.6438
+2026-09-09 19:38:47 Time Group 0: Recall@20: 0.6979
+2026-09-09 19:38:47 Time Group 0: MRR : 0.3520
+2026-09-09 19:38:47 
+
+2026-09-09 19:38:47 Time Group 1: Recall@1: 0.2438
+2026-09-09 19:38:47 Time Group 1: Recall@5: 0.4854
+2026-09-09 19:38:47 Time Group 1: Recall@10: 0.5687
+2026-09-09 19:38:47 Time Group 1: Recall@20: 0.6437
+2026-09-09 19:38:47 Time Group 1: MRR : 0.3528
+2026-09-09 19:38:47 
+
+2026-09-09 19:38:47 POI Group 0: Recall@1: 0.2521
+2026-09-09 19:38:47 POI Group 0: Recall@5: 0.6375
+2026-09-09 19:38:47 POI Group 0: Recall@10: 0.7688
+2026-09-09 19:38:47 POI Group 0: Recall@20: 0.8292
+2026-09-09 19:38:47 POI Group 0: MRR : 0.4157
+2026-09-09 19:38:47 
+
+2026-09-09 19:38:47 POI Group 1: Recall@1: 0.2000
+2026-09-09 19:38:47 POI Group 1: Recall@5: 0.4667
+2026-09-09 19:38:47 POI Group 1: Recall@10: 0.5854
+2026-09-09 19:38:47 POI Group 1: Recall@20: 0.6583
+2026-09-09 19:38:47 POI Group 1: MRR : 0.3194
+2026-09-09 19:38:47 
+
+2026-09-09 19:38:47 Update validation results and save model at epoch5
+2026-09-09 19:38:47 Reload model
+2026-09-09 19:38:47 epoch: 6 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:38:56 Training finishes at this epoch. It takes 0.15326973994572957 min
+2026-09-09 19:38:56 Training Epoch 7/100 training loss: 60.511672680194565
+2026-09-09 19:38:56 Validation
+2026-09-09 19:39:06 Validation finishes
+2026-09-09 19:39:06 Validation results:
+2026-09-09 19:39:06 User Group 0: Recall@1: 0.1917
+2026-09-09 19:39:06 User Group 0: Recall@5: 0.5396
+2026-09-09 19:39:06 User Group 0: Recall@10: 0.6583
+2026-09-09 19:39:06 User Group 0: Recall@20: 0.7396
+2026-09-09 19:39:06 User Group 0: MRR : 0.3474
+2026-09-09 19:39:06 
+
+2026-09-09 19:39:06 User Group 1: Recall@1: 0.1958
+2026-09-09 19:39:06 User Group 1: Recall@5: 0.4625
+2026-09-09 19:39:06 User Group 1: Recall@10: 0.5542
+2026-09-09 19:39:06 User Group 1: Recall@20: 0.5812
+2026-09-09 19:39:06 User Group 1: MRR : 0.3139
+2026-09-09 19:39:06 
+
+2026-09-09 19:39:06 Time Group 0: Recall@1: 0.1792
+2026-09-09 19:39:06 Time Group 0: Recall@5: 0.4979
+2026-09-09 19:39:06 Time Group 0: Recall@10: 0.6375
+2026-09-09 19:39:06 Time Group 0: Recall@20: 0.6937
+2026-09-09 19:39:06 Time Group 0: MRR : 0.3212
+2026-09-09 19:39:06 
+
+2026-09-09 19:39:06 Time Group 1: Recall@1: 0.2375
+2026-09-09 19:39:06 Time Group 1: Recall@5: 0.4729
+2026-09-09 19:39:06 Time Group 1: Recall@10: 0.5563
+2026-09-09 19:39:06 Time Group 1: Recall@20: 0.6042
+2026-09-09 19:39:06 Time Group 1: MRR : 0.3373
+2026-09-09 19:39:06 
+
+2026-09-09 19:39:06 POI Group 0: Recall@1: 0.2646
+2026-09-09 19:39:06 POI Group 0: Recall@5: 0.6833
+2026-09-09 19:39:06 POI Group 0: Recall@10: 0.7917
+2026-09-09 19:39:06 POI Group 0: Recall@20: 0.8479
+2026-09-09 19:39:06 POI Group 0: MRR : 0.4483
+2026-09-09 19:39:06 
+
+2026-09-09 19:39:06 POI Group 1: Recall@1: 0.1292
+2026-09-09 19:39:06 POI Group 1: Recall@5: 0.4500
+2026-09-09 19:39:06 POI Group 1: Recall@10: 0.5563
+2026-09-09 19:39:06 POI Group 1: Recall@20: 0.6229
+2026-09-09 19:39:06 POI Group 1: MRR : 0.2667
+2026-09-09 19:39:06 
+
+2026-09-09 19:39:06 At epoch 6  Stop Counter is 0 
+2026-09-09 19:39:06 Reload model
+2026-09-09 19:39:06 epoch: 7 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:39:15 Training finishes at this epoch. It takes 0.15317044655481973 min
+2026-09-09 19:39:15 Training Epoch 8/100 training loss: 60.41527616060697
+2026-09-09 19:39:15 Validation
+2026-09-09 19:39:24 Validation finishes
+2026-09-09 19:39:24 Validation results:
+2026-09-09 19:39:24 User Group 0: Recall@1: 0.1979
+2026-09-09 19:39:24 User Group 0: Recall@5: 0.5146
+2026-09-09 19:39:24 User Group 0: Recall@10: 0.6396
+2026-09-09 19:39:24 User Group 0: Recall@20: 0.7188
+2026-09-09 19:39:24 User Group 0: MRR : 0.3390
+2026-09-09 19:39:24 
+
+2026-09-09 19:39:24 User Group 1: Recall@1: 0.1812
+2026-09-09 19:39:24 User Group 1: Recall@5: 0.4500
+2026-09-09 19:39:24 User Group 1: Recall@10: 0.5292
+2026-09-09 19:39:24 User Group 1: Recall@20: 0.5667
+2026-09-09 19:39:24 User Group 1: MRR : 0.2994
+2026-09-09 19:39:24 
+
+2026-09-09 19:39:24 Time Group 0: Recall@1: 0.1833
+2026-09-09 19:39:24 Time Group 0: Recall@5: 0.4937
+2026-09-09 19:39:24 Time Group 0: Recall@10: 0.6417
+2026-09-09 19:39:24 Time Group 0: Recall@20: 0.7021
+2026-09-09 19:39:24 Time Group 0: MRR : 0.3290
+2026-09-09 19:39:24 
+
+2026-09-09 19:39:24 Time Group 1: Recall@1: 0.2042
+2026-09-09 19:39:24 Time Group 1: Recall@5: 0.4542
+2026-09-09 19:39:24 Time Group 1: Recall@10: 0.5375
+2026-09-09 19:39:24 Time Group 1: Recall@20: 0.5875
+2026-09-09 19:39:24 Time Group 1: MRR : 0.3105
+2026-09-09 19:39:24 
+
+2026-09-09 19:39:24 POI Group 0: Recall@1: 0.2542
+2026-09-09 19:39:24 POI Group 0: Recall@5: 0.6813
+2026-09-09 19:39:24 POI Group 0: Recall@10: 0.8083
+2026-09-09 19:39:24 POI Group 0: Recall@20: 0.8438
+2026-09-09 19:39:24 POI Group 0: MRR : 0.4359
+2026-09-09 19:39:24 
+
+2026-09-09 19:39:24 POI Group 1: Recall@1: 0.1729
+2026-09-09 19:39:24 POI Group 1: Recall@5: 0.4396
+2026-09-09 19:39:24 POI Group 1: Recall@10: 0.5354
+2026-09-09 19:39:24 POI Group 1: Recall@20: 0.6062
+2026-09-09 19:39:24 POI Group 1: MRR : 0.2898
+2026-09-09 19:39:24 
+
+2026-09-09 19:39:24 At epoch 7  Stop Counter is 1 
+2026-09-09 19:39:25 Reload model
+2026-09-09 19:39:25 epoch: 8 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:39:34 Training finishes at this epoch. It takes 0.15297006368637084 min
+2026-09-09 19:39:34 Training Epoch 9/100 training loss: 60.38424477210412
+2026-09-09 19:39:34 Validation
+2026-09-09 19:39:43 Validation finishes
+2026-09-09 19:39:43 Validation results:
+2026-09-09 19:39:43 User Group 0: Recall@1: 0.1896
+2026-09-09 19:39:43 User Group 0: Recall@5: 0.4979
+2026-09-09 19:39:43 User Group 0: Recall@10: 0.6292
+2026-09-09 19:39:43 User Group 0: Recall@20: 0.6979
+2026-09-09 19:39:43 User Group 0: MRR : 0.3301
+2026-09-09 19:39:43 
+
+2026-09-09 19:39:43 User Group 1: Recall@1: 0.1896
+2026-09-09 19:39:43 User Group 1: Recall@5: 0.4333
+2026-09-09 19:39:43 User Group 1: Recall@10: 0.5062
+2026-09-09 19:39:43 User Group 1: Recall@20: 0.5521
+2026-09-09 19:39:43 User Group 1: MRR : 0.3008
+2026-09-09 19:39:43 
+
+2026-09-09 19:39:43 Time Group 0: Recall@1: 0.1875
+2026-09-09 19:39:43 Time Group 0: Recall@5: 0.5437
+2026-09-09 19:39:43 Time Group 0: Recall@10: 0.6583
+2026-09-09 19:39:43 Time Group 0: Recall@20: 0.7083
+2026-09-09 19:39:43 Time Group 0: MRR : 0.3392
+2026-09-09 19:39:43 
+
+2026-09-09 19:39:43 Time Group 1: Recall@1: 0.2167
+2026-09-09 19:39:43 Time Group 1: Recall@5: 0.4542
+2026-09-09 19:39:43 Time Group 1: Recall@10: 0.5312
+2026-09-09 19:39:43 Time Group 1: Recall@20: 0.6000
+2026-09-09 19:39:43 Time Group 1: MRR : 0.3248
+2026-09-09 19:39:43 
+
+2026-09-09 19:39:43 POI Group 0: Recall@1: 0.2729
+2026-09-09 19:39:43 POI Group 0: Recall@5: 0.6708
+2026-09-09 19:39:43 POI Group 0: Recall@10: 0.8021
+2026-09-09 19:39:43 POI Group 0: Recall@20: 0.8333
+2026-09-09 19:39:43 POI Group 0: MRR : 0.4448
+2026-09-09 19:39:43 
+
+2026-09-09 19:39:43 POI Group 1: Recall@1: 0.1562
+2026-09-09 19:39:43 POI Group 1: Recall@5: 0.3792
+2026-09-09 19:39:43 POI Group 1: Recall@10: 0.4854
+2026-09-09 19:39:43 POI Group 1: Recall@20: 0.5438
+2026-09-09 19:39:43 POI Group 1: MRR : 0.2637
+2026-09-09 19:39:43 
+
+2026-09-09 19:39:43 At epoch 8  Stop Counter is 2 
+2026-09-09 19:39:43 Reload model
+2026-09-09 19:39:43 epoch: 9 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:39:53 Training finishes at this epoch. It takes 0.15467156569163004 min
+2026-09-09 19:39:53 Training Epoch 10/100 training loss: 60.55509479229267
+2026-09-09 19:39:53 Validation
+2026-09-09 19:40:02 Validation finishes
+2026-09-09 19:40:02 Validation results:
+2026-09-09 19:40:02 User Group 0: Recall@1: 0.1896
+2026-09-09 19:40:02 User Group 0: Recall@5: 0.5354
+2026-09-09 19:40:02 User Group 0: Recall@10: 0.6854
+2026-09-09 19:40:02 User Group 0: Recall@20: 0.7458
+2026-09-09 19:40:02 User Group 0: MRR : 0.3485
+2026-09-09 19:40:02 
+
+2026-09-09 19:40:02 User Group 1: Recall@1: 0.1750
+2026-09-09 19:40:02 User Group 1: Recall@5: 0.4437
+2026-09-09 19:40:02 User Group 1: Recall@10: 0.5167
+2026-09-09 19:40:02 User Group 1: Recall@20: 0.5604
+2026-09-09 19:40:02 User Group 1: MRR : 0.2932
+2026-09-09 19:40:02 
+
+2026-09-09 19:40:02 Time Group 0: Recall@1: 0.2000
+2026-09-09 19:40:02 Time Group 0: Recall@5: 0.5167
+2026-09-09 19:40:02 Time Group 0: Recall@10: 0.6250
+2026-09-09 19:40:02 Time Group 0: Recall@20: 0.6562
+2026-09-09 19:40:02 Time Group 0: MRR : 0.3395
+2026-09-09 19:40:02 
+
+2026-09-09 19:40:02 Time Group 1: Recall@1: 0.1792
+2026-09-09 19:40:02 Time Group 1: Recall@5: 0.4354
+2026-09-09 19:40:02 Time Group 1: Recall@10: 0.5292
+2026-09-09 19:40:02 Time Group 1: Recall@20: 0.6000
+2026-09-09 19:40:02 Time Group 1: MRR : 0.2954
+2026-09-09 19:40:02 
+
+2026-09-09 19:40:02 POI Group 0: Recall@1: 0.2604
+2026-09-09 19:40:02 POI Group 0: Recall@5: 0.6583
+2026-09-09 19:40:02 POI Group 0: Recall@10: 0.7729
+2026-09-09 19:40:02 POI Group 0: Recall@20: 0.8250
+2026-09-09 19:40:02 POI Group 0: MRR : 0.4330
+2026-09-09 19:40:02 
+
+2026-09-09 19:40:02 POI Group 1: Recall@1: 0.1792
+2026-09-09 19:40:02 POI Group 1: Recall@5: 0.4417
+2026-09-09 19:40:02 POI Group 1: Recall@10: 0.5375
+2026-09-09 19:40:02 POI Group 1: Recall@20: 0.6042
+2026-09-09 19:40:02 POI Group 1: MRR : 0.2957
+2026-09-09 19:40:02 
+
+2026-09-09 19:40:02 At epoch 9  Stop Counter is 3 
+2026-09-09 19:40:02 Reload model
+2026-09-09 19:40:02 epoch: 10 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:40:12 Training finishes at this epoch. It takes 0.15349388519922894 min
+2026-09-09 19:40:12 Training Epoch 11/100 training loss: 60.45721083420973
+2026-09-09 19:40:12 Validation
+2026-09-09 19:40:21 Validation finishes
+2026-09-09 19:40:21 Validation results:
+2026-09-09 19:40:21 User Group 0: Recall@1: 0.1812
+2026-09-09 19:40:21 User Group 0: Recall@5: 0.4812
+2026-09-09 19:40:21 User Group 0: Recall@10: 0.6375
+2026-09-09 19:40:21 User Group 0: Recall@20: 0.7062
+2026-09-09 19:40:21 User Group 0: MRR : 0.3234
+2026-09-09 19:40:21 
+
+2026-09-09 19:40:21 User Group 1: Recall@1: 0.1875
+2026-09-09 19:40:21 User Group 1: Recall@5: 0.4604
+2026-09-09 19:40:21 User Group 1: Recall@10: 0.5417
+2026-09-09 19:40:21 User Group 1: Recall@20: 0.5625
+2026-09-09 19:40:21 User Group 1: MRR : 0.3035
+2026-09-09 19:40:21 
+
+2026-09-09 19:40:21 Time Group 0: Recall@1: 0.2042
+2026-09-09 19:40:21 Time Group 0: Recall@5: 0.4917
+2026-09-09 19:40:21 Time Group 0: Recall@10: 0.6271
+2026-09-09 19:40:21 Time Group 0: Recall@20: 0.6813
+2026-09-09 19:40:21 Time Group 0: MRR : 0.3389
+2026-09-09 19:40:21 
+
+2026-09-09 19:40:21 Time Group 1: Recall@1: 0.2188
+2026-09-09 19:40:21 Time Group 1: Recall@5: 0.4646
+2026-09-09 19:40:21 Time Group 1: Recall@10: 0.5354
+2026-09-09 19:40:21 Time Group 1: Recall@20: 0.6042
+2026-09-09 19:40:21 Time Group 1: MRR : 0.3278
+2026-09-09 19:40:21 
+
+2026-09-09 19:40:21 POI Group 0: Recall@1: 0.2521
+2026-09-09 19:40:21 POI Group 0: Recall@5: 0.6354
+2026-09-09 19:40:21 POI Group 0: Recall@10: 0.7833
+2026-09-09 19:40:21 POI Group 0: Recall@20: 0.8104
+2026-09-09 19:40:21 POI Group 0: MRR : 0.4302
+2026-09-09 19:40:21 
+
+2026-09-09 19:40:21 POI Group 1: Recall@1: 0.1521
+2026-09-09 19:40:21 POI Group 1: Recall@5: 0.4188
+2026-09-09 19:40:21 POI Group 1: Recall@10: 0.5104
+2026-09-09 19:40:21 POI Group 1: Recall@20: 0.5833
+2026-09-09 19:40:21 POI Group 1: MRR : 0.2783
+2026-09-09 19:40:21 
+
+2026-09-09 19:40:21 At epoch 10  Stop Counter is 4 
+2026-09-09 19:40:21 Reload model
+2026-09-09 19:40:21 epoch: 11 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:40:31 Training finishes at this epoch. It takes 0.1537942926088969 min
+2026-09-09 19:40:31 Training Epoch 12/100 training loss: 60.19806876549354
+2026-09-09 19:40:31 Validation
+2026-09-09 19:40:40 Validation finishes
+2026-09-09 19:40:40 Validation results:
+2026-09-09 19:40:40 User Group 0: Recall@1: 0.1917
+2026-09-09 19:40:40 User Group 0: Recall@5: 0.5500
+2026-09-09 19:40:40 User Group 0: Recall@10: 0.6708
+2026-09-09 19:40:40 User Group 0: Recall@20: 0.7229
+2026-09-09 19:40:40 User Group 0: MRR : 0.3507
+2026-09-09 19:40:40 
+
+2026-09-09 19:40:40 User Group 1: Recall@1: 0.1771
+2026-09-09 19:40:40 User Group 1: Recall@5: 0.4271
+2026-09-09 19:40:40 User Group 1: Recall@10: 0.5250
+2026-09-09 19:40:40 User Group 1: Recall@20: 0.5688
+2026-09-09 19:40:40 User Group 1: MRR : 0.2927
+2026-09-09 19:40:40 
+
+2026-09-09 19:40:40 Time Group 0: Recall@1: 0.1896
+2026-09-09 19:40:40 Time Group 0: Recall@5: 0.4937
+2026-09-09 19:40:40 Time Group 0: Recall@10: 0.6187
+2026-09-09 19:40:40 Time Group 0: Recall@20: 0.6896
+2026-09-09 19:40:40 Time Group 0: MRR : 0.3285
+2026-09-09 19:40:40 
+
+2026-09-09 19:40:40 Time Group 1: Recall@1: 0.1875
+2026-09-09 19:40:40 Time Group 1: Recall@5: 0.4125
+2026-09-09 19:40:40 Time Group 1: Recall@10: 0.5062
+2026-09-09 19:40:40 Time Group 1: Recall@20: 0.5563
+2026-09-09 19:40:40 Time Group 1: MRR : 0.2929
+2026-09-09 19:40:40 
+
+2026-09-09 19:40:40 POI Group 0: Recall@1: 0.2458
+2026-09-09 19:40:40 POI Group 0: Recall@5: 0.6729
+2026-09-09 19:40:40 POI Group 0: Recall@10: 0.7875
+2026-09-09 19:40:40 POI Group 0: Recall@20: 0.8250
+2026-09-09 19:40:40 POI Group 0: MRR : 0.4260
+2026-09-09 19:40:40 
+
+2026-09-09 19:40:40 POI Group 1: Recall@1: 0.1396
+2026-09-09 19:40:40 POI Group 1: Recall@5: 0.4000
+2026-09-09 19:40:40 POI Group 1: Recall@10: 0.5208
+2026-09-09 19:40:40 POI Group 1: Recall@20: 0.5729
+2026-09-09 19:40:40 POI Group 1: MRR : 0.2558
+2026-09-09 19:40:40 
+
+2026-09-09 19:40:40 At epoch 11  Stop Counter is 5 
+2026-09-09 19:40:40 Reload model
+2026-09-09 19:40:40 epoch: 12 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:40:50 Training finishes at this epoch. It takes 0.15354424715042114 min
+2026-09-09 19:40:50 Training Epoch 13/100 training loss: 60.5898191011869
+2026-09-09 19:40:50 Validation
+2026-09-09 19:40:59 Validation finishes
+2026-09-09 19:40:59 Validation results:
+2026-09-09 19:40:59 User Group 0: Recall@1: 0.1833
+2026-09-09 19:40:59 User Group 0: Recall@5: 0.5479
+2026-09-09 19:40:59 User Group 0: Recall@10: 0.6708
+2026-09-09 19:40:59 User Group 0: Recall@20: 0.7271
+2026-09-09 19:40:59 User Group 0: MRR : 0.3432
+2026-09-09 19:40:59 
+
+2026-09-09 19:40:59 User Group 1: Recall@1: 0.1708
+2026-09-09 19:40:59 User Group 1: Recall@5: 0.4229
+2026-09-09 19:40:59 User Group 1: Recall@10: 0.5125
+2026-09-09 19:40:59 User Group 1: Recall@20: 0.5625
+2026-09-09 19:40:59 User Group 1: MRR : 0.2810
+2026-09-09 19:40:59 
+
+2026-09-09 19:40:59 Time Group 0: Recall@1: 0.1729
+2026-09-09 19:40:59 Time Group 0: Recall@5: 0.4729
+2026-09-09 19:40:59 Time Group 0: Recall@10: 0.5938
+2026-09-09 19:40:59 Time Group 0: Recall@20: 0.6583
+2026-09-09 19:40:59 Time Group 0: MRR : 0.3099
+2026-09-09 19:40:59 
+
+2026-09-09 19:40:59 Time Group 1: Recall@1: 0.2208
+2026-09-09 19:40:59 Time Group 1: Recall@5: 0.4625
+2026-09-09 19:40:59 Time Group 1: Recall@10: 0.5458
+2026-09-09 19:40:59 Time Group 1: Recall@20: 0.6042
+2026-09-09 19:40:59 Time Group 1: MRR : 0.3246
+2026-09-09 19:40:59 
+
+2026-09-09 19:40:59 POI Group 0: Recall@1: 0.2938
+2026-09-09 19:40:59 POI Group 0: Recall@5: 0.6958
+2026-09-09 19:40:59 POI Group 0: Recall@10: 0.8146
+2026-09-09 19:40:59 POI Group 0: Recall@20: 0.8417
+2026-09-09 19:40:59 POI Group 0: MRR : 0.4636
+2026-09-09 19:40:59 
+
+2026-09-09 19:40:59 POI Group 1: Recall@1: 0.1646
+2026-09-09 19:40:59 POI Group 1: Recall@5: 0.4146
+2026-09-09 19:40:59 POI Group 1: Recall@10: 0.5229
+2026-09-09 19:40:59 POI Group 1: Recall@20: 0.5771
+2026-09-09 19:40:59 POI Group 1: MRR : 0.2773
+2026-09-09 19:40:59 
+
+2026-09-09 19:40:59 At epoch 12  Stop Counter is 6 
+2026-09-09 19:40:59 Reload model
+2026-09-09 19:40:59 epoch: 13 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:41:09 Training finishes at this epoch. It takes 0.15388741493225097 min
+2026-09-09 19:41:09 Training Epoch 14/100 training loss: 60.40730226956881
+2026-09-09 19:41:09 Validation
+2026-09-09 19:41:18 Validation finishes
+2026-09-09 19:41:18 Validation results:
+2026-09-09 19:41:18 User Group 0: Recall@1: 0.2083
+2026-09-09 19:41:18 User Group 0: Recall@5: 0.5583
+2026-09-09 19:41:18 User Group 0: Recall@10: 0.6437
+2026-09-09 19:41:18 User Group 0: Recall@20: 0.6979
+2026-09-09 19:41:18 User Group 0: MRR : 0.3569
+2026-09-09 19:41:18 
+
+2026-09-09 19:41:18 User Group 1: Recall@1: 0.1854
+2026-09-09 19:41:18 User Group 1: Recall@5: 0.4333
+2026-09-09 19:41:18 User Group 1: Recall@10: 0.5146
+2026-09-09 19:41:18 User Group 1: Recall@20: 0.5500
+2026-09-09 19:41:18 User Group 1: MRR : 0.2925
+2026-09-09 19:41:18 
+
+2026-09-09 19:41:18 Time Group 0: Recall@1: 0.2083
+2026-09-09 19:41:18 Time Group 0: Recall@5: 0.5146
+2026-09-09 19:41:18 Time Group 0: Recall@10: 0.6271
+2026-09-09 19:41:18 Time Group 0: Recall@20: 0.6813
+2026-09-09 19:41:18 Time Group 0: MRR : 0.3458
+2026-09-09 19:41:18 
+
+2026-09-09 19:41:18 Time Group 1: Recall@1: 0.2104
+2026-09-09 19:41:18 Time Group 1: Recall@5: 0.4708
+2026-09-09 19:41:18 Time Group 1: Recall@10: 0.5563
+2026-09-09 19:41:18 Time Group 1: Recall@20: 0.6083
+2026-09-09 19:41:18 Time Group 1: MRR : 0.3185
+2026-09-09 19:41:18 
+
+2026-09-09 19:41:18 POI Group 0: Recall@1: 0.2500
+2026-09-09 19:41:18 POI Group 0: Recall@5: 0.6417
+2026-09-09 19:41:18 POI Group 0: Recall@10: 0.7604
+2026-09-09 19:41:18 POI Group 0: Recall@20: 0.8042
+2026-09-09 19:41:18 POI Group 0: MRR : 0.4173
+2026-09-09 19:41:18 
+
+2026-09-09 19:41:18 POI Group 1: Recall@1: 0.1562
+2026-09-09 19:41:18 POI Group 1: Recall@5: 0.4062
+2026-09-09 19:41:18 POI Group 1: Recall@10: 0.5417
+2026-09-09 19:41:18 POI Group 1: Recall@20: 0.5896
+2026-09-09 19:41:18 POI Group 1: MRR : 0.2758
+2026-09-09 19:41:18 
+
+2026-09-09 19:41:18 At epoch 13  Stop Counter is 7 
+2026-09-09 19:41:18 Reload model
+2026-09-09 19:41:18 epoch: 14 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:41:28 Training finishes at this epoch. It takes 0.1533838391304016 min
+2026-09-09 19:41:28 Training Epoch 15/100 training loss: 60.36064059917744
+2026-09-09 19:41:28 Validation
+2026-09-09 19:41:38 Validation finishes
+2026-09-09 19:41:38 Validation results:
+2026-09-09 19:41:38 User Group 0: Recall@1: 0.1875
+2026-09-09 19:41:38 User Group 0: Recall@5: 0.5208
+2026-09-09 19:41:38 User Group 0: Recall@10: 0.6667
+2026-09-09 19:41:38 User Group 0: Recall@20: 0.7333
+2026-09-09 19:41:38 User Group 0: MRR : 0.3370
+2026-09-09 19:41:38 
+
+2026-09-09 19:41:38 User Group 1: Recall@1: 0.1917
+2026-09-09 19:41:38 User Group 1: Recall@5: 0.4208
+2026-09-09 19:41:38 User Group 1: Recall@10: 0.5208
+2026-09-09 19:41:38 User Group 1: Recall@20: 0.5542
+2026-09-09 19:41:38 User Group 1: MRR : 0.2939
+2026-09-09 19:41:38 
+
+2026-09-09 19:41:38 Time Group 0: Recall@1: 0.1875
+2026-09-09 19:41:38 Time Group 0: Recall@5: 0.5104
+2026-09-09 19:41:38 Time Group 0: Recall@10: 0.6250
+2026-09-09 19:41:38 Time Group 0: Recall@20: 0.7042
+2026-09-09 19:41:38 Time Group 0: MRR : 0.3270
+2026-09-09 19:41:38 
+
+2026-09-09 19:41:38 Time Group 1: Recall@1: 0.2125
+2026-09-09 19:41:38 Time Group 1: Recall@5: 0.4771
+2026-09-09 19:41:38 Time Group 1: Recall@10: 0.5500
+2026-09-09 19:41:38 Time Group 1: Recall@20: 0.6062
+2026-09-09 19:41:38 Time Group 1: MRR : 0.3282
+2026-09-09 19:41:38 
+
+2026-09-09 19:41:38 POI Group 0: Recall@1: 0.2708
+2026-09-09 19:41:38 POI Group 0: Recall@5: 0.6917
+2026-09-09 19:41:38 POI Group 0: Recall@10: 0.7979
+2026-09-09 19:41:38 POI Group 0: Recall@20: 0.8396
+2026-09-09 19:41:38 POI Group 0: MRR : 0.4535
+2026-09-09 19:41:38 
+
+2026-09-09 19:41:38 POI Group 1: Recall@1: 0.1458
+2026-09-09 19:41:38 POI Group 1: Recall@5: 0.4208
+2026-09-09 19:41:38 POI Group 1: Recall@10: 0.5521
+2026-09-09 19:41:38 POI Group 1: Recall@20: 0.6125
+2026-09-09 19:41:38 POI Group 1: MRR : 0.2746
+2026-09-09 19:41:38 
+
+2026-09-09 19:41:38 At epoch 14  Stop Counter is 8 
+2026-09-09 19:41:38 Reload model
+2026-09-09 19:41:38 epoch: 15 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:41:47 Training finishes at this epoch. It takes 0.15524417559305828 min
+2026-09-09 19:41:47 Training Epoch 16/100 training loss: 60.530753502478966
+2026-09-09 19:41:47 Validation
+2026-09-09 19:41:57 Validation finishes
+2026-09-09 19:41:57 Validation results:
+2026-09-09 19:41:57 User Group 0: Recall@1: 0.2188
+2026-09-09 19:41:57 User Group 0: Recall@5: 0.5375
+2026-09-09 19:41:57 User Group 0: Recall@10: 0.6479
+2026-09-09 19:41:57 User Group 0: Recall@20: 0.6854
+2026-09-09 19:41:57 User Group 0: MRR : 0.3637
+2026-09-09 19:41:57 
+
+2026-09-09 19:41:57 User Group 1: Recall@1: 0.2021
+2026-09-09 19:41:57 User Group 1: Recall@5: 0.4750
+2026-09-09 19:41:57 User Group 1: Recall@10: 0.5646
+2026-09-09 19:41:57 User Group 1: Recall@20: 0.6146
+2026-09-09 19:41:57 User Group 1: MRR : 0.3233
+2026-09-09 19:41:57 
+
+2026-09-09 19:41:57 Time Group 0: Recall@1: 0.1875
+2026-09-09 19:41:57 Time Group 0: Recall@5: 0.4917
+2026-09-09 19:41:57 Time Group 0: Recall@10: 0.6271
+2026-09-09 19:41:57 Time Group 0: Recall@20: 0.7062
+2026-09-09 19:41:57 Time Group 0: MRR : 0.3263
+2026-09-09 19:41:57 
+
+2026-09-09 19:41:57 Time Group 1: Recall@1: 0.2042
+2026-09-09 19:41:57 Time Group 1: Recall@5: 0.4708
+2026-09-09 19:41:57 Time Group 1: Recall@10: 0.5479
+2026-09-09 19:41:57 Time Group 1: Recall@20: 0.6000
+2026-09-09 19:41:57 Time Group 1: MRR : 0.3189
+2026-09-09 19:41:57 
+
+2026-09-09 19:41:57 POI Group 0: Recall@1: 0.2875
+2026-09-09 19:41:57 POI Group 0: Recall@5: 0.6917
+2026-09-09 19:41:57 POI Group 0: Recall@10: 0.8187
+2026-09-09 19:41:57 POI Group 0: Recall@20: 0.8479
+2026-09-09 19:41:57 POI Group 0: MRR : 0.4641
+2026-09-09 19:41:57 
+
+2026-09-09 19:41:57 POI Group 1: Recall@1: 0.1500
+2026-09-09 19:41:57 POI Group 1: Recall@5: 0.4208
+2026-09-09 19:41:57 POI Group 1: Recall@10: 0.5187
+2026-09-09 19:41:57 POI Group 1: Recall@20: 0.5812
+2026-09-09 19:41:57 POI Group 1: MRR : 0.2735
+2026-09-09 19:41:57 
+
+2026-09-09 19:41:57 At epoch 15  Stop Counter is 9 
+2026-09-09 19:41:57 Reload model
+2026-09-09 19:41:57 epoch: 16 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:42:06 Training finishes at this epoch. It takes 0.15344361861546835 min
+2026-09-09 19:42:06 Training Epoch 17/100 training loss: 60.36815966092623
+2026-09-09 19:42:06 Validation
+2026-09-09 19:42:16 Validation finishes
+2026-09-09 19:42:16 Validation results:
+2026-09-09 19:42:16 User Group 0: Recall@1: 0.1750
+2026-09-09 19:42:16 User Group 0: Recall@5: 0.5146
+2026-09-09 19:42:16 User Group 0: Recall@10: 0.6500
+2026-09-09 19:42:16 User Group 0: Recall@20: 0.7208
+2026-09-09 19:42:16 User Group 0: MRR : 0.3243
+2026-09-09 19:42:16 
+
+2026-09-09 19:42:16 User Group 1: Recall@1: 0.1771
+2026-09-09 19:42:16 User Group 1: Recall@5: 0.4479
+2026-09-09 19:42:16 User Group 1: Recall@10: 0.5396
+2026-09-09 19:42:16 User Group 1: Recall@20: 0.5896
+2026-09-09 19:42:16 User Group 1: MRR : 0.2993
+2026-09-09 19:42:16 
+
+2026-09-09 19:42:16 Time Group 0: Recall@1: 0.2125
+2026-09-09 19:42:16 Time Group 0: Recall@5: 0.5375
+2026-09-09 19:42:16 Time Group 0: Recall@10: 0.6479
+2026-09-09 19:42:16 Time Group 0: Recall@20: 0.7208
+2026-09-09 19:42:16 Time Group 0: MRR : 0.3607
+2026-09-09 19:42:16 
+
+2026-09-09 19:42:16 Time Group 1: Recall@1: 0.2021
+2026-09-09 19:42:16 Time Group 1: Recall@5: 0.4458
+2026-09-09 19:42:16 Time Group 1: Recall@10: 0.5187
+2026-09-09 19:42:16 Time Group 1: Recall@20: 0.5687
+2026-09-09 19:42:16 Time Group 1: MRR : 0.3113
+2026-09-09 19:42:16 
+
+2026-09-09 19:42:16 POI Group 0: Recall@1: 0.2542
+2026-09-09 19:42:16 POI Group 0: Recall@5: 0.6521
+2026-09-09 19:42:16 POI Group 0: Recall@10: 0.7458
+2026-09-09 19:42:16 POI Group 0: Recall@20: 0.7875
+2026-09-09 19:42:16 POI Group 0: MRR : 0.4218
+2026-09-09 19:42:16 
+
+2026-09-09 19:42:16 POI Group 1: Recall@1: 0.1333
+2026-09-09 19:42:16 POI Group 1: Recall@5: 0.4208
+2026-09-09 19:42:16 POI Group 1: Recall@10: 0.5417
+2026-09-09 19:42:16 POI Group 1: Recall@20: 0.6063
+2026-09-09 19:42:16 POI Group 1: MRR : 0.2664
+2026-09-09 19:42:16 
+
+2026-09-09 19:42:16 At epoch 16  Stop Counter is 10 
+2026-09-09 19:42:16 Reload model
+2026-09-09 19:42:16 epoch: 17 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:42:25 Training finishes at this epoch. It takes 0.15391061703364053 min
+2026-09-09 19:42:25 Training Epoch 18/100 training loss: 60.44078298715445
+2026-09-09 19:42:25 Validation
+2026-09-09 19:42:35 Validation finishes
+2026-09-09 19:42:35 Validation results:
+2026-09-09 19:42:35 User Group 0: Recall@1: 0.2063
+2026-09-09 19:42:35 User Group 0: Recall@5: 0.4875
+2026-09-09 19:42:35 User Group 0: Recall@10: 0.6250
+2026-09-09 19:42:35 User Group 0: Recall@20: 0.6792
+2026-09-09 19:42:35 User Group 0: MRR : 0.3360
+2026-09-09 19:42:35 
+
+2026-09-09 19:42:35 User Group 1: Recall@1: 0.1917
+2026-09-09 19:42:35 User Group 1: Recall@5: 0.4792
+2026-09-09 19:42:35 User Group 1: Recall@10: 0.5458
+2026-09-09 19:42:35 User Group 1: Recall@20: 0.5896
+2026-09-09 19:42:35 User Group 1: MRR : 0.3171
+2026-09-09 19:42:35 
+
+2026-09-09 19:42:35 Time Group 0: Recall@1: 0.1750
+2026-09-09 19:42:35 Time Group 0: Recall@5: 0.5125
+2026-09-09 19:42:35 Time Group 0: Recall@10: 0.6375
+2026-09-09 19:42:35 Time Group 0: Recall@20: 0.7063
+2026-09-09 19:42:35 Time Group 0: MRR : 0.3256
+2026-09-09 19:42:35 
+
+2026-09-09 19:42:35 Time Group 1: Recall@1: 0.2375
+2026-09-09 19:42:35 Time Group 1: Recall@5: 0.4708
+2026-09-09 19:42:35 Time Group 1: Recall@10: 0.5437
+2026-09-09 19:42:35 Time Group 1: Recall@20: 0.5833
+2026-09-09 19:42:35 Time Group 1: MRR : 0.3377
+2026-09-09 19:42:35 
+
+2026-09-09 19:42:35 POI Group 0: Recall@1: 0.2396
+2026-09-09 19:42:35 POI Group 0: Recall@5: 0.6813
+2026-09-09 19:42:35 POI Group 0: Recall@10: 0.8000
+2026-09-09 19:42:35 POI Group 0: Recall@20: 0.8417
+2026-09-09 19:42:35 POI Group 0: MRR : 0.4313
+2026-09-09 19:42:35 
+
+2026-09-09 19:42:35 POI Group 1: Recall@1: 0.1562
+2026-09-09 19:42:35 POI Group 1: Recall@5: 0.4250
+2026-09-09 19:42:35 POI Group 1: Recall@10: 0.5458
+2026-09-09 19:42:35 POI Group 1: Recall@20: 0.6167
+2026-09-09 19:42:35 POI Group 1: MRR : 0.2732
+2026-09-09 19:42:35 
+
+2026-09-09 19:42:35 At epoch 17  Stop Counter is 11 
+2026-09-09 19:42:35 Reload model
+2026-09-09 19:42:35 epoch: 18 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:42:44 Training finishes at this epoch. It takes 0.1532912810643514 min
+2026-09-09 19:42:44 Training Epoch 19/100 training loss: 60.40913596520057
+2026-09-09 19:42:44 Validation
+2026-09-09 19:42:54 Validation finishes
+2026-09-09 19:42:54 Validation results:
+2026-09-09 19:42:54 User Group 0: Recall@1: 0.1792
+2026-09-09 19:42:54 User Group 0: Recall@5: 0.5125
+2026-09-09 19:42:54 User Group 0: Recall@10: 0.6417
+2026-09-09 19:42:54 User Group 0: Recall@20: 0.7125
+2026-09-09 19:42:54 User Group 0: MRR : 0.3241
+2026-09-09 19:42:54 
+
+2026-09-09 19:42:54 User Group 1: Recall@1: 0.2021
+2026-09-09 19:42:54 User Group 1: Recall@5: 0.4792
+2026-09-09 19:42:54 User Group 1: Recall@10: 0.5583
+2026-09-09 19:42:54 User Group 1: Recall@20: 0.6021
+2026-09-09 19:42:54 User Group 1: MRR : 0.3239
+2026-09-09 19:42:54 
+
+2026-09-09 19:42:54 Time Group 0: Recall@1: 0.1896
+2026-09-09 19:42:54 Time Group 0: Recall@5: 0.5104
+2026-09-09 19:42:54 Time Group 0: Recall@10: 0.6708
+2026-09-09 19:42:54 Time Group 0: Recall@20: 0.7375
+2026-09-09 19:42:54 Time Group 0: MRR : 0.3371
+2026-09-09 19:42:54 
+
+2026-09-09 19:42:54 Time Group 1: Recall@1: 0.1792
+2026-09-09 19:42:54 Time Group 1: Recall@5: 0.4500
+2026-09-09 19:42:54 Time Group 1: Recall@10: 0.5312
+2026-09-09 19:42:54 Time Group 1: Recall@20: 0.5792
+2026-09-09 19:42:54 Time Group 1: MRR : 0.2933
+2026-09-09 19:42:54 
+
+2026-09-09 19:42:54 POI Group 0: Recall@1: 0.2458
+2026-09-09 19:42:54 POI Group 0: Recall@5: 0.6458
+2026-09-09 19:42:54 POI Group 0: Recall@10: 0.7833
+2026-09-09 19:42:54 POI Group 0: Recall@20: 0.8250
+2026-09-09 19:42:54 POI Group 0: MRR : 0.4178
+2026-09-09 19:42:54 
+
+2026-09-09 19:42:54 POI Group 1: Recall@1: 0.1500
+2026-09-09 19:42:54 POI Group 1: Recall@5: 0.4083
+2026-09-09 19:42:54 POI Group 1: Recall@10: 0.5229
+2026-09-09 19:42:54 POI Group 1: Recall@20: 0.5854
+2026-09-09 19:42:54 POI Group 1: MRR : 0.2729
+2026-09-09 19:42:54 
+
+2026-09-09 19:42:54 At epoch 18  Stop Counter is 12 
+2026-09-09 19:42:54 Reload model
+2026-09-09 19:42:54 epoch: 19 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:43:03 Training finishes at this epoch. It takes 0.15397334098815918 min
+2026-09-09 19:43:03 Training Epoch 20/100 training loss: 60.30726916973408
+2026-09-09 19:43:03 Validation
+2026-09-09 19:43:13 Validation finishes
+2026-09-09 19:43:13 Validation results:
+2026-09-09 19:43:13 User Group 0: Recall@1: 0.1875
+2026-09-09 19:43:13 User Group 0: Recall@5: 0.5021
+2026-09-09 19:43:13 User Group 0: Recall@10: 0.6417
+2026-09-09 19:43:13 User Group 0: Recall@20: 0.7354
+2026-09-09 19:43:13 User Group 0: MRR : 0.3398
+2026-09-09 19:43:13 
+
+2026-09-09 19:43:13 User Group 1: Recall@1: 0.1500
+2026-09-09 19:43:13 User Group 1: Recall@5: 0.4292
+2026-09-09 19:43:13 User Group 1: Recall@10: 0.5417
+2026-09-09 19:43:13 User Group 1: Recall@20: 0.5896
+2026-09-09 19:43:13 User Group 1: MRR : 0.2749
+2026-09-09 19:43:13 
+
+2026-09-09 19:43:13 Time Group 0: Recall@1: 0.2021
+2026-09-09 19:43:13 Time Group 0: Recall@5: 0.5042
+2026-09-09 19:43:13 Time Group 0: Recall@10: 0.6312
+2026-09-09 19:43:13 Time Group 0: Recall@20: 0.7000
+2026-09-09 19:43:13 Time Group 0: MRR : 0.3414
+2026-09-09 19:43:13 
+
+2026-09-09 19:43:13 Time Group 1: Recall@1: 0.2375
+2026-09-09 19:43:13 Time Group 1: Recall@5: 0.4875
+2026-09-09 19:43:13 Time Group 1: Recall@10: 0.5667
+2026-09-09 19:43:13 Time Group 1: Recall@20: 0.6125
+2026-09-09 19:43:13 Time Group 1: MRR : 0.3362
+2026-09-09 19:43:13 
+
+2026-09-09 19:43:13 POI Group 0: Recall@1: 0.2667
+2026-09-09 19:43:13 POI Group 0: Recall@5: 0.6604
+2026-09-09 19:43:13 POI Group 0: Recall@10: 0.7771
+2026-09-09 19:43:13 POI Group 0: Recall@20: 0.8187
+2026-09-09 19:43:13 POI Group 0: MRR : 0.4353
+2026-09-09 19:43:13 
+
+2026-09-09 19:43:13 POI Group 1: Recall@1: 0.1542
+2026-09-09 19:43:13 POI Group 1: Recall@5: 0.4354
+2026-09-09 19:43:13 POI Group 1: Recall@10: 0.5438
+2026-09-09 19:43:13 POI Group 1: Recall@20: 0.6104
+2026-09-09 19:43:13 POI Group 1: MRR : 0.2821
+2026-09-09 19:43:13 
+
+2026-09-09 19:43:13 At epoch 19  Stop Counter is 13 
+2026-09-09 19:43:13 Reload model
+2026-09-09 19:43:13 epoch: 20 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:43:18 Training finishes at this epoch. It takes 0.08844555616378784 min
+2026-09-09 19:43:18 Training Epoch 21/100 training loss: 60.92600837120643
+2026-09-09 19:43:18 Validation
+2026-09-09 19:43:29 Validation finishes
+2026-09-09 19:43:29 Validation results:
+2026-09-09 19:43:29 User Group 0: Recall@1: 0.2021
+2026-09-09 19:43:29 User Group 0: Recall@5: 0.5354
+2026-09-09 19:43:29 User Group 0: Recall@10: 0.6667
+2026-09-09 19:43:29 User Group 0: Recall@20: 0.7271
+2026-09-09 19:43:29 User Group 0: MRR : 0.3543
+2026-09-09 19:43:29 
+
+2026-09-09 19:43:29 User Group 1: Recall@1: 0.1938
+2026-09-09 19:43:29 User Group 1: Recall@5: 0.4417
+2026-09-09 19:43:29 User Group 1: Recall@10: 0.5521
+2026-09-09 19:43:29 User Group 1: Recall@20: 0.5917
+2026-09-09 19:43:29 User Group 1: MRR : 0.3075
+2026-09-09 19:43:29 
+
+2026-09-09 19:43:29 Time Group 0: Recall@1: 0.1979
+2026-09-09 19:43:29 Time Group 0: Recall@5: 0.5000
+2026-09-09 19:43:29 Time Group 0: Recall@10: 0.6396
+2026-09-09 19:43:29 Time Group 0: Recall@20: 0.6937
+2026-09-09 19:43:29 Time Group 0: MRR : 0.3371
+2026-09-09 19:43:29 
+
+2026-09-09 19:43:29 Time Group 1: Recall@1: 0.1958
+2026-09-09 19:43:29 Time Group 1: Recall@5: 0.4292
+2026-09-09 19:43:29 Time Group 1: Recall@10: 0.5000
+2026-09-09 19:43:29 Time Group 1: Recall@20: 0.5542
+2026-09-09 19:43:29 Time Group 1: MRR : 0.2989
+2026-09-09 19:43:29 
+
+2026-09-09 19:43:29 POI Group 0: Recall@1: 0.2229
+2026-09-09 19:43:29 POI Group 0: Recall@5: 0.6375
+2026-09-09 19:43:29 POI Group 0: Recall@10: 0.7500
+2026-09-09 19:43:29 POI Group 0: Recall@20: 0.7854
+2026-09-09 19:43:29 POI Group 0: MRR : 0.4012
+2026-09-09 19:43:29 
+
+2026-09-09 19:43:29 POI Group 1: Recall@1: 0.1333
+2026-09-09 19:43:29 POI Group 1: Recall@5: 0.4062
+2026-09-09 19:43:29 POI Group 1: Recall@10: 0.5104
+2026-09-09 19:43:29 POI Group 1: Recall@20: 0.5833
+2026-09-09 19:43:29 POI Group 1: MRR : 0.2575
+2026-09-09 19:43:29 
+
+2026-09-09 19:43:29 Reload model
+2026-09-09 19:43:29 epoch: 21 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:43:38 Training finishes at this epoch. It takes 0.1535845915476481 min
+2026-09-09 19:43:38 Training Epoch 22/100 training loss: 60.35118396465595
+2026-09-09 19:43:38 Validation
+2026-09-09 19:43:48 Validation finishes
+2026-09-09 19:43:48 Validation results:
+2026-09-09 19:43:48 User Group 0: Recall@1: 0.1708
+2026-09-09 19:43:48 User Group 0: Recall@5: 0.5250
+2026-09-09 19:43:48 User Group 0: Recall@10: 0.6354
+2026-09-09 19:43:48 User Group 0: Recall@20: 0.6958
+2026-09-09 19:43:48 User Group 0: MRR : 0.3248
+2026-09-09 19:43:48 
+
+2026-09-09 19:43:48 User Group 1: Recall@1: 0.1958
+2026-09-09 19:43:48 User Group 1: Recall@5: 0.4229
+2026-09-09 19:43:48 User Group 1: Recall@10: 0.4958
+2026-09-09 19:43:48 User Group 1: Recall@20: 0.5438
+2026-09-09 19:43:48 User Group 1: MRR : 0.3021
+2026-09-09 19:43:48 
+
+2026-09-09 19:43:48 Time Group 0: Recall@1: 0.1833
+2026-09-09 19:43:48 Time Group 0: Recall@5: 0.4958
+2026-09-09 19:43:48 Time Group 0: Recall@10: 0.6167
+2026-09-09 19:43:48 Time Group 0: Recall@20: 0.6771
+2026-09-09 19:43:48 Time Group 0: MRR : 0.3217
+2026-09-09 19:43:48 
+
+2026-09-09 19:43:48 Time Group 1: Recall@1: 0.1979
+2026-09-09 19:43:48 Time Group 1: Recall@5: 0.4937
+2026-09-09 19:43:48 Time Group 1: Recall@10: 0.5708
+2026-09-09 19:43:48 Time Group 1: Recall@20: 0.6229
+2026-09-09 19:43:48 Time Group 1: MRR : 0.3279
+2026-09-09 19:43:48 
+
+2026-09-09 19:43:48 POI Group 0: Recall@1: 0.2250
+2026-09-09 19:43:48 POI Group 0: Recall@5: 0.6312
+2026-09-09 19:43:48 POI Group 0: Recall@10: 0.7542
+2026-09-09 19:43:48 POI Group 0: Recall@20: 0.8125
+2026-09-09 19:43:48 POI Group 0: MRR : 0.4009
+2026-09-09 19:43:48 
+
+2026-09-09 19:43:48 POI Group 1: Recall@1: 0.1583
+2026-09-09 19:43:48 POI Group 1: Recall@5: 0.4083
+2026-09-09 19:43:48 POI Group 1: Recall@10: 0.5125
+2026-09-09 19:43:48 POI Group 1: Recall@20: 0.5750
+2026-09-09 19:43:48 POI Group 1: MRR : 0.2695
+2026-09-09 19:43:48 
+
+2026-09-09 19:43:48 At epoch 21  Stop Counter is 0 
+2026-09-09 19:43:48 Reload model
+2026-09-09 19:43:48 epoch: 22 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:43:57 Training finishes at this epoch. It takes 0.15302669207255046 min
+2026-09-09 19:43:57 Training Epoch 23/100 training loss: 60.40454013531025
+2026-09-09 19:43:57 Validation
+2026-09-09 19:44:07 Validation finishes
+2026-09-09 19:44:07 Validation results:
+2026-09-09 19:44:07 User Group 0: Recall@1: 0.2063
+2026-09-09 19:44:07 User Group 0: Recall@5: 0.5125
+2026-09-09 19:44:07 User Group 0: Recall@10: 0.6354
+2026-09-09 19:44:07 User Group 0: Recall@20: 0.7000
+2026-09-09 19:44:07 User Group 0: MRR : 0.3445
+2026-09-09 19:44:07 
+
+2026-09-09 19:44:07 User Group 1: Recall@1: 0.1708
+2026-09-09 19:44:07 User Group 1: Recall@5: 0.4479
+2026-09-09 19:44:07 User Group 1: Recall@10: 0.5479
+2026-09-09 19:44:07 User Group 1: Recall@20: 0.5917
+2026-09-09 19:44:07 User Group 1: MRR : 0.2932
+2026-09-09 19:44:07 
+
+2026-09-09 19:44:07 Time Group 0: Recall@1: 0.1792
+2026-09-09 19:44:07 Time Group 0: Recall@5: 0.4917
+2026-09-09 19:44:07 Time Group 0: Recall@10: 0.6271
+2026-09-09 19:44:07 Time Group 0: Recall@20: 0.6833
+2026-09-09 19:44:07 Time Group 0: MRR : 0.3222
+2026-09-09 19:44:07 
+
+2026-09-09 19:44:07 Time Group 1: Recall@1: 0.2396
+2026-09-09 19:44:07 Time Group 1: Recall@5: 0.4917
+2026-09-09 19:44:07 Time Group 1: Recall@10: 0.5646
+2026-09-09 19:44:07 Time Group 1: Recall@20: 0.6104
+2026-09-09 19:44:07 Time Group 1: MRR : 0.3529
+2026-09-09 19:44:07 
+
+2026-09-09 19:44:07 POI Group 0: Recall@1: 0.2625
+2026-09-09 19:44:07 POI Group 0: Recall@5: 0.6667
+2026-09-09 19:44:07 POI Group 0: Recall@10: 0.7917
+2026-09-09 19:44:07 POI Group 0: Recall@20: 0.8271
+2026-09-09 19:44:07 POI Group 0: MRR : 0.4334
+2026-09-09 19:44:07 
+
+2026-09-09 19:44:07 POI Group 1: Recall@1: 0.1354
+2026-09-09 19:44:07 POI Group 1: Recall@5: 0.3812
+2026-09-09 19:44:07 POI Group 1: Recall@10: 0.5167
+2026-09-09 19:44:07 POI Group 1: Recall@20: 0.6104
+2026-09-09 19:44:07 POI Group 1: MRR : 0.2572
+2026-09-09 19:44:07 
+
+2026-09-09 19:44:07 At epoch 22  Stop Counter is 1 
+2026-09-09 19:44:07 Reload model
+2026-09-09 19:44:07 epoch: 23 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:44:16 Training finishes at this epoch. It takes 0.1533535083134969 min
+2026-09-09 19:44:16 Training Epoch 24/100 training loss: 60.303712111253006
+2026-09-09 19:44:16 Validation
+2026-09-09 19:44:26 Validation finishes
+2026-09-09 19:44:26 Validation results:
+2026-09-09 19:44:26 User Group 0: Recall@1: 0.2229
+2026-09-09 19:44:26 User Group 0: Recall@5: 0.4979
+2026-09-09 19:44:26 User Group 0: Recall@10: 0.6688
+2026-09-09 19:44:26 User Group 0: Recall@20: 0.7292
+2026-09-09 19:44:26 User Group 0: MRR : 0.3577
+2026-09-09 19:44:26 
+
+2026-09-09 19:44:26 User Group 1: Recall@1: 0.1687
+2026-09-09 19:44:26 User Group 1: Recall@5: 0.4250
+2026-09-09 19:44:26 User Group 1: Recall@10: 0.5167
+2026-09-09 19:44:26 User Group 1: Recall@20: 0.5667
+2026-09-09 19:44:26 User Group 1: MRR : 0.2795
+2026-09-09 19:44:26 
+
+2026-09-09 19:44:26 Time Group 0: Recall@1: 0.2021
+2026-09-09 19:44:26 Time Group 0: Recall@5: 0.4875
+2026-09-09 19:44:26 Time Group 0: Recall@10: 0.6021
+2026-09-09 19:44:26 Time Group 0: Recall@20: 0.6854
+2026-09-09 19:44:26 Time Group 0: MRR : 0.3300
+2026-09-09 19:44:26 
+
+2026-09-09 19:44:26 Time Group 1: Recall@1: 0.2333
+2026-09-09 19:44:26 Time Group 1: Recall@5: 0.4813
+2026-09-09 19:44:26 Time Group 1: Recall@10: 0.5458
+2026-09-09 19:44:26 Time Group 1: Recall@20: 0.5938
+2026-09-09 19:44:26 Time Group 1: MRR : 0.3415
+2026-09-09 19:44:26 
+
+2026-09-09 19:44:26 POI Group 0: Recall@1: 0.2104
+2026-09-09 19:44:26 POI Group 0: Recall@5: 0.6271
+2026-09-09 19:44:26 POI Group 0: Recall@10: 0.7750
+2026-09-09 19:44:26 POI Group 0: Recall@20: 0.8208
+2026-09-09 19:44:26 POI Group 0: MRR : 0.3933
+2026-09-09 19:44:26 
+
+2026-09-09 19:44:26 POI Group 1: Recall@1: 0.1354
+2026-09-09 19:44:26 POI Group 1: Recall@5: 0.3854
+2026-09-09 19:44:26 POI Group 1: Recall@10: 0.4771
+2026-09-09 19:44:26 POI Group 1: Recall@20: 0.5375
+2026-09-09 19:44:26 POI Group 1: MRR : 0.2432
+2026-09-09 19:44:26 
+
+2026-09-09 19:44:26 At epoch 23  Stop Counter is 2 
+2026-09-09 19:44:26 Reload model
+2026-09-09 19:44:26 epoch: 24 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:44:35 Training finishes at this epoch. It takes 0.15321258703867593 min
+2026-09-09 19:44:35 Training Epoch 25/100 training loss: 60.4081544142503
+2026-09-09 19:44:35 Validation
+2026-09-09 19:44:45 Validation finishes
+2026-09-09 19:44:45 Validation results:
+2026-09-09 19:44:45 User Group 0: Recall@1: 0.1812
+2026-09-09 19:44:45 User Group 0: Recall@5: 0.5417
+2026-09-09 19:44:45 User Group 0: Recall@10: 0.6625
+2026-09-09 19:44:45 User Group 0: Recall@20: 0.7354
+2026-09-09 19:44:45 User Group 0: MRR : 0.3424
+2026-09-09 19:44:45 
+
+2026-09-09 19:44:45 User Group 1: Recall@1: 0.2083
+2026-09-09 19:44:45 User Group 1: Recall@5: 0.4729
+2026-09-09 19:44:45 User Group 1: Recall@10: 0.5667
+2026-09-09 19:44:45 User Group 1: Recall@20: 0.6125
+2026-09-09 19:44:45 User Group 1: MRR : 0.3215
+2026-09-09 19:44:45 
+
+2026-09-09 19:44:45 Time Group 0: Recall@1: 0.2188
+2026-09-09 19:44:45 Time Group 0: Recall@5: 0.5458
+2026-09-09 19:44:45 Time Group 0: Recall@10: 0.6812
+2026-09-09 19:44:45 Time Group 0: Recall@20: 0.7333
+2026-09-09 19:44:45 Time Group 0: MRR : 0.3616
+2026-09-09 19:44:45 
+
+2026-09-09 19:44:45 Time Group 1: Recall@1: 0.1958
+2026-09-09 19:44:45 Time Group 1: Recall@5: 0.4292
+2026-09-09 19:44:45 Time Group 1: Recall@10: 0.5167
+2026-09-09 19:44:45 Time Group 1: Recall@20: 0.5750
+2026-09-09 19:44:45 Time Group 1: MRR : 0.3002
+2026-09-09 19:44:45 
+
+2026-09-09 19:44:45 POI Group 0: Recall@1: 0.2458
+2026-09-09 19:44:45 POI Group 0: Recall@5: 0.6729
+2026-09-09 19:44:45 POI Group 0: Recall@10: 0.8000
+2026-09-09 19:44:45 POI Group 0: Recall@20: 0.8313
+2026-09-09 19:44:45 POI Group 0: MRR : 0.4339
+2026-09-09 19:44:45 
+
+2026-09-09 19:44:45 POI Group 1: Recall@1: 0.1375
+2026-09-09 19:44:45 POI Group 1: Recall@5: 0.4188
+2026-09-09 19:44:45 POI Group 1: Recall@10: 0.5312
+2026-09-09 19:44:45 POI Group 1: Recall@20: 0.5771
+2026-09-09 19:44:45 POI Group 1: MRR : 0.2646
+2026-09-09 19:44:45 
+
+2026-09-09 19:44:45 At epoch 24  Stop Counter is 3 
+2026-09-09 19:44:45 Reload model
+2026-09-09 19:44:45 epoch: 25 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:44:54 Training finishes at this epoch. It takes 0.15347280104955038 min
+2026-09-09 19:44:54 Training Epoch 26/100 training loss: 60.501375931959885
+2026-09-09 19:44:54 Validation
+2026-09-09 19:45:04 Validation finishes
+2026-09-09 19:45:04 Validation results:
+2026-09-09 19:45:04 User Group 0: Recall@1: 0.1875
+2026-09-09 19:45:04 User Group 0: Recall@5: 0.5250
+2026-09-09 19:45:04 User Group 0: Recall@10: 0.6813
+2026-09-09 19:45:04 User Group 0: Recall@20: 0.7458
+2026-09-09 19:45:04 User Group 0: MRR : 0.3371
+2026-09-09 19:45:04 
+
+2026-09-09 19:45:04 User Group 1: Recall@1: 0.2000
+2026-09-09 19:45:04 User Group 1: Recall@5: 0.4521
+2026-09-09 19:45:04 User Group 1: Recall@10: 0.5375
+2026-09-09 19:45:04 User Group 1: Recall@20: 0.5833
+2026-09-09 19:45:04 User Group 1: MRR : 0.3119
+2026-09-09 19:45:04 
+
+2026-09-09 19:45:04 Time Group 0: Recall@1: 0.1958
+2026-09-09 19:45:04 Time Group 0: Recall@5: 0.5229
+2026-09-09 19:45:04 Time Group 0: Recall@10: 0.6417
+2026-09-09 19:45:04 Time Group 0: Recall@20: 0.7021
+2026-09-09 19:45:04 Time Group 0: MRR : 0.3411
+2026-09-09 19:45:04 
+
+2026-09-09 19:45:04 Time Group 1: Recall@1: 0.2271
+2026-09-09 19:45:04 Time Group 1: Recall@5: 0.4875
+2026-09-09 19:45:04 Time Group 1: Recall@10: 0.5833
+2026-09-09 19:45:04 Time Group 1: Recall@20: 0.6271
+2026-09-09 19:45:04 Time Group 1: MRR : 0.3454
+2026-09-09 19:45:04 
+
+2026-09-09 19:45:04 POI Group 0: Recall@1: 0.2500
+2026-09-09 19:45:04 POI Group 0: Recall@5: 0.6167
+2026-09-09 19:45:04 POI Group 0: Recall@10: 0.7375
+2026-09-09 19:45:04 POI Group 0: Recall@20: 0.7854
+2026-09-09 19:45:04 POI Group 0: MRR : 0.4116
+2026-09-09 19:45:04 
+
+2026-09-09 19:45:04 POI Group 1: Recall@1: 0.1667
+2026-09-09 19:45:04 POI Group 1: Recall@5: 0.3979
+2026-09-09 19:45:04 POI Group 1: Recall@10: 0.5021
+2026-09-09 19:45:04 POI Group 1: Recall@20: 0.5750
+2026-09-09 19:45:04 POI Group 1: MRR : 0.2739
+2026-09-09 19:45:04 
+
+2026-09-09 19:45:04 At epoch 25  Stop Counter is 4 
+2026-09-09 19:45:04 Reload model
+2026-09-09 19:45:04 epoch: 26 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:45:13 Training finishes at this epoch. It takes 0.15437297423680624 min
+2026-09-09 19:45:13 Training Epoch 27/100 training loss: 60.290142646202675
+2026-09-09 19:45:13 Validation
+2026-09-09 19:45:23 Validation finishes
+2026-09-09 19:45:23 Validation results:
+2026-09-09 19:45:23 User Group 0: Recall@1: 0.1958
+2026-09-09 19:45:23 User Group 0: Recall@5: 0.5104
+2026-09-09 19:45:23 User Group 0: Recall@10: 0.6437
+2026-09-09 19:45:23 User Group 0: Recall@20: 0.7083
+2026-09-09 19:45:23 User Group 0: MRR : 0.3419
+2026-09-09 19:45:23 
+
+2026-09-09 19:45:23 User Group 1: Recall@1: 0.1771
+2026-09-09 19:45:23 User Group 1: Recall@5: 0.4312
+2026-09-09 19:45:23 User Group 1: Recall@10: 0.5104
+2026-09-09 19:45:23 User Group 1: Recall@20: 0.5646
+2026-09-09 19:45:23 User Group 1: MRR : 0.2901
+2026-09-09 19:45:23 
+
+2026-09-09 19:45:23 Time Group 0: Recall@1: 0.1813
+2026-09-09 19:45:23 Time Group 0: Recall@5: 0.5125
+2026-09-09 19:45:23 Time Group 0: Recall@10: 0.6146
+2026-09-09 19:45:23 Time Group 0: Recall@20: 0.6667
+2026-09-09 19:45:23 Time Group 0: MRR : 0.3265
+2026-09-09 19:45:23 
+
+2026-09-09 19:45:23 Time Group 1: Recall@1: 0.2313
+2026-09-09 19:45:23 Time Group 1: Recall@5: 0.4896
+2026-09-09 19:45:23 Time Group 1: Recall@10: 0.5771
+2026-09-09 19:45:23 Time Group 1: Recall@20: 0.6250
+2026-09-09 19:45:23 Time Group 1: MRR : 0.3456
+2026-09-09 19:45:23 
+
+2026-09-09 19:45:23 POI Group 0: Recall@1: 0.2458
+2026-09-09 19:45:23 POI Group 0: Recall@5: 0.6854
+2026-09-09 19:45:23 POI Group 0: Recall@10: 0.8104
+2026-09-09 19:45:23 POI Group 0: Recall@20: 0.8583
+2026-09-09 19:45:23 POI Group 0: MRR : 0.4387
+2026-09-09 19:45:23 
+
+2026-09-09 19:45:23 POI Group 1: Recall@1: 0.1604
+2026-09-09 19:45:23 POI Group 1: Recall@5: 0.4146
+2026-09-09 19:45:23 POI Group 1: Recall@10: 0.5542
+2026-09-09 19:45:23 POI Group 1: Recall@20: 0.6167
+2026-09-09 19:45:23 POI Group 1: MRR : 0.2755
+2026-09-09 19:45:23 
+
+2026-09-09 19:45:23 At epoch 26  Stop Counter is 5 
+2026-09-09 19:45:23 Reload model
+2026-09-09 19:45:23 epoch: 27 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:45:32 Training finishes at this epoch. It takes 0.15357396205266316 min
+2026-09-09 19:45:32 Training Epoch 28/100 training loss: 60.326625237098106
+2026-09-09 19:45:32 Validation
+2026-09-09 19:45:42 Validation finishes
+2026-09-09 19:45:42 Validation results:
+2026-09-09 19:45:42 User Group 0: Recall@1: 0.2083
+2026-09-09 19:45:42 User Group 0: Recall@5: 0.5604
+2026-09-09 19:45:42 User Group 0: Recall@10: 0.6875
+2026-09-09 19:45:42 User Group 0: Recall@20: 0.7375
+2026-09-09 19:45:42 User Group 0: MRR : 0.3646
+2026-09-09 19:45:42 
+
+2026-09-09 19:45:42 User Group 1: Recall@1: 0.1979
+2026-09-09 19:45:42 User Group 1: Recall@5: 0.4937
+2026-09-09 19:45:42 User Group 1: Recall@10: 0.5687
+2026-09-09 19:45:42 User Group 1: Recall@20: 0.6104
+2026-09-09 19:45:42 User Group 1: MRR : 0.3292
+2026-09-09 19:45:42 
+
+2026-09-09 19:45:42 Time Group 0: Recall@1: 0.1667
+2026-09-09 19:45:42 Time Group 0: Recall@5: 0.4958
+2026-09-09 19:45:42 Time Group 0: Recall@10: 0.6250
+2026-09-09 19:45:42 Time Group 0: Recall@20: 0.6875
+2026-09-09 19:45:42 Time Group 0: MRR : 0.3126
+2026-09-09 19:45:42 
+
+2026-09-09 19:45:42 Time Group 1: Recall@1: 0.2375
+2026-09-09 19:45:42 Time Group 1: Recall@5: 0.4646
+2026-09-09 19:45:42 Time Group 1: Recall@10: 0.5646
+2026-09-09 19:45:42 Time Group 1: Recall@20: 0.6188
+2026-09-09 19:45:42 Time Group 1: MRR : 0.3396
+2026-09-09 19:45:42 
+
+2026-09-09 19:45:42 POI Group 0: Recall@1: 0.2708
+2026-09-09 19:45:42 POI Group 0: Recall@5: 0.6979
+2026-09-09 19:45:42 POI Group 0: Recall@10: 0.7896
+2026-09-09 19:45:42 POI Group 0: Recall@20: 0.8229
+2026-09-09 19:45:42 POI Group 0: MRR : 0.4545
+2026-09-09 19:45:42 
+
+2026-09-09 19:45:42 POI Group 1: Recall@1: 0.1646
+2026-09-09 19:45:42 POI Group 1: Recall@5: 0.4229
+2026-09-09 19:45:42 POI Group 1: Recall@10: 0.5271
+2026-09-09 19:45:42 POI Group 1: Recall@20: 0.6063
+2026-09-09 19:45:42 POI Group 1: MRR : 0.2847
+2026-09-09 19:45:42 
+
+2026-09-09 19:45:42 At epoch 27  Stop Counter is 6 
+2026-09-09 19:45:42 Reload model
+2026-09-09 19:45:42 epoch: 28 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:45:51 Training finishes at this epoch. It takes 0.15307765404383342 min
+2026-09-09 19:45:51 Training Epoch 29/100 training loss: 60.36732482910156
+2026-09-09 19:45:51 Validation
+2026-09-09 19:46:01 Validation finishes
+2026-09-09 19:46:01 Validation results:
+2026-09-09 19:46:01 User Group 0: Recall@1: 0.1792
+2026-09-09 19:46:01 User Group 0: Recall@5: 0.5354
+2026-09-09 19:46:01 User Group 0: Recall@10: 0.6437
+2026-09-09 19:46:01 User Group 0: Recall@20: 0.6958
+2026-09-09 19:46:01 User Group 0: MRR : 0.3402
+2026-09-09 19:46:01 
+
+2026-09-09 19:46:01 User Group 1: Recall@1: 0.2271
+2026-09-09 19:46:01 User Group 1: Recall@5: 0.4750
+2026-09-09 19:46:01 User Group 1: Recall@10: 0.5563
+2026-09-09 19:46:01 User Group 1: Recall@20: 0.5979
+2026-09-09 19:46:01 User Group 1: MRR : 0.3394
+2026-09-09 19:46:01 
+
+2026-09-09 19:46:01 Time Group 0: Recall@1: 0.2000
+2026-09-09 19:46:01 Time Group 0: Recall@5: 0.5292
+2026-09-09 19:46:01 Time Group 0: Recall@10: 0.6479
+2026-09-09 19:46:01 Time Group 0: Recall@20: 0.7062
+2026-09-09 19:46:01 Time Group 0: MRR : 0.3478
+2026-09-09 19:46:01 
+
+2026-09-09 19:46:01 Time Group 1: Recall@1: 0.2208
+2026-09-09 19:46:01 Time Group 1: Recall@5: 0.4375
+2026-09-09 19:46:01 Time Group 1: Recall@10: 0.5438
+2026-09-09 19:46:01 Time Group 1: Recall@20: 0.5812
+2026-09-09 19:46:01 Time Group 1: MRR : 0.3211
+2026-09-09 19:46:01 
+
+2026-09-09 19:46:01 POI Group 0: Recall@1: 0.2479
+2026-09-09 19:46:01 POI Group 0: Recall@5: 0.6562
+2026-09-09 19:46:01 POI Group 0: Recall@10: 0.7646
+2026-09-09 19:46:01 POI Group 0: Recall@20: 0.8021
+2026-09-09 19:46:01 POI Group 0: MRR : 0.4234
+2026-09-09 19:46:01 
+
+2026-09-09 19:46:01 POI Group 1: Recall@1: 0.1708
+2026-09-09 19:46:01 POI Group 1: Recall@5: 0.4146
+2026-09-09 19:46:01 POI Group 1: Recall@10: 0.5375
+2026-09-09 19:46:01 POI Group 1: Recall@20: 0.6104
+2026-09-09 19:46:01 POI Group 1: MRR : 0.2890
+2026-09-09 19:46:01 
+
+2026-09-09 19:46:01 At epoch 28  Stop Counter is 7 
+2026-09-09 19:46:01 Reload model
+2026-09-09 19:46:01 epoch: 29 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:46:10 Training finishes at this epoch. It takes 0.153521462281545 min
+2026-09-09 19:46:10 Training Epoch 30/100 training loss: 60.441146263709435
+2026-09-09 19:46:10 Validation
+2026-09-09 19:46:20 Validation finishes
+2026-09-09 19:46:20 Validation results:
+2026-09-09 19:46:20 User Group 0: Recall@1: 0.1521
+2026-09-09 19:46:20 User Group 0: Recall@5: 0.5042
+2026-09-09 19:46:20 User Group 0: Recall@10: 0.6292
+2026-09-09 19:46:20 User Group 0: Recall@20: 0.6958
+2026-09-09 19:46:20 User Group 0: MRR : 0.3126
+2026-09-09 19:46:20 
+
+2026-09-09 19:46:20 User Group 1: Recall@1: 0.1833
+2026-09-09 19:46:20 User Group 1: Recall@5: 0.4667
+2026-09-09 19:46:20 User Group 1: Recall@10: 0.5792
+2026-09-09 19:46:20 User Group 1: Recall@20: 0.6021
+2026-09-09 19:46:20 User Group 1: MRR : 0.3163
+2026-09-09 19:46:20 
+
+2026-09-09 19:46:20 Time Group 0: Recall@1: 0.1854
+2026-09-09 19:46:20 Time Group 0: Recall@5: 0.5042
+2026-09-09 19:46:20 Time Group 0: Recall@10: 0.6438
+2026-09-09 19:46:20 Time Group 0: Recall@20: 0.7000
+2026-09-09 19:46:20 Time Group 0: MRR : 0.3338
+2026-09-09 19:46:20 
+
+2026-09-09 19:46:20 Time Group 1: Recall@1: 0.2146
+2026-09-09 19:46:20 Time Group 1: Recall@5: 0.4500
+2026-09-09 19:46:20 Time Group 1: Recall@10: 0.5542
+2026-09-09 19:46:20 Time Group 1: Recall@20: 0.6104
+2026-09-09 19:46:20 Time Group 1: MRR : 0.3233
+2026-09-09 19:46:20 
+
+2026-09-09 19:46:20 POI Group 0: Recall@1: 0.2229
+2026-09-09 19:46:20 POI Group 0: Recall@5: 0.6771
+2026-09-09 19:46:20 POI Group 0: Recall@10: 0.8125
+2026-09-09 19:46:20 POI Group 0: Recall@20: 0.8542
+2026-09-09 19:46:20 POI Group 0: MRR : 0.4130
+2026-09-09 19:46:20 
+
+2026-09-09 19:46:20 POI Group 1: Recall@1: 0.1250
+2026-09-09 19:46:20 POI Group 1: Recall@5: 0.3979
+2026-09-09 19:46:20 POI Group 1: Recall@10: 0.4917
+2026-09-09 19:46:20 POI Group 1: Recall@20: 0.5667
+2026-09-09 19:46:20 POI Group 1: MRR : 0.2457
+2026-09-09 19:46:20 
+
+2026-09-09 19:46:20 At epoch 29  Stop Counter is 8 
+2026-09-09 19:46:20 Reload model
+2026-09-09 19:46:20 epoch: 30 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:46:25 Training finishes at this epoch. It takes 0.08678391774495443 min
+2026-09-09 19:46:25 Training Epoch 31/100 training loss: 60.74886204646184
+2026-09-09 19:46:25 Validation
+2026-09-09 19:46:35 Validation finishes
+2026-09-09 19:46:35 Validation results:
+2026-09-09 19:46:35 User Group 0: Recall@1: 0.2125
+2026-09-09 19:46:35 User Group 0: Recall@5: 0.5500
+2026-09-09 19:46:35 User Group 0: Recall@10: 0.6750
+2026-09-09 19:46:35 User Group 0: Recall@20: 0.7292
+2026-09-09 19:46:35 User Group 0: MRR : 0.3578
+2026-09-09 19:46:35 
+
+2026-09-09 19:46:35 User Group 1: Recall@1: 0.1792
+2026-09-09 19:46:35 User Group 1: Recall@5: 0.4479
+2026-09-09 19:46:35 User Group 1: Recall@10: 0.5417
+2026-09-09 19:46:35 User Group 1: Recall@20: 0.5875
+2026-09-09 19:46:35 User Group 1: MRR : 0.2949
+2026-09-09 19:46:35 
+
+2026-09-09 19:46:35 Time Group 0: Recall@1: 0.1979
+2026-09-09 19:46:35 Time Group 0: Recall@5: 0.5229
+2026-09-09 19:46:35 Time Group 0: Recall@10: 0.6375
+2026-09-09 19:46:35 Time Group 0: Recall@20: 0.6938
+2026-09-09 19:46:35 Time Group 0: MRR : 0.3404
+2026-09-09 19:46:35 
+
+2026-09-09 19:46:35 Time Group 1: Recall@1: 0.1917
+2026-09-09 19:46:35 Time Group 1: Recall@5: 0.4229
+2026-09-09 19:46:35 Time Group 1: Recall@10: 0.5083
+2026-09-09 19:46:35 Time Group 1: Recall@20: 0.5625
+2026-09-09 19:46:35 Time Group 1: MRR : 0.2948
+2026-09-09 19:46:35 
+
+2026-09-09 19:46:35 POI Group 0: Recall@1: 0.2646
+2026-09-09 19:46:35 POI Group 0: Recall@5: 0.6708
+2026-09-09 19:46:35 POI Group 0: Recall@10: 0.7979
+2026-09-09 19:46:35 POI Group 0: Recall@20: 0.8375
+2026-09-09 19:46:35 POI Group 0: MRR : 0.4372
+2026-09-09 19:46:35 
+
+2026-09-09 19:46:35 POI Group 1: Recall@1: 0.1583
+2026-09-09 19:46:35 POI Group 1: Recall@5: 0.4208
+2026-09-09 19:46:35 POI Group 1: Recall@10: 0.5187
+2026-09-09 19:46:35 POI Group 1: Recall@20: 0.5812
+2026-09-09 19:46:35 POI Group 1: MRR : 0.2789
+2026-09-09 19:46:35 
+
+2026-09-09 19:46:35 Reload model
+2026-09-09 19:46:35 epoch: 31 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:46:45 Training finishes at this epoch. It takes 0.15333161354064942 min
+2026-09-09 19:46:45 Training Epoch 32/100 training loss: 60.104128910945015
+2026-09-09 19:46:45 Validation
+2026-09-09 19:46:54 Validation finishes
+2026-09-09 19:46:54 Validation results:
+2026-09-09 19:46:54 User Group 0: Recall@1: 0.1729
+2026-09-09 19:46:54 User Group 0: Recall@5: 0.5062
+2026-09-09 19:46:54 User Group 0: Recall@10: 0.6437
+2026-09-09 19:46:54 User Group 0: Recall@20: 0.7083
+2026-09-09 19:46:54 User Group 0: MRR : 0.3220
+2026-09-09 19:46:54 
+
+2026-09-09 19:46:54 User Group 1: Recall@1: 0.2208
+2026-09-09 19:46:54 User Group 1: Recall@5: 0.4625
+2026-09-09 19:46:54 User Group 1: Recall@10: 0.5708
+2026-09-09 19:46:54 User Group 1: Recall@20: 0.6000
+2026-09-09 19:46:54 User Group 1: MRR : 0.3346
+2026-09-09 19:46:54 
+
+2026-09-09 19:46:54 Time Group 0: Recall@1: 0.2104
+2026-09-09 19:46:54 Time Group 0: Recall@5: 0.5333
+2026-09-09 19:46:54 Time Group 0: Recall@10: 0.6542
+2026-09-09 19:46:54 Time Group 0: Recall@20: 0.7104
+2026-09-09 19:46:54 Time Group 0: MRR : 0.3562
+2026-09-09 19:46:54 
+
+2026-09-09 19:46:54 Time Group 1: Recall@1: 0.2229
+2026-09-09 19:46:54 Time Group 1: Recall@5: 0.4729
+2026-09-09 19:46:54 Time Group 1: Recall@10: 0.5500
+2026-09-09 19:46:54 Time Group 1: Recall@20: 0.6125
+2026-09-09 19:46:54 Time Group 1: MRR : 0.3332
+2026-09-09 19:46:54 
+
+2026-09-09 19:46:54 POI Group 0: Recall@1: 0.2792
+2026-09-09 19:46:54 POI Group 0: Recall@5: 0.7083
+2026-09-09 19:46:54 POI Group 0: Recall@10: 0.7917
+2026-09-09 19:46:54 POI Group 0: Recall@20: 0.8500
+2026-09-09 19:46:54 POI Group 0: MRR : 0.4573
+2026-09-09 19:46:54 
+
+2026-09-09 19:46:54 POI Group 1: Recall@1: 0.1833
+2026-09-09 19:46:54 POI Group 1: Recall@5: 0.4271
+2026-09-09 19:46:54 POI Group 1: Recall@10: 0.5521
+2026-09-09 19:46:54 POI Group 1: Recall@20: 0.6021
+2026-09-09 19:46:54 POI Group 1: MRR : 0.2932
+2026-09-09 19:46:54 
+
+2026-09-09 19:46:54 At epoch 31  Stop Counter is 0 
+2026-09-09 19:46:54 Reload model
+2026-09-09 19:46:54 epoch: 32 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:47:04 Training finishes at this epoch. It takes 0.15439136028289796 min
+2026-09-09 19:47:04 Training Epoch 33/100 training loss: 60.38392521784856
+2026-09-09 19:47:04 Validation
+2026-09-09 19:47:13 Validation finishes
+2026-09-09 19:47:13 Validation results:
+2026-09-09 19:47:13 User Group 0: Recall@1: 0.1833
+2026-09-09 19:47:13 User Group 0: Recall@5: 0.5125
+2026-09-09 19:47:13 User Group 0: Recall@10: 0.6562
+2026-09-09 19:47:13 User Group 0: Recall@20: 0.7167
+2026-09-09 19:47:13 User Group 0: MRR : 0.3298
+2026-09-09 19:47:13 
+
+2026-09-09 19:47:13 User Group 1: Recall@1: 0.1687
+2026-09-09 19:47:13 User Group 1: Recall@5: 0.4104
+2026-09-09 19:47:13 User Group 1: Recall@10: 0.4896
+2026-09-09 19:47:13 User Group 1: Recall@20: 0.5417
+2026-09-09 19:47:13 User Group 1: MRR : 0.2760
+2026-09-09 19:47:13 
+
+2026-09-09 19:47:13 Time Group 0: Recall@1: 0.1583
+2026-09-09 19:47:13 Time Group 0: Recall@5: 0.5271
+2026-09-09 19:47:13 Time Group 0: Recall@10: 0.6396
+2026-09-09 19:47:13 Time Group 0: Recall@20: 0.6875
+2026-09-09 19:47:13 Time Group 0: MRR : 0.3184
+2026-09-09 19:47:13 
+
+2026-09-09 19:47:13 Time Group 1: Recall@1: 0.2021
+2026-09-09 19:47:13 Time Group 1: Recall@5: 0.4500
+2026-09-09 19:47:13 Time Group 1: Recall@10: 0.5292
+2026-09-09 19:47:13 Time Group 1: Recall@20: 0.5667
+2026-09-09 19:47:13 Time Group 1: MRR : 0.3092
+2026-09-09 19:47:13 
+
+2026-09-09 19:47:13 POI Group 0: Recall@1: 0.2729
+2026-09-09 19:47:13 POI Group 0: Recall@5: 0.6646
+2026-09-09 19:47:13 POI Group 0: Recall@10: 0.8000
+2026-09-09 19:47:13 POI Group 0: Recall@20: 0.8375
+2026-09-09 19:47:13 POI Group 0: MRR : 0.4445
+2026-09-09 19:47:13 
+
+2026-09-09 19:47:13 POI Group 1: Recall@1: 0.1500
+2026-09-09 19:47:13 POI Group 1: Recall@5: 0.4250
+2026-09-09 19:47:13 POI Group 1: Recall@10: 0.5417
+2026-09-09 19:47:13 POI Group 1: Recall@20: 0.5875
+2026-09-09 19:47:13 POI Group 1: MRR : 0.2734
+2026-09-09 19:47:13 
+
+2026-09-09 19:47:13 At epoch 32  Stop Counter is 1 
+2026-09-09 19:47:13 Reload model
+2026-09-09 19:47:13 epoch: 33 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:47:23 Training finishes at this epoch. It takes 0.15343534151713054 min
+2026-09-09 19:47:23 Training Epoch 34/100 training loss: 60.44971466064453
+2026-09-09 19:47:23 Validation
+2026-09-09 19:47:32 Validation finishes
+2026-09-09 19:47:32 Validation results:
+2026-09-09 19:47:32 User Group 0: Recall@1: 0.1896
+2026-09-09 19:47:32 User Group 0: Recall@5: 0.5354
+2026-09-09 19:47:32 User Group 0: Recall@10: 0.6625
+2026-09-09 19:47:32 User Group 0: Recall@20: 0.7146
+2026-09-09 19:47:32 User Group 0: MRR : 0.3462
+2026-09-09 19:47:32 
+
+2026-09-09 19:47:32 User Group 1: Recall@1: 0.1458
+2026-09-09 19:47:32 User Group 1: Recall@5: 0.4229
+2026-09-09 19:47:32 User Group 1: Recall@10: 0.5021
+2026-09-09 19:47:32 User Group 1: Recall@20: 0.5542
+2026-09-09 19:47:32 User Group 1: MRR : 0.2698
+2026-09-09 19:47:32 
+
+2026-09-09 19:47:32 Time Group 0: Recall@1: 0.1958
+2026-09-09 19:47:32 Time Group 0: Recall@5: 0.5417
+2026-09-09 19:47:32 Time Group 0: Recall@10: 0.6396
+2026-09-09 19:47:32 Time Group 0: Recall@20: 0.6854
+2026-09-09 19:47:32 Time Group 0: MRR : 0.3468
+2026-09-09 19:47:32 
+
+2026-09-09 19:47:32 Time Group 1: Recall@1: 0.2063
+2026-09-09 19:47:32 Time Group 1: Recall@5: 0.4458
+2026-09-09 19:47:32 Time Group 1: Recall@10: 0.5250
+2026-09-09 19:47:32 Time Group 1: Recall@20: 0.5896
+2026-09-09 19:47:32 Time Group 1: MRR : 0.3100
+2026-09-09 19:47:32 
+
+2026-09-09 19:47:32 POI Group 0: Recall@1: 0.2958
+2026-09-09 19:47:32 POI Group 0: Recall@5: 0.6729
+2026-09-09 19:47:32 POI Group 0: Recall@10: 0.7896
+2026-09-09 19:47:32 POI Group 0: Recall@20: 0.8354
+2026-09-09 19:47:32 POI Group 0: MRR : 0.4588
+2026-09-09 19:47:32 
+
+2026-09-09 19:47:32 POI Group 1: Recall@1: 0.1625
+2026-09-09 19:47:32 POI Group 1: Recall@5: 0.4250
+2026-09-09 19:47:32 POI Group 1: Recall@10: 0.5396
+2026-09-09 19:47:32 POI Group 1: Recall@20: 0.6063
+2026-09-09 19:47:32 POI Group 1: MRR : 0.2813
+2026-09-09 19:47:32 
+
+2026-09-09 19:47:32 At epoch 33  Stop Counter is 2 
+2026-09-09 19:47:32 Reload model
+2026-09-09 19:47:32 epoch: 34 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:47:42 Training finishes at this epoch. It takes 0.15291783412297566 min
+2026-09-09 19:47:42 Training Epoch 35/100 training loss: 60.437481513390175
+2026-09-09 19:47:42 Validation
+2026-09-09 19:47:51 Validation finishes
+2026-09-09 19:47:51 Validation results:
+2026-09-09 19:47:51 User Group 0: Recall@1: 0.2167
+2026-09-09 19:47:51 User Group 0: Recall@5: 0.5271
+2026-09-09 19:47:51 User Group 0: Recall@10: 0.6417
+2026-09-09 19:47:51 User Group 0: Recall@20: 0.7146
+2026-09-09 19:47:51 User Group 0: MRR : 0.3604
+2026-09-09 19:47:51 
+
+2026-09-09 19:47:51 User Group 1: Recall@1: 0.1792
+2026-09-09 19:47:51 User Group 1: Recall@5: 0.4521
+2026-09-09 19:47:51 User Group 1: Recall@10: 0.5292
+2026-09-09 19:47:51 User Group 1: Recall@20: 0.5771
+2026-09-09 19:47:51 User Group 1: MRR : 0.2996
+2026-09-09 19:47:51 
+
+2026-09-09 19:47:51 Time Group 0: Recall@1: 0.1875
+2026-09-09 19:47:51 Time Group 0: Recall@5: 0.5250
+2026-09-09 19:47:51 Time Group 0: Recall@10: 0.6479
+2026-09-09 19:47:51 Time Group 0: Recall@20: 0.7021
+2026-09-09 19:47:51 Time Group 0: MRR : 0.3361
+2026-09-09 19:47:51 
+
+2026-09-09 19:47:51 Time Group 1: Recall@1: 0.2271
+2026-09-09 19:47:51 Time Group 1: Recall@5: 0.4688
+2026-09-09 19:47:51 Time Group 1: Recall@10: 0.5604
+2026-09-09 19:47:51 Time Group 1: Recall@20: 0.6146
+2026-09-09 19:47:51 Time Group 1: MRR : 0.3362
+2026-09-09 19:47:51 
+
+2026-09-09 19:47:51 POI Group 0: Recall@1: 0.2437
+2026-09-09 19:47:51 POI Group 0: Recall@5: 0.6521
+2026-09-09 19:47:51 POI Group 0: Recall@10: 0.7875
+2026-09-09 19:47:51 POI Group 0: Recall@20: 0.8292
+2026-09-09 19:47:51 POI Group 0: MRR : 0.4234
+2026-09-09 19:47:51 
+
+2026-09-09 19:47:51 POI Group 1: Recall@1: 0.1375
+2026-09-09 19:47:51 POI Group 1: Recall@5: 0.4104
+2026-09-09 19:47:51 POI Group 1: Recall@10: 0.5083
+2026-09-09 19:47:51 POI Group 1: Recall@20: 0.5917
+2026-09-09 19:47:51 POI Group 1: MRR : 0.2593
+2026-09-09 19:47:51 
+
+2026-09-09 19:47:51 At epoch 34  Stop Counter is 3 
+2026-09-09 19:47:51 Reload model
+2026-09-09 19:47:51 epoch: 35 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:48:00 Training finishes at this epoch. It takes 0.15341840982437133 min
+2026-09-09 19:48:00 Training Epoch 36/100 training loss: 60.449360187237076
+2026-09-09 19:48:00 Validation
+2026-09-09 19:48:10 Validation finishes
+2026-09-09 19:48:10 Validation results:
+2026-09-09 19:48:10 User Group 0: Recall@1: 0.1625
+2026-09-09 19:48:10 User Group 0: Recall@5: 0.5042
+2026-09-09 19:48:10 User Group 0: Recall@10: 0.6479
+2026-09-09 19:48:10 User Group 0: Recall@20: 0.7000
+2026-09-09 19:48:10 User Group 0: MRR : 0.3129
+2026-09-09 19:48:10 
+
+2026-09-09 19:48:10 User Group 1: Recall@1: 0.1521
+2026-09-09 19:48:10 User Group 1: Recall@5: 0.4375
+2026-09-09 19:48:10 User Group 1: Recall@10: 0.5583
+2026-09-09 19:48:10 User Group 1: Recall@20: 0.6000
+2026-09-09 19:48:10 User Group 1: MRR : 0.2865
+2026-09-09 19:48:10 
+
+2026-09-09 19:48:10 Time Group 0: Recall@1: 0.1833
+2026-09-09 19:48:10 Time Group 0: Recall@5: 0.4813
+2026-09-09 19:48:10 Time Group 0: Recall@10: 0.5875
+2026-09-09 19:48:10 Time Group 0: Recall@20: 0.6292
+2026-09-09 19:48:10 Time Group 0: MRR : 0.3192
+2026-09-09 19:48:10 
+
+2026-09-09 19:48:10 Time Group 1: Recall@1: 0.2313
+2026-09-09 19:48:10 Time Group 1: Recall@5: 0.4667
+2026-09-09 19:48:10 Time Group 1: Recall@10: 0.5437
+2026-09-09 19:48:10 Time Group 1: Recall@20: 0.5813
+2026-09-09 19:48:10 Time Group 1: MRR : 0.3349
+2026-09-09 19:48:10 
+
+2026-09-09 19:48:10 POI Group 0: Recall@1: 0.2417
+2026-09-09 19:48:10 POI Group 0: Recall@5: 0.6771
+2026-09-09 19:48:10 POI Group 0: Recall@10: 0.7937
+2026-09-09 19:48:10 POI Group 0: Recall@20: 0.8250
+2026-09-09 19:48:10 POI Group 0: MRR : 0.4153
+2026-09-09 19:48:10 
+
+2026-09-09 19:48:10 POI Group 1: Recall@1: 0.1333
+2026-09-09 19:48:10 POI Group 1: Recall@5: 0.4271
+2026-09-09 19:48:10 POI Group 1: Recall@10: 0.5271
+2026-09-09 19:48:10 POI Group 1: Recall@20: 0.5875
+2026-09-09 19:48:10 POI Group 1: MRR : 0.2631
+2026-09-09 19:48:10 
+
+2026-09-09 19:48:10 At epoch 35  Stop Counter is 4 
+2026-09-09 19:48:10 Reload model
+2026-09-09 19:48:10 epoch: 36 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:48:19 Training finishes at this epoch. It takes 0.1531178077061971 min
+2026-09-09 19:48:19 Training Epoch 37/100 training loss: 60.44577319805439
+2026-09-09 19:48:19 Validation
+2026-09-09 19:48:29 Validation finishes
+2026-09-09 19:48:29 Validation results:
+2026-09-09 19:48:29 User Group 0: Recall@1: 0.2063
+2026-09-09 19:48:29 User Group 0: Recall@5: 0.5417
+2026-09-09 19:48:29 User Group 0: Recall@10: 0.6729
+2026-09-09 19:48:29 User Group 0: Recall@20: 0.7479
+2026-09-09 19:48:29 User Group 0: MRR : 0.3602
+2026-09-09 19:48:29 
+
+2026-09-09 19:48:29 User Group 1: Recall@1: 0.1375
+2026-09-09 19:48:29 User Group 1: Recall@5: 0.4354
+2026-09-09 19:48:29 User Group 1: Recall@10: 0.5187
+2026-09-09 19:48:29 User Group 1: Recall@20: 0.5667
+2026-09-09 19:48:29 User Group 1: MRR : 0.2644
+2026-09-09 19:48:29 
+
+2026-09-09 19:48:29 Time Group 0: Recall@1: 0.1813
+2026-09-09 19:48:29 Time Group 0: Recall@5: 0.5146
+2026-09-09 19:48:29 Time Group 0: Recall@10: 0.6229
+2026-09-09 19:48:29 Time Group 0: Recall@20: 0.6750
+2026-09-09 19:48:29 Time Group 0: MRR : 0.3323
+2026-09-09 19:48:29 
+
+2026-09-09 19:48:29 Time Group 1: Recall@1: 0.2625
+2026-09-09 19:48:29 Time Group 1: Recall@5: 0.4813
+2026-09-09 19:48:29 Time Group 1: Recall@10: 0.5521
+2026-09-09 19:48:29 Time Group 1: Recall@20: 0.6125
+2026-09-09 19:48:29 Time Group 1: MRR : 0.3561
+2026-09-09 19:48:29 
+
+2026-09-09 19:48:29 POI Group 0: Recall@1: 0.2604
+2026-09-09 19:48:29 POI Group 0: Recall@5: 0.6583
+2026-09-09 19:48:29 POI Group 0: Recall@10: 0.8083
+2026-09-09 19:48:29 POI Group 0: Recall@20: 0.8333
+2026-09-09 19:48:29 POI Group 0: MRR : 0.4389
+2026-09-09 19:48:29 
+
+2026-09-09 19:48:29 POI Group 1: Recall@1: 0.1375
+2026-09-09 19:48:29 POI Group 1: Recall@5: 0.4250
+2026-09-09 19:48:29 POI Group 1: Recall@10: 0.5438
+2026-09-09 19:48:29 POI Group 1: Recall@20: 0.5938
+2026-09-09 19:48:29 POI Group 1: MRR : 0.2656
+2026-09-09 19:48:29 
+
+2026-09-09 19:48:29 At epoch 36  Stop Counter is 5 
+2026-09-09 19:48:29 Reload model
+2026-09-09 19:48:29 epoch: 37 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:48:38 Training finishes at this epoch. It takes 0.1532869815826416 min
+2026-09-09 19:48:38 Training Epoch 38/100 training loss: 60.37378369844877
+2026-09-09 19:48:38 Validation
+2026-09-09 19:48:48 Validation finishes
+2026-09-09 19:48:48 Validation results:
+2026-09-09 19:48:48 User Group 0: Recall@1: 0.2000
+2026-09-09 19:48:48 User Group 0: Recall@5: 0.5125
+2026-09-09 19:48:48 User Group 0: Recall@10: 0.6417
+2026-09-09 19:48:48 User Group 0: Recall@20: 0.6937
+2026-09-09 19:48:48 User Group 0: MRR : 0.3432
+2026-09-09 19:48:48 
+
+2026-09-09 19:48:48 User Group 1: Recall@1: 0.1979
+2026-09-09 19:48:48 User Group 1: Recall@5: 0.4750
+2026-09-09 19:48:48 User Group 1: Recall@10: 0.5479
+2026-09-09 19:48:48 User Group 1: Recall@20: 0.5833
+2026-09-09 19:48:48 User Group 1: MRR : 0.3152
+2026-09-09 19:48:48 
+
+2026-09-09 19:48:48 Time Group 0: Recall@1: 0.1729
+2026-09-09 19:48:48 Time Group 0: Recall@5: 0.5042
+2026-09-09 19:48:48 Time Group 0: Recall@10: 0.6396
+2026-09-09 19:48:48 Time Group 0: Recall@20: 0.6979
+2026-09-09 19:48:48 Time Group 0: MRR : 0.3228
+2026-09-09 19:48:48 
+
+2026-09-09 19:48:48 Time Group 1: Recall@1: 0.2083
+2026-09-09 19:48:48 Time Group 1: Recall@5: 0.4708
+2026-09-09 19:48:48 Time Group 1: Recall@10: 0.5625
+2026-09-09 19:48:48 Time Group 1: Recall@20: 0.5938
+2026-09-09 19:48:48 Time Group 1: MRR : 0.3192
+2026-09-09 19:48:48 
+
+2026-09-09 19:48:48 POI Group 0: Recall@1: 0.2333
+2026-09-09 19:48:48 POI Group 0: Recall@5: 0.6521
+2026-09-09 19:48:48 POI Group 0: Recall@10: 0.7854
+2026-09-09 19:48:48 POI Group 0: Recall@20: 0.8292
+2026-09-09 19:48:48 POI Group 0: MRR : 0.4238
+2026-09-09 19:48:48 
+
+2026-09-09 19:48:48 POI Group 1: Recall@1: 0.1250
+2026-09-09 19:48:48 POI Group 1: Recall@5: 0.4021
+2026-09-09 19:48:48 POI Group 1: Recall@10: 0.5354
+2026-09-09 19:48:48 POI Group 1: Recall@20: 0.6188
+2026-09-09 19:48:48 POI Group 1: MRR : 0.2566
+2026-09-09 19:48:48 
+
+2026-09-09 19:48:48 At epoch 37  Stop Counter is 6 
+2026-09-09 19:48:48 Reload model
+2026-09-09 19:48:48 epoch: 38 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:48:57 Training finishes at this epoch. It takes 0.15498345295588176 min
+2026-09-09 19:48:57 Training Epoch 39/100 training loss: 60.366493518535904
+2026-09-09 19:48:57 Validation
+2026-09-09 19:49:07 Validation finishes
+2026-09-09 19:49:07 Validation results:
+2026-09-09 19:49:07 User Group 0: Recall@1: 0.1688
+2026-09-09 19:49:07 User Group 0: Recall@5: 0.5000
+2026-09-09 19:49:07 User Group 0: Recall@10: 0.6083
+2026-09-09 19:49:07 User Group 0: Recall@20: 0.6896
+2026-09-09 19:49:07 User Group 0: MRR : 0.3149
+2026-09-09 19:49:07 
+
+2026-09-09 19:49:07 User Group 1: Recall@1: 0.1771
+2026-09-09 19:49:07 User Group 1: Recall@5: 0.4750
+2026-09-09 19:49:07 User Group 1: Recall@10: 0.5417
+2026-09-09 19:49:07 User Group 1: Recall@20: 0.5812
+2026-09-09 19:49:07 User Group 1: MRR : 0.3062
+2026-09-09 19:49:07 
+
+2026-09-09 19:49:07 Time Group 0: Recall@1: 0.1604
+2026-09-09 19:49:07 Time Group 0: Recall@5: 0.5167
+2026-09-09 19:49:07 Time Group 0: Recall@10: 0.6375
+2026-09-09 19:49:07 Time Group 0: Recall@20: 0.7021
+2026-09-09 19:49:07 Time Group 0: MRR : 0.3210
+2026-09-09 19:49:07 
+
+2026-09-09 19:49:07 Time Group 1: Recall@1: 0.1833
+2026-09-09 19:49:07 Time Group 1: Recall@5: 0.4688
+2026-09-09 19:49:07 Time Group 1: Recall@10: 0.5750
+2026-09-09 19:49:07 Time Group 1: Recall@20: 0.6188
+2026-09-09 19:49:07 Time Group 1: MRR : 0.3118
+2026-09-09 19:49:07 
+
+2026-09-09 19:49:07 POI Group 0: Recall@1: 0.2271
+2026-09-09 19:49:07 POI Group 0: Recall@5: 0.6542
+2026-09-09 19:49:07 POI Group 0: Recall@10: 0.7562
+2026-09-09 19:49:07 POI Group 0: Recall@20: 0.8104
+2026-09-09 19:49:07 POI Group 0: MRR : 0.4089
+2026-09-09 19:49:07 
+
+2026-09-09 19:49:07 POI Group 1: Recall@1: 0.1688
+2026-09-09 19:49:07 POI Group 1: Recall@5: 0.4125
+2026-09-09 19:49:07 POI Group 1: Recall@10: 0.4854
+2026-09-09 19:49:07 POI Group 1: Recall@20: 0.5521
+2026-09-09 19:49:07 POI Group 1: MRR : 0.2746
+2026-09-09 19:49:07 
+
+2026-09-09 19:49:07 At epoch 38  Stop Counter is 7 
+2026-09-09 19:49:07 Reload model
+2026-09-09 19:49:07 epoch: 39 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:49:16 Training finishes at this epoch. It takes 0.15377794504165648 min
+2026-09-09 19:49:16 Training Epoch 40/100 training loss: 60.2916380075308
+2026-09-09 19:49:16 Validation
+2026-09-09 19:49:26 Validation finishes
+2026-09-09 19:49:26 Validation results:
+2026-09-09 19:49:26 User Group 0: Recall@1: 0.1938
+2026-09-09 19:49:26 User Group 0: Recall@5: 0.5479
+2026-09-09 19:49:26 User Group 0: Recall@10: 0.6833
+2026-09-09 19:49:26 User Group 0: Recall@20: 0.7354
+2026-09-09 19:49:26 User Group 0: MRR : 0.3477
+2026-09-09 19:49:26 
+
+2026-09-09 19:49:26 User Group 1: Recall@1: 0.1833
+2026-09-09 19:49:26 User Group 1: Recall@5: 0.4729
+2026-09-09 19:49:26 User Group 1: Recall@10: 0.5521
+2026-09-09 19:49:26 User Group 1: Recall@20: 0.6021
+2026-09-09 19:49:26 User Group 1: MRR : 0.3100
+2026-09-09 19:49:26 
+
+2026-09-09 19:49:26 Time Group 0: Recall@1: 0.1625
+2026-09-09 19:49:26 Time Group 0: Recall@5: 0.4979
+2026-09-09 19:49:26 Time Group 0: Recall@10: 0.6208
+2026-09-09 19:49:26 Time Group 0: Recall@20: 0.6688
+2026-09-09 19:49:26 Time Group 0: MRR : 0.3150
+2026-09-09 19:49:26 
+
+2026-09-09 19:49:26 Time Group 1: Recall@1: 0.1917
+2026-09-09 19:49:26 Time Group 1: Recall@5: 0.4438
+2026-09-09 19:49:26 Time Group 1: Recall@10: 0.5208
+2026-09-09 19:49:26 Time Group 1: Recall@20: 0.5812
+2026-09-09 19:49:26 Time Group 1: MRR : 0.3070
+2026-09-09 19:49:26 
+
+2026-09-09 19:49:26 POI Group 0: Recall@1: 0.2396
+2026-09-09 19:49:26 POI Group 0: Recall@5: 0.6646
+2026-09-09 19:49:26 POI Group 0: Recall@10: 0.7792
+2026-09-09 19:49:26 POI Group 0: Recall@20: 0.8250
+2026-09-09 19:49:26 POI Group 0: MRR : 0.4197
+2026-09-09 19:49:26 
+
+2026-09-09 19:49:26 POI Group 1: Recall@1: 0.1354
+2026-09-09 19:49:26 POI Group 1: Recall@5: 0.3771
+2026-09-09 19:49:26 POI Group 1: Recall@10: 0.4813
+2026-09-09 19:49:26 POI Group 1: Recall@20: 0.5583
+2026-09-09 19:49:26 POI Group 1: MRR : 0.2472
+2026-09-09 19:49:26 
+
+2026-09-09 19:49:26 At epoch 39  Stop Counter is 8 
+2026-09-09 19:49:26 Reload model
+2026-09-09 19:49:26 epoch: 40 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:49:35 Training finishes at this epoch. It takes 0.15340234438578287 min
+2026-09-09 19:49:35 Training Epoch 41/100 training loss: 60.42142046414889
+2026-09-09 19:49:35 Validation
+2026-09-09 19:49:45 Validation finishes
+2026-09-09 19:49:45 Validation results:
+2026-09-09 19:49:45 User Group 0: Recall@1: 0.2000
+2026-09-09 19:49:45 User Group 0: Recall@5: 0.5333
+2026-09-09 19:49:45 User Group 0: Recall@10: 0.6250
+2026-09-09 19:49:45 User Group 0: Recall@20: 0.6979
+2026-09-09 19:49:45 User Group 0: MRR : 0.3431
+2026-09-09 19:49:45 
+
+2026-09-09 19:49:45 User Group 1: Recall@1: 0.1646
+2026-09-09 19:49:45 User Group 1: Recall@5: 0.4333
+2026-09-09 19:49:45 User Group 1: Recall@10: 0.5229
+2026-09-09 19:49:45 User Group 1: Recall@20: 0.5896
+2026-09-09 19:49:45 User Group 1: MRR : 0.2861
+2026-09-09 19:49:45 
+
+2026-09-09 19:49:45 Time Group 0: Recall@1: 0.1396
+2026-09-09 19:49:45 Time Group 0: Recall@5: 0.4833
+2026-09-09 19:49:45 Time Group 0: Recall@10: 0.6292
+2026-09-09 19:49:45 Time Group 0: Recall@20: 0.6958
+2026-09-09 19:49:45 Time Group 0: MRR : 0.2963
+2026-09-09 19:49:45 
+
+2026-09-09 19:49:45 Time Group 1: Recall@1: 0.2417
+2026-09-09 19:49:45 Time Group 1: Recall@5: 0.5229
+2026-09-09 19:49:45 Time Group 1: Recall@10: 0.5958
+2026-09-09 19:49:45 Time Group 1: Recall@20: 0.6333
+2026-09-09 19:49:45 Time Group 1: MRR : 0.3626
+2026-09-09 19:49:45 
+
+2026-09-09 19:49:45 POI Group 0: Recall@1: 0.2458
+2026-09-09 19:49:45 POI Group 0: Recall@5: 0.6479
+2026-09-09 19:49:45 POI Group 0: Recall@10: 0.7792
+2026-09-09 19:49:45 POI Group 0: Recall@20: 0.8104
+2026-09-09 19:49:45 POI Group 0: MRR : 0.4188
+2026-09-09 19:49:45 
+
+2026-09-09 19:49:45 POI Group 1: Recall@1: 0.1375
+2026-09-09 19:49:45 POI Group 1: Recall@5: 0.4229
+2026-09-09 19:49:45 POI Group 1: Recall@10: 0.5292
+2026-09-09 19:49:45 POI Group 1: Recall@20: 0.5833
+2026-09-09 19:49:45 POI Group 1: MRR : 0.2614
+2026-09-09 19:49:45 
+
+2026-09-09 19:49:45 At epoch 40  Stop Counter is 9 
+2026-09-09 19:49:45 Reload model
+2026-09-09 19:49:45 epoch: 41 ; current group weights: [0.16666667 0.16666667 0.16666667 0.16666667 0.16666667 0.16666667]
+2026-09-09 19:49:54 Training finishes at this epoch. It takes 0.15383907159169516 min
+2026-09-09 19:49:54 Training Epoch 42/100 training loss: 60.49281076284555
+2026-09-09 19:49:54 Validation
+2026-09-09 19:50:04 Validation finishes
+2026-09-09 19:50:04 Validation results:
+2026-09-09 19:50:04 User Group 0: Recall@1: 0.1896
+2026-09-09 19:50:04 User Group 0: Recall@5: 0.5000
+2026-09-09 19:50:04 User Group 0: Recall@10: 0.6146
+2026-09-09 19:50:04 User Group 0: Recall@20: 0.6958
+2026-09-09 19:50:04 User Group 0: MRR : 0.3292
+2026-09-09 19:50:04 
+
+2026-09-09 19:50:04 User Group 1: Recall@1: 0.1771
+2026-09-09 19:50:04 User Group 1: Recall@5: 0.4688
+2026-09-09 19:50:04 User Group 1: Recall@10: 0.5563
+2026-09-09 19:50:04 User Group 1: Recall@20: 0.6083
+2026-09-09 19:50:04 User Group 1: MRR : 0.3113
+2026-09-09 19:50:04 
+
+2026-09-09 19:50:04 Time Group 0: Recall@1: 0.1563
+2026-09-09 19:50:04 Time Group 0: Recall@5: 0.4625
+2026-09-09 19:50:04 Time Group 0: Recall@10: 0.5792
+2026-09-09 19:50:04 Time Group 0: Recall@20: 0.6521
+2026-09-09 19:50:04 Time Group 0: MRR : 0.2943
+2026-09-09 19:50:04 
+
+2026-09-09 19:50:04 Time Group 1: Recall@1: 0.2104
+2026-09-09 19:50:04 Time Group 1: Recall@5: 0.4792
+2026-09-09 19:50:04 Time Group 1: Recall@10: 0.5667
+2026-09-09 19:50:04 Time Group 1: Recall@20: 0.6125
+2026-09-09 19:50:04 Time Group 1: MRR : 0.3332
+2026-09-09 19:50:04 
+
+2026-09-09 19:50:04 POI Group 0: Recall@1: 0.2687
+2026-09-09 19:50:04 POI Group 0: Recall@5: 0.6937
+2026-09-09 19:50:04 POI Group 0: Recall@10: 0.8188
+2026-09-09 19:50:04 POI Group 0: Recall@20: 0.8625
+2026-09-09 19:50:04 POI Group 0: MRR : 0.4517
+2026-09-09 19:50:04 
+
+2026-09-09 19:50:04 POI Group 1: Recall@1: 0.1458
+2026-09-09 19:50:04 POI Group 1: Recall@5: 0.4104
+2026-09-09 19:50:04 POI Group 1: Recall@10: 0.5042
+2026-09-09 19:50:04 POI Group 1: Recall@20: 0.5646
+2026-09-09 19:50:04 POI Group 1: MRR : 0.2701
+2026-09-09 19:50:04 
+
+2026-09-09 19:50:04 At epoch 41  Stop Counter is 10 
+2026-09-09 19:50:04 Test
+2026-09-09 19:50:04 Reload best training model
+2026-09-09 19:50:15 Test finishes
+2026-09-09 19:50:15 Test results:
+2026-09-09 19:50:15 User Group 0: Recall@1: 0.2188
+2026-09-09 19:50:15 User Group 0: Recall@5: 0.5271
+2026-09-09 19:50:15 User Group 0: Recall@10: 0.6250
+2026-09-09 19:50:15 User Group 0: Recall@20: 0.6875
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 User Group 0: MRR: 0.3509
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 User Group 1: Recall@1: 0.2063
+2026-09-09 19:50:15 User Group 1: Recall@5: 0.4583
+2026-09-09 19:50:15 User Group 1: Recall@10: 0.5375
+2026-09-09 19:50:15 User Group 1: Recall@20: 0.5812
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 User Group 1: MRR: 0.3159
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 ==================================
+
+
+2026-09-09 19:50:15 Time Group 0: Recall@1: 0.1687
+2026-09-09 19:50:15 Time Group 0: Recall@5: 0.5083
+2026-09-09 19:50:15 Time Group 0: Recall@10: 0.6437
+2026-09-09 19:50:15 Time Group 0: Recall@20: 0.6896
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 Time Group 0: MRR: 0.3212
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 Time Group 1: Recall@1: 0.2333
+2026-09-09 19:50:15 Time Group 1: Recall@5: 0.5354
+2026-09-09 19:50:15 Time Group 1: Recall@10: 0.6188
+2026-09-09 19:50:15 Time Group 1: Recall@20: 0.6583
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 Time Group 1: MRR: 0.3547
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 ==================================
+
+
+2026-09-09 19:50:15 POI Group 0: Recall@1: 0.2875
+2026-09-09 19:50:15 POI Group 0: Recall@5: 0.6708
+2026-09-09 19:50:15 POI Group 0: Recall@10: 0.7854
+2026-09-09 19:50:15 POI Group 0: Recall@20: 0.8271
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 POI Group 0: MRR: 0.4532
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 POI Group 1: Recall@1: 0.1458
+2026-09-09 19:50:15 POI Group 1: Recall@5: 0.4000
+2026-09-09 19:50:15 POI Group 1: Recall@10: 0.4937
+2026-09-09 19:50:15 POI Group 1: Recall@20: 0.5625
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 POI Group 1: MRR: 0.2607
+2026-09-09 19:50:15 
+
+2026-09-09 19:50:15 ==================================
+
+
+2026-09-09 19:50:15 User Group 0 query user count is 692
+2026-09-09 19:50:15 User Group 1 query user count is 251
+2026-09-09 19:50:15 Time Group 0 query user count is 766
+2026-09-09 19:50:15 Time Group 1 query user count is 177
+2026-09-09 19:50:15 POI Group 0 query user count is 318
+2026-09-09 19:50:15 POI Group 1 query user count is 625
