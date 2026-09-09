@@ -1,0 +1,111 @@
+{
+  "cpu": {
+    "all_trainable_gradients_finite": true,
+    "checkpoint_exact": true,
+    "deterministic": true,
+    "device": "cpu",
+    "finite": true,
+    "full_catalog_shape": [
+      3,
+      7
+    ],
+    "geography_view_changed": true,
+    "optimizer_complete": true,
+    "output_sha256": "fefc01ef134536e26bb554b0005d744e37999315ef5ccfcc5aaea94908bcf34b",
+    "split_gradients_reachable": true,
+    "split_isolation": true,
+    "split_topology": {
+      "user_view_gates.collaborative.weight": [
+        [
+          "User/0",
+          "User/1",
+          "Time/0"
+        ],
+        [
+          "Time/1",
+          "POI/0",
+          "POI/1"
+        ]
+      ]
+    },
+    "threshold_exact": true,
+    "trainable_parameter_count": 492,
+    "unrelated_collaborative_view_exact": true,
+    "unsplit_exact": true
+  },
+  "cuda": {
+    "all_trainable_gradients_finite": true,
+    "checkpoint_exact": true,
+    "deterministic": true,
+    "device": "cuda:0",
+    "finite": true,
+    "full_catalog_shape": [
+      3,
+      7
+    ],
+    "geography_view_changed": true,
+    "optimizer_complete": true,
+    "output_sha256": "32108b36c764da79b85c9a636ae4b16148234b127ebe0cd131db9bb33aebe4be",
+    "split_gradients_reachable": true,
+    "split_isolation": true,
+    "split_topology": {
+      "user_view_gates.collaborative.weight": [
+        [
+          "User/0",
+          "User/1",
+          "Time/0"
+        ],
+        [
+          "Time/1",
+          "POI/0",
+          "POI/1"
+        ]
+      ]
+    },
+    "threshold_exact": true,
+    "trainable_parameter_count": 492,
+    "unrelated_collaborative_view_exact": true,
+    "unsplit_exact": true
+  },
+  "decision": "PASS",
+  "expected_upstream_commit": "3d74d70c852c56adcc09d907488410be5eda2744",
+  "failed_gates": [],
+  "gates": {
+    "A0_AUTHORITY_IDENTITY": true,
+    "A10_GRADIENT_REACHABILITY": true,
+    "A11_CHECKPOINT_ROUNDTRIP": true,
+    "A12_DETERMINISM": true,
+    "A13_CPU_SMOKE": true,
+    "A14_CUDA_SMOKE_IF_AVAILABLE": true,
+    "A15_TARGET_BLIND": true,
+    "A1_NO_GUGEN_DEPENDENCY": true,
+    "A2_FORWARD_SHAPES": true,
+    "A3_GRAPH_VIEW_COHERENCE": true,
+    "A4_TASK_INDEX_BIJECTION": true,
+    "A5_SHARED_ANCHOR": true,
+    "A6_SPLIT_PREDICATE": true,
+    "A7_UNSPLIT_IDENTITY": true,
+    "A8_SPLIT_ISOLATION": true,
+    "A9_OPTIMIZER_COMPLETENESS": true
+  },
+  "git_commit": "34005ef1f2e259a54605fb44b3e8b2d4e124eeb1",
+  "git_parent": "8308cf4b9a12b604d397e4932ae8932190436982",
+  "interpretation": "PASS establishes synthetic computation-graph and APS parameter-bank coherence only. It does not establish dataset identity or paper metrics.",
+  "metrics_computed": false,
+  "paper_table_reproduction_established": false,
+  "registry_sha256": "e17a0c19dc3f10d6722c6157128438dc34d9cfd49e5ecdf53b3cb7d6b830678a",
+  "runtime": {
+    "cuda_available": true,
+    "cuda_version": "11.8",
+    "device_name": "NVIDIA GeForce RTX 2080 Ti",
+    "python": "3.10.20",
+    "torch": "2.4.1+cu118"
+  },
+  "schema": "msahg.paper-math-r1.target-free-receipt.v1",
+  "source_sha256": {
+    "audit": "9600e0490fb481dcff6614108beb4c32f5336ab854079bd372bda4e09e17c461",
+    "module": "19d120c84f01c27422585504a6ad5a5d3cd60f1adb7546c8d91d199cc551ec4e"
+  },
+  "target_accessed": false,
+  "training_performed": false
+}
