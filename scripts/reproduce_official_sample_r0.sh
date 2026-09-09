@@ -33,6 +33,8 @@ done
 
 unzip -q "$repo_root/datasets/sample.zip" -d "$run_root/datasets"
 
+export DGLBACKEND=pytorch
+
 "$python_bin" - <<'PY' > "$output_root/environment.txt"
 import platform
 import cvxpy
@@ -55,7 +57,6 @@ if torch.cuda.is_available():
 PY
 
 export PYTHONHASHSEED=2023
-export DGLBACKEND=pytorch
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
 
 (
