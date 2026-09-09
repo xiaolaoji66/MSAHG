@@ -1,0 +1,53 @@
+{
+  "schema": "msahg.public-dataset-identity-audit.v1",
+  "date": "2026-09-09",
+  "source": {
+    "publisher_page": "https://sites.google.com/site/yangdingqi/home/foursquare-dataset",
+    "download_url": "https://drive.google.com/file/d/1VE67jfSN-GV6fkCfuyBEQJzk_qy-SfOk/view?usp=sharing",
+    "archive_name": "dataset_tsmc2014.zip",
+    "archive_sha256": "cbe3fdab373d24b09b5fc53509c8958c77ff72b6c1a68589ce337d4f9a80235b"
+  },
+  "count_method": {
+    "format": "tab-separated text",
+    "rows": "number of non-empty records with at least two columns",
+    "users": "cardinality of column 1",
+    "venues": "cardinality of column 2",
+    "text_decoding": "latin-1"
+  },
+  "observed_raw_counts": {
+    "NYC": {
+      "rows": 227428,
+      "users": 1083,
+      "venues": 38333
+    },
+    "TKY": {
+      "rows": 573703,
+      "users": 2293,
+      "venues": 61858
+    }
+  },
+  "paper_reported_counts": {
+    "NYC": {
+      "checkins": 57327,
+      "users": 1743,
+      "pois": 7289,
+      "trajectories": 6102
+    },
+    "TKY": {
+      "checkins": 507260,
+      "users": 1383,
+      "pois": 17023,
+      "trajectories": 41374
+    }
+  },
+  "mechanical_findings": {
+    "NYC": "IDENTITY_CONTRADICTION",
+    "TKY": "COUNTS_POSSIBLY_FILTER_DERIVED_BUT_PREPROCESSOR_MISSING"
+  },
+  "reasoning": {
+    "NYC": "A filtering or subsetting pipeline cannot increase unique users from 1083 to 1743. The paper therefore used a different source, joined additional users, or contains a reporting error.",
+    "TKY": "All reported basic counts are lower than the observed raw counts, so filtering is numerically possible, but the exact transformation is not identified."
+  },
+  "decision": "PAPER_DATA_IDENTITY_BLOCKED",
+  "claim_boundary": "This audit establishes an identity contradiction for the cited public NYC raw archive. It does not identify which alternative dataset or correction produced the paper table."
+}
