@@ -1,0 +1,84 @@
+{
+  "schema": "msahg.paper-faithful-reproduction-scope.v1",
+  "date": "2026-09-09",
+  "paper": {
+    "title": "Multifaceted Scenario-Aware Hypergraph Learning for Next POI Recommendation",
+    "venue": "AAAI 2026",
+    "doi": "10.1609/aaai.v40i18.38552"
+  },
+  "source_authority": {
+    "repository": "https://github.com/COCOMiss/MSAHG",
+    "commit": "3d74d70c852c56adcc09d907488410be5eda2744"
+  },
+  "reproduction_authority": {
+    "repository": "https://github.com/xiaolaoji66/MSAHG",
+    "base_commit": "511f7c0c64b7378c966d808d7b3cea0684a19f33",
+    "branch": "repro/paper-faithful-r1-prospective"
+  },
+  "completed_evidence": {
+    "official_sample_replay": "COMPLETE",
+    "official_sample_result_commit": "511f7c0c64b7378c966d808d7b3cea0684a19f33",
+    "paper_table_reproduction": "NOT_ESTABLISHED"
+  },
+  "data_identity": {
+    "status": "BLOCKED_UNRESOLVED",
+    "nyc_paper_users": 1743,
+    "nyc_public_source_users_reported_variants": [1082, 1083],
+    "reason_codes": [
+      "RELEASED_FULL_DATA_ABSENT",
+      "PREPROCESSOR_ABSENT",
+      "NYC_USER_COUNT_CONTRADICTION",
+      "VALIDATION_SPLIT_UNSPECIFIED",
+      "SCENARIO_LABEL_RULES_INCOMPLETE"
+    ],
+    "substitution_allowed": false
+  },
+  "r1a": {
+    "name": "paper-math reconstruction",
+    "implementation_authorized": true,
+    "target_free_execution_authorized": true,
+    "score_bearing_execution_authorized": false,
+    "target_access_authorized": false,
+    "gugen_dependency_authorized": false,
+    "registered_aps_cosine_threshold": -0.5,
+    "required_gates": [
+      "A0_AUTHORITY_IDENTITY",
+      "A1_NO_GUGEN_DEPENDENCY",
+      "A2_FORWARD_SHAPES",
+      "A3_GRAPH_VIEW_COHERENCE",
+      "A4_TASK_INDEX_BIJECTION",
+      "A5_SHARED_ANCHOR",
+      "A6_SPLIT_PREDICATE",
+      "A7_UNSPLIT_IDENTITY",
+      "A8_SPLIT_ISOLATION",
+      "A9_OPTIMIZER_COMPLETENESS",
+      "A10_GRADIENT_REACHABILITY",
+      "A11_CHECKPOINT_ROUNDTRIP",
+      "A12_DETERMINISM",
+      "A13_CPU_SMOKE",
+      "A14_CUDA_SMOKE_IF_AVAILABLE",
+      "A15_TARGET_BLIND"
+    ]
+  },
+  "r1b": {
+    "name": "data and protocol identity gate",
+    "status": "OPEN_BLOCKED_ON_MISSING_AUTHORITY",
+    "paper_faithful_empirical_execution_authorized": false,
+    "required_author_materials": [
+      "raw dataset identity or immutable download receipt",
+      "complete preprocessing code and parameters",
+      "scenario-label construction rules",
+      "city-center coordinates and boundary policy",
+      "train-validation-test split manifests",
+      "train-only graph construction policy",
+      "random seeds and result aggregation protocol"
+    ]
+  },
+  "immutable_boundaries": {
+    "do_not_modify_upstream_files": true,
+    "do_not_relabel_sample_metrics_as_paper_results": true,
+    "do_not_use_gugen_material": true,
+    "do_not_tune_to_paper_table": true,
+    "preserve_failed_and_completed_outputs": true
+  }
+}
