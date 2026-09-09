@@ -1,0 +1,114 @@
+{
+  "schema": "msahg.on-sthgcn-sample-protocol.scope.v1",
+  "date": "2026-09-09",
+  "paper": {
+    "title": "Multifaceted Scenario-Aware Hypergraph Learning for Next POI Recommendation",
+    "venue": "AAAI 2026",
+    "doi": "10.1609/aaai.v40i18.38552"
+  },
+  "msahg_authority": {
+    "official_repository": "https://github.com/COCOMiss/MSAHG",
+    "upstream_commit": "3d74d70c852c56adcc09d907488410be5eda2744",
+    "reproduction_repository": "https://github.com/xiaolaoji66/MSAHG",
+    "parent_evidence_commit": "6afeb73ebcbfc384ac3fff1912eee83aae95cf8a"
+  },
+  "sthgcn_authority": {
+    "repository": "https://github.com/alipay/Spatio-Temporal-Hypergraph-Model",
+    "commit": "27b595846d29019799485985bff49f9ed02c4ade",
+    "license": "Apache-2.0",
+    "nyc_archive_sha256": "974bc90b3e0cdec6ec29a0a953ac41d3f81880e17bdd4c7c0cd94f2afc9e17d2",
+    "tky_archive_sha256": "823cd400a8d67b360c50217c1e8141e566a2b804ca8af9feac9ff9c0f76220c7"
+  },
+  "protocol_name": "MSAHG-on-STHGCN-Protocol R1",
+  "protocol_class": "public same-protocol engineering reconstruction",
+  "paper_faithful_empirical_reproduction": false,
+  "sample_protocol": {
+    "nyc": {
+      "source": "GETNext-derived pre-split CSV files distributed by STHGCN",
+      "split_authority": "file membership",
+      "raw_records": {
+        "train": 83228,
+        "validation": 10339,
+        "test": 10374,
+        "total": 103941
+      }
+    },
+    "tky": {
+      "source": "dataset_TSMC2014_TKY.txt distributed by STHGCN",
+      "raw_member_sha256": "85542c605ce708d8584637756590383a84e9bbdb71342d0d8e78858ba2a0e5c8",
+      "raw_records": 573703,
+      "raw_users": 2293,
+      "raw_pois": 61858,
+      "raw_categories": 385,
+      "poi_frequency_keep_predicate": "> 9",
+      "user_frequency_keep_predicate": "> 9 after POI filtering",
+      "intended_split": "global chronological 80/10/10",
+      "trajectory_gap_minutes": 1440,
+      "trajectory_break_predicate": "> 1440",
+      "label_vocabulary": "fit on train only",
+      "cold_start": "remove unseen validation/test users and POIs",
+      "training_targets": "all non-first trajectory events in the training partition",
+      "validation_test_targets": "last non-first event per trajectory only"
+    }
+  },
+  "reported_statistics": {
+    "sthgcn": {
+      "nyc": {"users": 1048, "pois": 4981, "checkins": 103941, "trajectories": 14130},
+      "tky": {"users": 2282, "pois": 7833, "checkins": 405000, "trajectories": 65499}
+    },
+    "msahg": {
+      "nyc": {"users": 1743, "pois": 7289, "checkins": 57327, "trajectories": 6102},
+      "tky": {"users": 1383, "pois": 17023, "checkins": 507260, "trajectories": 41374}
+    }
+  },
+  "adopted_surface": [
+    "source records",
+    "sample split identity",
+    "trajectory identity",
+    "train-only label vocabulary",
+    "cold-start handling",
+    "next-POI target construction",
+    "last-event validation/test endpoint"
+  ],
+  "excluded_surface": [
+    "STHGCN serialized PyG hypergraphs",
+    "MSAHG paper-table identity",
+    "unregistered scenario labels",
+    "GUGEN material"
+  ],
+  "required_gates": [
+    "Q0_MSAHG_AUTHORITY",
+    "Q1_STHGCN_AUTHORITY",
+    "Q2_LICENSE_AND_SOURCE_HASHES",
+    "Q3_ARCHIVE_MEMBERS",
+    "Q4_NYC_RAW_SPLIT_COUNTS",
+    "Q5_TKY_RAW_IDENTITY",
+    "Q6_SOURCE_SEMANTICS",
+    "Q7_SPLIT_ASSIGNMENT_AUDIT",
+    "Q8_FULL_GRAPH_INPUT_AUDIT",
+    "Q9_DATASET_IDENTITY_SEPARATION",
+    "Q10_NO_GUGEN_DEPENDENCY",
+    "Q11_SCORE_FREE",
+    "Q12_FAIL_CLOSED"
+  ],
+  "authorization": {
+    "scope_documentation": true,
+    "qualification_implementation": true,
+    "score_free_data_identity_qualification": true,
+    "raw_data_identity_access": true,
+    "record_content_use": "identity, split, and preprocessing qualification only",
+    "sample_materialization": false,
+    "scenario_label_materialization": false,
+    "graph_materialization": false,
+    "training": false,
+    "metric_computation": false,
+    "validation_target_evaluation": false,
+    "test_target_evaluation": false,
+    "hyperparameter_tuning": false
+  },
+  "interpretation_boundary": {
+    "allowed": "public STHGCN sample-protocol qualification",
+    "prohibited": "MSAHG paper-table reproduction claim",
+    "score_execution_requires_new_versioned_authority": true
+  }
+}
