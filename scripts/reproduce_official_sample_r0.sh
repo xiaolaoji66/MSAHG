@@ -71,7 +71,6 @@ export CUDA_DEVICE_ORDER=PCI_BUS_ID
   "$python_bin" run.py \
     --dataset NYC \
     --deviceID "$device_id" \
-    --seed 2023 \
     --num_epochs "$num_epochs" \
     --batch_size 200 \
     --finetune_batch_size 20 \
