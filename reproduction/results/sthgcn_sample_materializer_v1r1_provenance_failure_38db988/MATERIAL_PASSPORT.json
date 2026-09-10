@@ -1,0 +1,64 @@
+{
+  "schema": "msahg.sthgcn-sample-materializer-v1r1-provenance-result-passport.v1",
+  "date": "2026-09-10",
+  "decision": "PROTOCOL_FAILURE",
+  "reason_code": "REPLAY_TEMP_DIRECTORY_PREEXISTENCE",
+  "authorities": {
+    "parent_contract_commit": "cccf03c605bb3b1d7374e34a5eac9c247ea3b48b",
+    "registration_commit": "be5efdc1ed56b6628dde82224eaf6df2abfec1cf",
+    "implementation_commit": "38db98809e6f8bb3723e61163d1b428060aba8be",
+    "sthgcn_commit": "27b595846d29019799485985bff49f9ed02c4ade",
+    "v1_replay_commit": "a53acb3a3f637c2da372661ed95559f92881f8fa"
+  },
+  "execution": {
+    "runtime": {
+      "python": "3.10.20",
+      "pandas": "2.2.3",
+      "numpy": "1.26.4"
+    },
+    "automatic_retry_performed": false,
+    "independent_audit_emitted": false,
+    "partial_output_entries": [
+      "PROTOCOL_FAILURE.json",
+      "nyc/"
+    ]
+  },
+  "preconditions": {
+    "v1_exact_replay_passed": true,
+    "nyc_v1_rows": 103941,
+    "tky_v1_rows": 405000,
+    "nyc_sample_sha256": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65",
+    "tky_sample_sha256": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0",
+    "v1_independent_audit_sha256": "952bc9cac38b25f30b232bbcec52be18ef9ee88c51964d19dbfaeedbd92cc203",
+    "source_worktree_clean_after_failure": true,
+    "v1_worktree_clean_after_failure": true,
+    "v1r1_worktree_clean_after_failure": true
+  },
+  "target_free_qualification": {
+    "decision": "PASS",
+    "gates_passed": 12,
+    "gates_total": 12,
+    "receipt_sha256": "e332c2649c9a5be0b9580e77617ab4439304a686fe82344e2f19d6a3f8dfc549"
+  },
+  "root_cause": {
+    "classification": "IMPLEMENTATION_DIRECTORY_OWNERSHIP_DEFECT",
+    "confirmed_source_facts": [
+      "_prepare_dataset creates replay_parent with tempfile.mkdtemp, so the path already exists",
+      "_write_replay immediately calls directory.mkdir with exist_ok false on that same path",
+      "the collision occurs before a real provenance sidecar or independent audit is emitted"
+    ],
+    "scientific_interpretation": "No statement about NYC/TKY original-split provenance or downstream predictive value can be made from this failed run."
+  },
+  "prohibited_activity": {
+    "scenario_labels_materialized": false,
+    "graph_materialized": false,
+    "model_executed": false,
+    "training_performed": false,
+    "inference_performed": false,
+    "loss_computed": false,
+    "checkpoint_accessed": false,
+    "recommendation_metrics_computed": false,
+    "target_evaluation_performed": false
+  },
+  "next_state": "V1R1_STOP_NEW_VERSIONED_REPAIR_AUTHORITY_REQUIRED"
+}

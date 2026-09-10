@@ -1,0 +1,65 @@
+{
+  "checkpoint_accessed": false,
+  "decision": "PASS",
+  "failed_gates": [],
+  "gates": {
+    "T0_REGISTRY_AND_LINEAGE": true,
+    "T10_NO_DOWNSTREAM_ACTIVITY": true,
+    "T11_FAIL_CLOSED": true,
+    "T1_V1_SOURCE_FROZEN": true,
+    "T2_SIDECAR_COLUMNS": true,
+    "T3_ROW_BIJECTION": true,
+    "T4_VISIBLE_SPLIT_IMPLICATION": true,
+    "T5_INVALID_SPLIT_REJECTED": true,
+    "T6_DUPLICATE_ID_REJECTED": true,
+    "T7_TWO_RUN_BYTE_DETERMINISM": true,
+    "T8_IMPORT_BOUNDARY": true,
+    "T9_NO_REAL_DATA_SURFACE": true
+  },
+  "graph_materialized": false,
+  "implementation_commit": "38db98809e6f8bb3723e61163d1b428060aba8be",
+  "implementation_source_sha256": "606de269b48b6d5394a292956b033b0c43daa86d703360969443ce80e1ddaf5e",
+  "inference_performed": false,
+  "interpretation": "PASS establishes synthetic split-provenance repair coherence only; no public record, graph, model, or metric was accessed.",
+  "loss_computed": false,
+  "model_executed": false,
+  "original_split_provenance_materialized": false,
+  "production_imports": [
+    "__future__",
+    "argparse",
+    "hashlib",
+    "importlib",
+    "json",
+    "numpy",
+    "os",
+    "pandas",
+    "pathlib",
+    "shutil",
+    "subprocess",
+    "sys",
+    "tempfile"
+  ],
+  "real_record_content_read": false,
+  "recommendation_metrics_computed": false,
+  "registry_sha256": "cfb573c2706fbea0870e001103b0c34dab992a62a970fb79764b953d68a7b45c",
+  "runtime": {
+    "python": "3.10.20"
+  },
+  "scenario_labels_materialized": false,
+  "schema": "msahg.sthgcn-sample-materializer-v1r1-target-free-receipt.v1",
+  "synthetic_determinism": {
+    "first": {
+      "receipt.json": "a747452616ac38efea90fb6eba7d3f7c1328d439cbed4e3e01a7ef6dfa74b681",
+      "record_split_provenance.csv": "fe2acd69af36264a60957fb1306100bbce10d35f0d51f9c438a6aa06e236de2f"
+    },
+    "pass": true,
+    "rows": 5,
+    "second": {
+      "receipt.json": "a747452616ac38efea90fb6eba7d3f7c1328d439cbed4e3e01a7ef6dfa74b681",
+      "record_split_provenance.csv": "fe2acd69af36264a60957fb1306100bbce10d35f0d51f9c438a6aa06e236de2f"
+    }
+  },
+  "target_evaluation_performed": false,
+  "training_performed": false,
+  "v1_source_sha256": "288daa4ab0de251cbbb0d4d8a1735af1193d42aa0c258757443fd2a154e65f3e"
+}

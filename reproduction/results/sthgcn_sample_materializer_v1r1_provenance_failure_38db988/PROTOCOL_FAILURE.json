@@ -1,0 +1,8 @@
+{
+  "automatic_retry_performed": false,
+  "decision": "PROTOCOL_FAILURE",
+  "reason": "[Errno 17] File exists: '/mnt/data4t/wyh/msahg_runs/sthgcn_v1r1_replay_my_1knmc'",
+  "recommendation_metrics_computed": false,
+  "schema": "msahg.sthgcn-sample-materializer-v1r1-provenance-failure.v1",
+  "training_performed": false
+}
