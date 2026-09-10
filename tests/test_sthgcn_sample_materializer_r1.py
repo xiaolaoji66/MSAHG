@@ -97,6 +97,25 @@ class STHGCNSampleMaterializerR1Test(unittest.TestCase):
             with self.assertRaises(MODULE.MaterializationError):
                 MODULE.materialize_dataset("nyc", Path("missing"), path)
 
+    def test_csv_serialization_is_byte_deterministic(self):
+        frame = pd.DataFrame(
+            {
+                "integer": [2, 1],
+                "text": ["a,b", "line"],
+                "floating": [1.25, 2.5],
+            }
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            first = Path(temporary) / "first.csv"
+            second = Path(temporary) / "second.csv"
+            MODULE._write_csv(first, frame)
+            MODULE._write_csv(second, frame)
+            self.assertEqual(first.read_bytes(), second.read_bytes())
+
+    def test_runtime_authority_is_clean_and_contains_registration(self):
+        authority = MODULE.verify_reproduction_authority()
+        self.assertEqual(authority["implementation_commit"], MODULE._git(ROOT, "rev-parse", "HEAD"))
+
     def test_registered_count_witnesses_are_exact(self):
         self.assertEqual(
             MODULE.EXPECTED,

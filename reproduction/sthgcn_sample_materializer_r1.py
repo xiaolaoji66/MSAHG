@@ -116,6 +116,22 @@ def verify_registry(registry_path):
     return registry
 
 
+def verify_reproduction_authority():
+    root = Path(__file__).resolve().parents[1]
+    head = _git(root, "rev-parse", "HEAD")
+    if _git(root, "status", "--porcelain=v1", "--untracked-files=all"):
+        raise MaterializationError("reproduction implementation tree is not clean")
+    for ancestor in (REGISTRATION_COMMIT, PORTABILITY_AUTHORITY_COMMIT):
+        result = subprocess.run(
+            ["git", "-C", str(root), "merge-base", "--is-ancestor", ancestor, head],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+        if result.returncode != 0:
+            raise MaterializationError("reproduction authority lineage mismatch")
+    return {"root": root, "implementation_commit": head}
+
+
 def _json_scalar(value):
     if isinstance(value, np.generic):
         return value.item()
@@ -372,7 +388,7 @@ def _count_summary(sample, eligible):
     }
 
 
-def materialize_dataset(dataset, archive_path, output_dir, expected=None):
+def materialize_dataset(dataset, archive_path, output_dir, expected=None, runtime_authority=None):
     output = Path(output_dir)
     if output.exists():
         raise MaterializationError("output already exists: " + str(output))
@@ -422,6 +438,9 @@ def materialize_dataset(dataset, archive_path, output_dir, expected=None):
         "authorities": {
             "registration_commit": REGISTRATION_COMMIT,
             "portability_authority_commit": PORTABILITY_AUTHORITY_COMMIT,
+            "implementation_commit": (
+                runtime_authority["implementation_commit"] if runtime_authority else None
+            ),
             "sthgcn_commit": STHGCN_COMMIT,
             "archive_sha256": sha256_file(archive_path),
         },
@@ -462,6 +481,7 @@ def parse_args(argv=None):
 def main(argv=None):
     args = parse_args(argv)
     verify_registry(args.registry)
+    runtime_authority = verify_reproduction_authority()
     authority = verify_source_authority(args.sthgcn_root)
     output_root = Path(args.output_root).resolve()
     if output_root.exists():
@@ -471,7 +491,13 @@ def main(argv=None):
     receipts = []
     for dataset in datasets:
         receipts.append(
-            materialize_dataset(dataset, authority[dataset], output_root / dataset, EXPECTED[dataset])
+            materialize_dataset(
+                dataset,
+                authority[dataset],
+                output_root / dataset,
+                EXPECTED[dataset],
+                runtime_authority,
+            )
         )
     if _git(authority["root"], "rev-parse", "HEAD") != STHGCN_COMMIT:
         raise MaterializationError("STHGCN commit changed during materialization")
