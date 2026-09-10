@@ -1,0 +1,96 @@
+{
+  "authorities": {
+    "implementation_commit": "1f6fce9505eae929a8f131fc67556e513c4d1100",
+    "parent_result_commit": "9bb6248b7cd8730b9c05676926f213afe3e476fc",
+    "registration_commit": "4dd32f64440687c5f65c659b7e28b0b83b90d713",
+    "registry_sha256": "f9ff7c5ffe4affc4ccf4ff0d44dd9089274b4e416437f34219fa6b5c33ddc1ba",
+    "scope_sha256": "1192d00dc626f6a4eb4ab1c94807bb227c4bb68efba9948abb94959801a3c755"
+  },
+  "automatic_retry_performed": false,
+  "checkpoint_accessed": false,
+  "decision": "PASS",
+  "failed_gates": [],
+  "gates": {
+    "C0_AUTHORITY": true,
+    "C10_GEOGRAPHY": true,
+    "C11_TRANSITION": true,
+    "C12_ROUTING": true,
+    "C13_DETERMINISM": true,
+    "C14_CAUSAL_PERTURBATION": true,
+    "C15_SOURCE_IMMUTABLE": true,
+    "C16_SCORE_FREE": true,
+    "C17_FAIL_CLOSED": true,
+    "C1_NO_EVAL_FIT": true,
+    "C2_PREFIX_LABEL": true,
+    "C3_USER_RULE": true,
+    "C4_TIME_RULE": true,
+    "C5_SPATIAL_RULE": true,
+    "C6_LABEL_PARTITION": true,
+    "C7_JOINT_METADATA_ONLY": true,
+    "C8_COLLABORATIVE": true,
+    "C9_TEMPORAL": true
+  },
+  "graph_materialized_from_real_data": false,
+  "inference_performed": false,
+  "interpretation": "PASS establishes synthetic implementation coherence only; real scenario/graph materialization and all model activity remain unauthorized.",
+  "loss_computed": false,
+  "model_executed": false,
+  "production_imports": [
+    "__future__",
+    "argparse",
+    "csv",
+    "datetime",
+    "hashlib",
+    "io",
+    "json",
+    "math",
+    "pathlib",
+    "struct",
+    "subprocess",
+    "sys",
+    "zipfile"
+  ],
+  "real_materialization_performed": false,
+  "real_provenance_sidecar_read": false,
+  "real_record_content_read": false,
+  "recommendation_metrics_computed": false,
+  "runtime": {
+    "python": "3.10.20"
+  },
+  "scenario_labels_materialized_from_real_data": false,
+  "schema": "msahg.on-sthgcn.causal-materializer-v1r1-target-free-receipt.v1",
+  "source_authority": {
+    "msahg_historical": {
+      "dataset.py": "9f0d8635a98af3d436ffd1fb2858f06da23311abe2cc208b4a0c93f048e74970",
+      "datasets/sample.zip": "1fc176fe2e83730934724c43df0a6682bb501c81dd7ec44c1ddab27c7e78cf4c",
+      "model_devide.py": "9e5c503d3e10e274ef1f28435490fd1cf88c5d2298f897be0465c16497e63bdc",
+      "run.py": "f22972e0e526e777eec7f5ca8a950d780a32e54508662f423a0729073f8a742c",
+      "train_nash.py": "6f62c1d82360a879a0695d6fdf5e657b0faff549cb247fa0092fbb5718449538",
+      "utils.py": "b4892df839b5c2aee1c608fa54d552ebdafed6d608389cbbfd10904cb4bfdd36"
+    },
+    "sthgcn_commit": "27b595846d29019799485985bff49f9ed02c4ade"
+  },
+  "synthetic": {
+    "activity_center": [
+      "0.0",
+      "0.0"
+    ],
+    "eligible_targets": 84,
+    "graph_shards": 37,
+    "joint_cells_observed": [
+      "0|0|0",
+      "0|0|1",
+      "0|1|0",
+      "0|1|1",
+      "1|0|0",
+      "1|0|1",
+      "1|1|0",
+      "1|1|1"
+    ],
+    "records": 96,
+    "train_derived_fingerprint": "8fd52f5f3d66bc33a9d129491708779ad764fd72742bc6354a5d034d75476996",
+    "training_records": 80
+  },
+  "target_evaluation_performed": false,
+  "training_performed": false
+}
