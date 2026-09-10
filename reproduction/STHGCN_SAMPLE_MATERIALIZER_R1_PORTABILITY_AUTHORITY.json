@@ -1,0 +1,33 @@
+{
+  "schema": "msahg.sthgcn-sample-materializer.portability-authority.v1",
+  "date": "2026-09-10",
+  "parent_scope_commit": "7c813210665f61197e68e7e794c5da091a259569",
+  "parent_registry_raw_sha256": "09fa364f345763bb34362dd54d0f1d819431bc6f25261b0ed6d75ef2f682e49c",
+  "clarifications": {
+    "timestamp_parse": "reject malformed or missing timestamps; do not coerce",
+    "local_wall_clock_serialization": "%Y-%m-%d %H:%M:%S",
+    "epoch_definition": "integer Unix seconds obtained by interpreting the timezone-naive local wall clock as UTC",
+    "epoch_reason": "the STHGCN source uses strftime('%s') on a naive datetime, which depends on host timezone; the portable definition preserves all within-city differences while removing host-timezone drift",
+    "stable_order": "local timestamp ascending, then immutable source ordinal ascending",
+    "csv": "UTF-8, RFC4180-compatible quoting, LF line endings, no index column",
+    "json": "UTF-8, sorted keys, two-space indentation, trailing LF"
+  },
+  "non_changes": [
+    "NYC file-level split identity",
+    "TKY explicit chronological 80/10/10 split",
+    "frequency filtering",
+    "isolation predicate",
+    "trajectory boundary",
+    "train-only vocabulary",
+    "target eligibility",
+    "cold-start exclusion"
+  ],
+  "authorization": {
+    "materializer_implementation": true,
+    "score_free_materialization": true,
+    "graph_materialization": false,
+    "scenario_labels": false,
+    "training": false,
+    "metrics": false
+  }
+}
