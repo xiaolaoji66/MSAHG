@@ -1,0 +1,167 @@
+{
+  "schema": "msahg.on-sthgcn.graph-scenario-protocol-audit.v1",
+  "date": "2026-09-10",
+  "base_commit": "9e67e05875540cc87a21e15c4ff3623400c6ab49",
+  "authorities": {
+    "msahg_paper": {
+      "doi": "10.1609/aaai.v40i18.38552",
+      "title": "Multifaceted Scenario-Aware Hypergraph Learning for Next POI Recommendation",
+      "venue": "AAAI 2026"
+    },
+    "msahg_source": {
+      "commit": "3d74d70c852c56adcc09d907488410be5eda2744",
+      "repository": "https://github.com/COCOMiss/MSAHG"
+    },
+    "reproduction_repository": "https://github.com/xiaolaoji66/MSAHG",
+    "sthgcn_materialization_result": {
+      "commit": "9e67e05875540cc87a21e15c4ff3623400c6ab49",
+      "path": "reproduction/results/sthgcn_sample_materializer_r1_a53acb3"
+    },
+    "sthgcn_source": {
+      "commit": "27b595846d29019799485985bff49f9ed02c4ade",
+      "repository": "https://github.com/alipay/Spatio-Temporal-Hypergraph-Model"
+    }
+  },
+  "decisions": {
+    "msahg_paper_table_reproduction": "BLOCKED",
+    "paper_faithful_scenario_protocol": "BLOCKED",
+    "released_source_as_graph_authority": "REJECTED",
+    "sthgcn_causal_reconstruction": "FEASIBLE_BUT_NOT_YET_CONTRACTED"
+  },
+  "count_disambiguation": {
+    "joint_label_combinations": 8,
+    "released_source_task_ids": 6,
+    "shared_transition_graphs": 1,
+    "split_subhypergraphs_described_by_paper": 8,
+    "task_ids": [
+      "User/0",
+      "User/1",
+      "Time/0",
+      "Time/1",
+      "POI/0",
+      "POI/1"
+    ]
+  },
+  "paper_scenario_identifiability": {
+    "spatial_region": {
+      "reason_codes": [
+        "CITY_CENTER_COORDINATES_ABSENT",
+        "CENTER_AUTHORITY_ABSENT",
+        "RELEASED_LABEL_REVERSE_FIT_NONUNIQUE"
+      ],
+      "status": "BLOCKED"
+    },
+    "temporal_context": {
+      "prospective_reconstruction": "last observed prefix local weekday; Monday-Friday workday, Saturday-Sunday weekend",
+      "source_integer_provenance": "NOT_IDENTIFIED",
+      "status": "RECONSTRUCTABLE_NOT_SOURCE_PROVENANCED"
+    },
+    "user_type": {
+      "official_sample_labels": {
+        "group_0": 114,
+        "group_1": 45,
+        "total": 159
+      },
+      "official_sample_train_only_hotel_gt_5pct": {
+        "label_1_predictions": 8,
+        "mismatches_against_released_labels": 37
+      },
+      "reason_codes": [
+        "ACCOMMODATION_CATEGORY_SET_UNSPECIFIED",
+        "THRESHOLD_PRESENTED_AS_EXAMPLE",
+        "DENOMINATOR_UNSPECIFIED",
+        "LABEL_BUILDER_ABSENT"
+      ],
+      "status": "BLOCKED"
+    }
+  },
+  "source_graph_findings": {
+    "collaborative": {
+      "paper": "one hyperedge per trajectory",
+      "source": "one aggregate column per user across trajectories",
+      "status": "MISMATCH"
+    },
+    "geography": {
+      "paper": "two region-specific geographical sub-hypergraphs",
+      "source": "one adjacency per dataset split; POI group does not select topology",
+      "status": "MISMATCH"
+    },
+    "graph_provenance": {
+      "paper": "not sufficiently specified",
+      "source": "train and test structures are constructed independently from their own interaction files",
+      "status": "NOT_ADMISSIBLE_FOR_TRAIN_ONLY_RECONSTRUCTION"
+    },
+    "task_topology": {
+      "paper": "combined scenario prose",
+      "source": "six marginal task losses",
+      "status": "UNDERDETERMINED"
+    },
+    "temporal": {
+      "paper": "workday and weekend, 48 half-hour slots per day",
+      "source": "two matrices selected through values 0..47 and 48..95 without released encoder provenance",
+      "status": "PARTIAL_MISMATCH"
+    },
+    "transition": {
+      "paper": "consecutive directed POI transitions",
+      "source": "every earlier-to-later pair inside a trajectory",
+      "status": "MISMATCH"
+    }
+  },
+  "frozen_source_sha256": {
+    "dataset.py": "9f0d8635a98af3d436ffd1fb2858f06da23311abe2cc208b4a0c93f048e74970",
+    "datasets/sample.zip": "1fc176fe2e83730934724c43df0a6682bb501c81dd7ec44c1ddab27c7e78cf4c",
+    "model_devide.py": "9e5c503d3e10e274ef1f28435490fd1cf88c5d2298f897be0465c16497e63bdc",
+    "run.py": "f22972e0e526e777eec7f5ca8a950d780a32e54508662f423a0729073f8a742c",
+    "train_nash.py": "6f62c1d82360a879a0695d6fdf5e657b0faff549cb247fa0092fbb5718449538",
+    "utils.py": "b4892df839b5c2aee1c608fa54d552ebdafed6d608389cbbfd10904cb4bfdd36"
+  },
+  "bounded_diagnostics": {
+    "official_sample_city_tags": {
+      "tag_0": 1889,
+      "tag_1": 4981,
+      "statement": "many nearby fitted centers reproduce the tags; no fitted center is accepted as protocol authority"
+    },
+    "raw_category_name_scan": {
+      "lodging_like_literal_category_found": "Hotel",
+      "nyc_distinct_category_names": 207,
+      "tky_distinct_category_names": 247
+    }
+  },
+  "draft_reconstruction": {
+    "causal_boundary": "all static graph structure and scenario-user statistics from training interactions only",
+    "graph_semantics": {
+      "collaborative": "binary POI-by-trajectory incidence, split by train-only user label",
+      "geography": "binary POI-by-neighborhood incidence at 2.5 km, split by a future registered region rule",
+      "temporal_poi": "binary half-hour-slot-by-POI incidence, split workday/weekend",
+      "temporal_user": "binary half-hour-slot-by-user incidence, split workday/weekend",
+      "transition": "one shared directed incidence over distinct consecutive training pairs"
+    },
+    "joint_triple_role": "support-audit metadata only",
+    "scenario_rules": {
+      "spatial": "OPEN",
+      "temporal": "last observed prefix local weekday; Monday-Friday versus Saturday-Sunday",
+      "user": "PROVISIONAL: train-only category-name Hotel share > 0.05"
+    },
+    "status": "DRAFT_NON_EXECUTABLE",
+    "task_role": "six marginal APS and reporting tasks"
+  },
+  "authorization": {
+    "architecture_implementation": false,
+    "graph_materialization": false,
+    "hyperparameter_tuning": false,
+    "metric_computation": false,
+    "model_training": false,
+    "scenario_label_materialization": false,
+    "source_and_public_record_read_only_audit": true,
+    "target_evaluation": false,
+    "test_access_for_model_selection": false
+  },
+  "next_scope_requirements": [
+    "choose and name one spatial anchor rule for NYC and TKY",
+    "accept or replace the provisional train-only Hotel share user rule",
+    "freeze graph incidence, weight, normalization, duplicate, and isolated-node semantics",
+    "freeze six marginal tasks and the non-task role of joint triples",
+    "register target-free deterministic graph and scenario materialization gates",
+    "obtain a separate execution authority"
+  ]
+}
