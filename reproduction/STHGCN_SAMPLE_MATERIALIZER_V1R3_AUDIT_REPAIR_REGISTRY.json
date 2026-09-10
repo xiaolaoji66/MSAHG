@@ -1,0 +1,100 @@
+{
+  "schema": "msahg.sthgcn-sample-materializer-v1r3-audit-repair.v1",
+  "date": "2026-09-10",
+  "status": "AUDITOR_IMPLEMENTATION_AND_ONE_AUDIT_EXECUTION_AUTHORIZED",
+  "parent_commit": "cc1abb0d35626ec89d4b189e3674d29d3288c670",
+  "authorities": {
+    "reproduction_repository": "https://github.com/xiaolaoji66/MSAHG",
+    "scope_path": "reproduction/STHGCN_SAMPLE_MATERIALIZER_V1R3_AUDIT_REPAIR_SCOPE.md",
+    "scope_sha256": "04705537c72963664f35678011df45994c11c93940e241b234f66d09066166e1",
+    "v1r2_registration_commit": "fd5aa7739d031c1fa20336084823a63ee56e7acc",
+    "v1r2_implementation_commit": "d73f118afa9b51a1418acd5c1fa5eb32b5b0818b",
+    "v1r2_failure_archive_commit": "cc1abb0d35626ec89d4b189e3674d29d3288c670",
+    "v1r2_result_path": "reproduction/results/sthgcn_sample_materializer_v1r2_provenance_audit_failure_d73f118",
+    "v1r2_materializer_sha256": "2cd6d32cc8742e6e1f3f6e95e57ff262df24c02bcf4f80d778f8d6ba0f37a91c",
+    "v1r2_auditor_sha256": "4c0439546c9cebe1bfc973724f60526b5bb5c7afa5a84f0b2ee288b86b668e23",
+    "v1r2_archive_manifest_sha256": "51cdd28ae2a57012a4bfa72f9ebca1ea13a47d88eae0d5f33bcc2a352fde86bc",
+    "v1r2_output_manifest_sha256": "0892de52898df79d1fa97bf6bb474258ba8948f7439c0e0085c716d5491ccdd8",
+    "v1r2_failed_audit_sha256": "2ac3e73a87035d951036f50b3e44c87452dc63cc913d07c6de23c67f8f870349"
+  },
+  "frozen_files": {
+    "provenance_summary.json": "db8f952b5f6b0e2a88554997df59773144f04f23b0161a63b7aadb71e9b44a98",
+    "nyc/provenance_receipt.json": "e67b5bf7f373ae9b5fb859981ddc116694d99f72726292e707c6ff7decf81f22",
+    "nyc/record_split_provenance.csv": "57c0b434918d5cd1bb421f2654c430a572e3e70f6c587ad398e078c8fd0f93d3",
+    "tky/provenance_receipt.json": "1cc91cf9e30834eb43f39e34a1d402a358264788e146579466816dbc29b51a7f",
+    "tky/record_split_provenance.csv": "5f287bb802943a3e8f99ff307acf2f8c47f5c4e46eab62fd62ff00c7a0de211d"
+  },
+  "v1_sample_sha256": {
+    "nyc": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65",
+    "tky": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0"
+  },
+  "expected_rows": {
+    "nyc": 103941,
+    "tky": 405000
+  },
+  "expected_real_gate_names": [
+    "R0_AUTHORITY",
+    "R1_FRESH_OUTPUT",
+    "R2_V1_INPUT_IMMUTABLE",
+    "R3_EXACT_V1_REPLAY",
+    "R4_ROW_BIJECTION",
+    "R5_LEGAL_ORIGINAL_SPLIT",
+    "R6_VISIBLE_SPLIT_IMPLICATION",
+    "R7_IDENTITY_STABILITY",
+    "R8_COUNT_CONSERVATION",
+    "R9_TWO_RUN_DETERMINISM",
+    "R10_SOURCE_IMMUTABLE",
+    "R11_NO_DOWNSTREAM_MATERIAL",
+    "R12_SCORE_FREE",
+    "R13_FAIL_CLOSED",
+    "R14_REPLAY_CHILD_DIRECTORY_HANDOFF",
+    "R15_V1R1_FAILURE_REPRODUCED",
+    "R16_REPAIR_DELTA_EXACT"
+  ],
+  "target_free_gates": [
+    "A0_REGISTRY_AND_LINEAGE",
+    "A1_FROZEN_V1R2_OUTPUT_HASHES",
+    "A2_OLD_FAILURE_REPRODUCED",
+    "A3_ORDER_INDEPENDENT_EXACT_GATE_SET",
+    "A4_MISSING_GATE_REJECTED",
+    "A5_EXTRA_GATE_REJECTED",
+    "A6_DUPLICATE_GATE_REJECTED",
+    "A7_FALSE_GATE_REJECTED",
+    "A8_NONBOOLEAN_GATE_REJECTED",
+    "A9_INPUT_IMMUTABLE",
+    "A10_AUDITOR_IMPORT_BOUNDARY",
+    "A11_NO_DOWNSTREAM_ACTIVITY",
+    "A12_FAIL_CLOSED"
+  ],
+  "repair": {
+    "old_predicate": "tuple(observed_gate_keys) == expected_gate_sequence",
+    "new_predicate": "unique observed gate-name set equals expected gate-name set and every value is exactly true",
+    "json_duplicate_keys": "reject",
+    "allowed_semantic_delta": "gate object order is ignored",
+    "all_other_checks": "unchanged"
+  },
+  "authorization": {
+    "documentation": true,
+    "auditor_implementation": true,
+    "synthetic_qualification": true,
+    "server_target_free_qualification": true,
+    "one_preserved_v1r2_audit_execution": true,
+    "failure_or_pass_archive": true,
+    "modify_v1": false,
+    "modify_v1r1": false,
+    "modify_v1r2": false,
+    "regenerate_sidecars": false,
+    "materializer_execution": false,
+    "scenario_materialization": false,
+    "graph_materialization": false,
+    "model_implementation": false,
+    "training": false,
+    "inference": false,
+    "loss": false,
+    "checkpoint_access": false,
+    "metric_computation": false,
+    "target_evaluation": false,
+    "automatic_real_retry": false
+  },
+  "next_if_pass": "SEPARATE_CAUSAL_GRAPH_MATERIALIZER_AUTHORITY_REQUIRED"
+}
