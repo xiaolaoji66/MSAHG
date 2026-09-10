@@ -1,0 +1,100 @@
+{
+  "schema": "msahg.sthgcn-sample-materializer.scope.v1",
+  "date": "2026-09-10",
+  "repository": "https://github.com/xiaolaoji66/MSAHG",
+  "base_branch": "results/sthgcn-sample-protocol-r1-score-free-f606afa",
+  "base_commit": "f09a5016958a3495764f55cd69f93d5bc5e147bb",
+  "protocol_authorities": {
+    "registration": "87e21b86f39f7491e2460f0647ace0e14d6fbb17",
+    "qualification_implementation": "f606afafd6b71e3fa34142207a8dc162d71cbe15",
+    "qualification_result": "f09a5016958a3495764f55cd69f93d5bc5e147bb"
+  },
+  "sthgcn_authority": {
+    "repository": "https://github.com/alipay/Spatio-Temporal-Hypergraph-Model",
+    "commit": "27b595846d29019799485985bff49f9ed02c4ade",
+    "nyc_archive_sha256": "974bc90b3e0cdec6ec29a0a953ac41d3f81880e17bdd4c7c0cd94f2afc9e17d2",
+    "tky_archive_sha256": "823cd400a8d67b360c50217c1e8141e566a2b804ca8af9feac9ff9c0f76220c7",
+    "tky_member_sha256": "85542c605ce708d8584637756590383a84e9bbdb71342d0d8e78858ba2a0e5c8"
+  },
+  "portable_reference": {
+    "stable_tie_breaker": "source ordinal",
+    "nyc_split": "published file membership",
+    "tky_split": "explicit global local-time order; [0,floor(0.8N)) train, [floor(0.8N),floor(0.9N)) validation, remainder test",
+    "tky_source_chained_assignment": "documented defect; not authoritative",
+    "tky_poi_keep": "count > 9",
+    "tky_user_keep": "count > 9 after POI filtering",
+    "tky_isolation": "remove iff no same-user predecessor or successor within <= 24 hours",
+    "trajectory_break": "user changes or local-time gap > 1440 minutes",
+    "vocabulary": "fit on training split only",
+    "first_event": "ignore as prediction target",
+    "validation_test_endpoint": "final non-first event per trajectory only",
+    "cold_start": "exclude validation/test endpoints with unseen training user or POI"
+  },
+  "reported_count_witnesses": {
+    "nyc": {
+      "users": 1048,
+      "pois": 4981,
+      "post_filter_events": 103941,
+      "trajectories": 14130
+    },
+    "tky": {
+      "users": 2282,
+      "pois": 7833,
+      "post_filter_events": 405000,
+      "trajectories": 65499
+    }
+  },
+  "required_outputs_per_dataset": [
+    "sample.csv",
+    "train_sample.csv",
+    "validate_sample.csv",
+    "test_sample.csv",
+    "label_encoding.json",
+    "materialization_receipt.json",
+    "SHA256SUMS"
+  ],
+  "required_gates": [
+    "M0_AUTHORITY",
+    "M1_FRESH_OUTPUT",
+    "M2_PORTABLE_SPLIT",
+    "M3_FILTER_AND_SESSION",
+    "M4_TRAIN_ONLY_VOCABULARY",
+    "M5_TARGET_CONSTRUCTION",
+    "M6_COLD_START",
+    "M7_DETERMINISM",
+    "M8_SOURCE_IMMUTABLE",
+    "M9_NO_GRAPH",
+    "M10_NO_SCENARIOS",
+    "M11_SCORE_FREE",
+    "M12_COUNT_WITNESS",
+    "M13_FAIL_CLOSED"
+  ],
+  "status_after_registration": "MATERIALIZER_IMPLEMENTATION_AUTHORIZED_SCORE_EXECUTION_CLOSED",
+  "authorization": {
+    "documentation": true,
+    "materializer_implementation": true,
+    "synthetic_tests": true,
+    "public_archive_read": true,
+    "score_free_sample_materialization": true,
+    "receipt_and_checksum": true,
+    "result_archive": true,
+    "graph_materialization": false,
+    "scenario_label_materialization": false,
+    "training": false,
+    "inference": false,
+    "metric_computation": false,
+    "checkpoint_access": false,
+    "hyperparameter_tuning": false
+  },
+  "fail_closed": {
+    "existing_output": "reject",
+    "identity_mismatch": "HOLD",
+    "count_mismatch": "HOLD / COUNT_MISMATCH",
+    "automatic_retry": false,
+    "result_driven_rule_change": false
+  },
+  "interpretation_boundary": {
+    "allowed": "portable score-free reconstruction of the public STHGCN sample protocol",
+    "prohibited": "MSAHG paper-table reproduction or predictive-gain claim"
+  }
+}
