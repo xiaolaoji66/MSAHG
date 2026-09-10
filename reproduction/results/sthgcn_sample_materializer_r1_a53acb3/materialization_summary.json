@@ -1,0 +1,12 @@
+{
+  "datasets": {
+    "nyc": "PASS",
+    "tky": "PASS"
+  },
+  "decision": "PASS",
+  "graph_materialized": false,
+  "recommendation_metrics_computed": false,
+  "scenario_labels_materialized": false,
+  "schema": "msahg.sthgcn-sample-materialization-summary.v1",
+  "training_performed": false
+}

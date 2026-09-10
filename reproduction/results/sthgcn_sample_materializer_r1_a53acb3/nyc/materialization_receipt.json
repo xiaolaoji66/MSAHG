@@ -1,0 +1,58 @@
+{
+  "authorities": {
+    "archive_sha256": "974bc90b3e0cdec6ec29a0a953ac41d3f81880e17bdd4c7c0cd94f2afc9e17d2",
+    "implementation_commit": "a53acb3a3f637c2da372661ed95559f92881f8fa",
+    "portability_authority_commit": "cc91340e466f151c8e54777d35453f2c48721774",
+    "registration_commit": "7c813210665f61197e68e7e794c5da091a259569",
+    "sthgcn_commit": "27b595846d29019799485985bff49f9ed02c4ade"
+  },
+  "checkpoint_accessed": false,
+  "counts": {
+    "eligible_test": 1357,
+    "eligible_train": 72206,
+    "eligible_validation": 1407,
+    "ignored_records": 28620,
+    "pois": 4981,
+    "post_filter_events": 103941,
+    "trajectories": 14130,
+    "users": 1048
+  },
+  "dataset": "nyc",
+  "decision": "PASS",
+  "gates": {
+    "M0_AUTHORITY": true,
+    "M10_NO_SCENARIOS": true,
+    "M11_SCORE_FREE": true,
+    "M12_COUNT_WITNESS": true,
+    "M13_FAIL_CLOSED": true,
+    "M1_FRESH_OUTPUT": true,
+    "M2_PORTABLE_SPLIT": true,
+    "M3_FILTER_AND_SESSION": true,
+    "M4_TRAIN_ONLY_VOCABULARY": true,
+    "M5_TARGET_CONSTRUCTION": true,
+    "M6_COLD_START": true,
+    "M7_DETERMINISM": true,
+    "M8_SOURCE_IMMUTABLE": true,
+    "M9_NO_GRAPH": true
+  },
+  "graph_materialized": false,
+  "interpretation": "Portable score-free reconstruction of the public STHGCN sample protocol; not an MSAHG paper-table reproduction or predictive result.",
+  "reason_codes": [],
+  "recommendation_metrics_computed": false,
+  "record_content_read": true,
+  "reported_count_witness": {
+    "pois": 4981,
+    "post_filter_events": 103941,
+    "trajectories": 14130,
+    "users": 1048
+  },
+  "runtime": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "python": "3.12.14"
+  },
+  "sample_materialized": true,
+  "scenario_labels_materialized": false,
+  "schema": "msahg.sthgcn-sample-materialization-receipt.v1",
+  "training_performed": false
+}

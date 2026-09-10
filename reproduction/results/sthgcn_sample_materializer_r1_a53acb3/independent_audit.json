@@ -1,0 +1,54 @@
+{
+  "datasets": {
+    "nyc": {
+      "checks": {
+        "checksums": true,
+        "cold_start_excluded": true,
+        "no_graph_or_scenario_output": true,
+        "receipt_counts": true,
+        "receipt_score_free": true,
+        "reported_counts": true,
+        "train_first_event_excluded": true,
+        "validation_test_final_event_only": true
+      },
+      "checksum_output": "label_encoding.json: OK\nmaterialization_receipt.json: OK\nsample.csv: OK\ntest_sample.csv: OK\ntrain_sample.csv: OK\nvalidate_sample.csv: OK\n",
+      "counts": {
+        "pois": 4981,
+        "post_filter_events": 103941,
+        "trajectories": 14130,
+        "users": 1048
+      },
+      "dataset": "nyc",
+      "forbidden_names": [],
+      "pass": true
+    },
+    "tky": {
+      "checks": {
+        "checksums": true,
+        "cold_start_excluded": true,
+        "no_graph_or_scenario_output": true,
+        "receipt_counts": true,
+        "receipt_score_free": true,
+        "reported_counts": true,
+        "train_first_event_excluded": true,
+        "validation_test_final_event_only": true
+      },
+      "checksum_output": "label_encoding.json: OK\nmaterialization_receipt.json: OK\nsample.csv: OK\ntest_sample.csv: OK\ntrain_sample.csv: OK\nvalidate_sample.csv: OK\n",
+      "counts": {
+        "pois": 7833,
+        "post_filter_events": 405000,
+        "trajectories": 65499,
+        "users": 2282
+      },
+      "dataset": "tky",
+      "forbidden_names": [],
+      "pass": true
+    }
+  },
+  "decision": "PASS",
+  "graph_materialized": false,
+  "recommendation_metrics_computed": false,
+  "scenario_labels_materialized": false,
+  "schema": "msahg.sthgcn-sample-materialization-independent-audit.v1",
+  "training_performed": false
+}
