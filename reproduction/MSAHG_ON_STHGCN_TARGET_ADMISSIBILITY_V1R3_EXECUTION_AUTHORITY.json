@@ -1,0 +1,33 @@
+{
+  "schema": "msahg.on-sthgcn.target-admissibility-v1r3-execution-authority.v1",
+  "date": "2026-09-10",
+  "status": "ONE_SCORE_FREE_REAL_AUDIT_AUTHORIZED",
+  "registration_commit": "80a0dfccc306d961d95e77334188a93e7a624ad3",
+  "implementation_commit": "bd9e7f6e518eda833d25f4fd1b6ff8639c934ad6",
+  "parent_failure_archive": "727c82e8e1c822fa1acc8bab7f1511c2a2388b3e",
+  "registry_path": "reproduction/MSAHG_ON_STHGCN_TARGET_ADMISSIBILITY_V1R3_REGISTRY.json",
+  "registry_sha256": "fc5f5efe379efb77fb17bd5cb90a306a85106e95b7f220a3e4e190be73d47b13",
+  "scope_sha256": "db82773ddd18c1a203604d9d59aa3b019ff12d1bd972ce7399592a68e40760dd",
+  "datasets": [
+    "nyc",
+    "tky"
+  ],
+  "audit_invocations": 1,
+  "official_source_read_authorized": true,
+  "real_public_csv_read_authorized": true,
+  "real_provenance_sidecar_read_authorized": true,
+  "scenario_support_computation_authorized": true,
+  "graph_materialization_authorized": false,
+  "scenario_materialization_authorized": false,
+  "model_implementation_authorized": false,
+  "training_authorized": false,
+  "inference_authorized": false,
+  "checkpoint_access_authorized": false,
+  "recommendation_metric_computation_authorized": false,
+  "target_evaluation_authorized": false,
+  "threshold_search_authorized": false,
+  "posthoc_group_merge_authorized": false,
+  "automatic_retry_authorized": false,
+  "failure_rule": "PRESERVE_OUTPUT_AND_STOP_NO_RETRY",
+  "pass_rule": "MAY_PROCEED_TO_SEPARATE_VERSIONED_V1R3_MATERIALIZER_REPAIR_UNDER_USER_APPROVED_CONDITIONAL_SCOPE"
+}
