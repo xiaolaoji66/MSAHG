@@ -1,0 +1,585 @@
+{
+  "authority": {
+    "authority_commit": "7c2ea94c6aa59c797ddd993c5dfe5a237d1a245b",
+    "implementation_commit": "bd9e7f6e518eda833d25f4fd1b6ff8639c934ad6"
+  },
+  "automatic_retry_performed": false,
+  "datasets": [
+    {
+      "axis_partitions": {
+        "test": {
+          "poi_axis_total": 1300,
+          "scenario_rows": 1300,
+          "time_axis_total": 1300,
+          "user_axis_total": 1300
+        },
+        "train": {
+          "poi_axis_total": 72206,
+          "scenario_rows": 72206,
+          "time_axis_total": 72206,
+          "user_axis_total": 72206
+        },
+        "validation": {
+          "poi_axis_total": 1345,
+          "scenario_rows": 1345,
+          "time_axis_total": 1345,
+          "user_axis_total": 1345
+        }
+      },
+      "axis_partitions_exact": false,
+      "complete_rows": 103941,
+      "dataset": "nyc",
+      "duplicate_trajectory_rank_count": 0,
+      "duplicate_trajectory_ranks": [],
+      "encoding": {
+        "poi_class_count": 4980,
+        "poi_offset": 0,
+        "poi_padding_id": 4980,
+        "user_class_count": 1047,
+        "user_offset": 0,
+        "user_padding_id": 1047
+      },
+      "excluded_current_endpoints": {
+        "test": {
+          "either": 209,
+          "unknown_poi": 120,
+          "unknown_user": 115
+        },
+        "train": {
+          "either": 0,
+          "unknown_poi": 0,
+          "unknown_user": 0
+        },
+        "validation": {
+          "either": 142,
+          "unknown_poi": 91,
+          "unknown_user": 72
+        }
+      },
+      "expected_official_target_counts": {
+        "test": 1347,
+        "train": 72206,
+        "validation": 1400
+      },
+      "input_immutable": true,
+      "input_sha256_after": {
+        "label_encoding.json": "1d8ae8f4a04908868f9ad4e186944a9f3e84b472bd015b2bbad9b663fff3c64b",
+        "record_split_provenance.csv": "57c0b434918d5cd1bb421f2654c430a572e3e70f6c587ad398e078c8fd0f93d3",
+        "sample.csv": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65"
+      },
+      "input_sha256_before": {
+        "label_encoding.json": "1d8ae8f4a04908868f9ad4e186944a9f3e84b472bd015b2bbad9b663fff3c64b",
+        "record_split_provenance.csv": "57c0b434918d5cd1bb421f2654c430a572e3e70f6c587ad398e078c8fd0f93d3",
+        "sample.csv": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65"
+      },
+      "missing_immediate_prefix_count": 0,
+      "missing_immediate_prefix_examples": [],
+      "official_target_counts": {
+        "test": 1357,
+        "train": 72206,
+        "validation": 1407
+      },
+      "official_target_counts_exact": false,
+      "support": {
+        "test": {
+          "POI/0": {
+            "distinct_users": 332,
+            "targets": 850
+          },
+          "POI/1": {
+            "distinct_users": 158,
+            "targets": 450
+          },
+          "Time/0": {
+            "distinct_users": 346,
+            "targets": 975
+          },
+          "Time/1": {
+            "distinct_users": 215,
+            "targets": 325
+          },
+          "User/0": {
+            "distinct_users": 384,
+            "targets": 1224
+          },
+          "User/1": {
+            "distinct_users": 24,
+            "targets": 76
+          }
+        },
+        "train": {
+          "POI/0": {
+            "distinct_users": 984,
+            "targets": 45234
+          },
+          "POI/1": {
+            "distinct_users": 697,
+            "targets": 26972
+          },
+          "Time/0": {
+            "distinct_users": 1031,
+            "targets": 54610
+          },
+          "Time/1": {
+            "distinct_users": 933,
+            "targets": 17596
+          },
+          "User/0": {
+            "distinct_users": 988,
+            "targets": 66633
+          },
+          "User/1": {
+            "distinct_users": 59,
+            "targets": 5573
+          }
+        },
+        "validation": {
+          "POI/0": {
+            "distinct_users": 377,
+            "targets": 910
+          },
+          "POI/1": {
+            "distinct_users": 157,
+            "targets": 435
+          },
+          "Time/0": {
+            "distinct_users": 377,
+            "targets": 933
+          },
+          "Time/1": {
+            "distinct_users": 263,
+            "targets": 412
+          },
+          "User/0": {
+            "distinct_users": 434,
+            "targets": 1276
+          },
+          "User/1": {
+            "distinct_users": 27,
+            "targets": 69
+          }
+        }
+      },
+      "support_failures": [
+        {
+          "floor": {
+            "distinct_users": 30,
+            "targets": 100
+          },
+          "observed": {
+            "distinct_users": 27,
+            "targets": 69
+          },
+          "split": "validation",
+          "task": "User/1"
+        },
+        {
+          "floor": {
+            "distinct_users": 30,
+            "targets": 100
+          },
+          "observed": {
+            "distinct_users": 24,
+            "targets": 76
+          },
+          "split": "test",
+          "task": "User/1"
+        }
+      ],
+      "support_floors_pass": false,
+      "train_only_activity_center": {
+        "latitude": 40.74703585892305,
+        "longitude": -73.9835663081809
+      },
+      "train_only_poi_labels": {
+        "group_0_pois": 3333,
+        "group_1_pois": 1647
+      },
+      "train_only_user_labels": {
+        "group_0_users": 988,
+        "group_1_users": 59
+      },
+      "unknown_immediate_prefix_poi_count": 119,
+      "unknown_immediate_prefix_poi_examples": [
+        {
+          "prefix_source_ordinal": 84633,
+          "target_source_ordinal": 84653
+        },
+        {
+          "prefix_source_ordinal": 84689,
+          "target_source_ordinal": 84747
+        },
+        {
+          "prefix_source_ordinal": 84629,
+          "target_source_ordinal": 84770
+        },
+        {
+          "prefix_source_ordinal": 84791,
+          "target_source_ordinal": 84814
+        },
+        {
+          "prefix_source_ordinal": 84807,
+          "target_source_ordinal": 84864
+        },
+        {
+          "prefix_source_ordinal": 84978,
+          "target_source_ordinal": 85089
+        },
+        {
+          "prefix_source_ordinal": 85711,
+          "target_source_ordinal": 85747
+        },
+        {
+          "prefix_source_ordinal": 85731,
+          "target_source_ordinal": 85873
+        },
+        {
+          "prefix_source_ordinal": 85888,
+          "target_source_ordinal": 85917
+        },
+        {
+          "prefix_source_ordinal": 85964,
+          "target_source_ordinal": 86031
+        },
+        {
+          "prefix_source_ordinal": 85938,
+          "target_source_ordinal": 86047
+        },
+        {
+          "prefix_source_ordinal": 85945,
+          "target_source_ordinal": 86059
+        },
+        {
+          "prefix_source_ordinal": 85915,
+          "target_source_ordinal": 86069
+        },
+        {
+          "prefix_source_ordinal": 86128,
+          "target_source_ordinal": 86156
+        },
+        {
+          "prefix_source_ordinal": 86041,
+          "target_source_ordinal": 86203
+        },
+        {
+          "prefix_source_ordinal": 86263,
+          "target_source_ordinal": 86413
+        },
+        {
+          "prefix_source_ordinal": 86690,
+          "target_source_ordinal": 86782
+        },
+        {
+          "prefix_source_ordinal": 86674,
+          "target_source_ordinal": 86856
+        },
+        {
+          "prefix_source_ordinal": 87062,
+          "target_source_ordinal": 87063
+        },
+        {
+          "prefix_source_ordinal": 87289,
+          "target_source_ordinal": 87320
+        }
+      ]
+    },
+    {
+      "axis_partitions": {
+        "test": {
+          "poi_axis_total": 7028,
+          "scenario_rows": 7028,
+          "time_axis_total": 7028,
+          "user_axis_total": 7028
+        },
+        "train": {
+          "poi_axis_total": 274597,
+          "scenario_rows": 274597,
+          "time_axis_total": 274597,
+          "user_axis_total": 274597
+        },
+        "validation": {
+          "poi_axis_total": 6862,
+          "scenario_rows": 6862,
+          "time_axis_total": 6862,
+          "user_axis_total": 6862
+        }
+      },
+      "axis_partitions_exact": false,
+      "complete_rows": 405000,
+      "dataset": "tky",
+      "duplicate_trajectory_rank_count": 0,
+      "duplicate_trajectory_ranks": [],
+      "encoding": {
+        "poi_class_count": 7832,
+        "poi_offset": 1,
+        "poi_padding_id": 0,
+        "user_class_count": 2281,
+        "user_offset": 1,
+        "user_padding_id": 0
+      },
+      "excluded_current_endpoints": {
+        "test": {
+          "either": 108,
+          "unknown_poi": 42,
+          "unknown_user": 76
+        },
+        "train": {
+          "either": 0,
+          "unknown_poi": 0,
+          "unknown_user": 0
+        },
+        "validation": {
+          "either": 59,
+          "unknown_poi": 29,
+          "unknown_user": 32
+        }
+      },
+      "expected_official_target_counts": {
+        "test": 7038,
+        "train": 274597,
+        "validation": 6868
+      },
+      "input_immutable": true,
+      "input_sha256_after": {
+        "label_encoding.json": "333e33a94f9386ef0b5e62124a91bfdb22c1697ce2bae5b15ff12e73f93f81d7",
+        "record_split_provenance.csv": "5f287bb802943a3e8f99ff307acf2f8c47f5c4e46eab62fd62ff00c7a0de211d",
+        "sample.csv": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0"
+      },
+      "input_sha256_before": {
+        "label_encoding.json": "333e33a94f9386ef0b5e62124a91bfdb22c1697ce2bae5b15ff12e73f93f81d7",
+        "record_split_provenance.csv": "5f287bb802943a3e8f99ff307acf2f8c47f5c4e46eab62fd62ff00c7a0de211d",
+        "sample.csv": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0"
+      },
+      "missing_immediate_prefix_count": 0,
+      "missing_immediate_prefix_examples": [],
+      "official_target_counts": {
+        "test": 7049,
+        "train": 274597,
+        "validation": 6875
+      },
+      "official_target_counts_exact": false,
+      "support": {
+        "test": {
+          "POI/0": {
+            "distinct_users": 1499,
+            "targets": 5198
+          },
+          "POI/1": {
+            "distinct_users": 725,
+            "targets": 1830
+          },
+          "Time/0": {
+            "distinct_users": 1518,
+            "targets": 5420
+          },
+          "Time/1": {
+            "distinct_users": 1052,
+            "targets": 1608
+          },
+          "User/0": {
+            "distinct_users": 1632,
+            "targets": 6920
+          },
+          "User/1": {
+            "distinct_users": 30,
+            "targets": 108
+          }
+        },
+        "train": {
+          "POI/0": {
+            "distinct_users": 2265,
+            "targets": 197456
+          },
+          "POI/1": {
+            "distinct_users": 2019,
+            "targets": 77141
+          },
+          "Time/0": {
+            "distinct_users": 2271,
+            "targets": 190524
+          },
+          "Time/1": {
+            "distinct_users": 2237,
+            "targets": 84073
+          },
+          "User/0": {
+            "distinct_users": 2238,
+            "targets": 272125
+          },
+          "User/1": {
+            "distinct_users": 43,
+            "targets": 2472
+          }
+        },
+        "validation": {
+          "POI/0": {
+            "distinct_users": 1596,
+            "targets": 5122
+          },
+          "POI/1": {
+            "distinct_users": 775,
+            "targets": 1740
+          },
+          "Time/0": {
+            "distinct_users": 1549,
+            "targets": 4495
+          },
+          "Time/1": {
+            "distinct_users": 1274,
+            "targets": 2367
+          },
+          "User/0": {
+            "distinct_users": 1714,
+            "targets": 6759
+          },
+          "User/1": {
+            "distinct_users": 30,
+            "targets": 103
+          }
+        }
+      },
+      "support_failures": [],
+      "support_floors_pass": true,
+      "train_only_activity_center": {
+        "latitude": 35.6819800374406,
+        "longitude": 139.71779325751652
+      },
+      "train_only_poi_labels": {
+        "group_0_pois": 5347,
+        "group_1_pois": 2485
+      },
+      "train_only_user_labels": {
+        "group_0_users": 2238,
+        "group_1_users": 43
+      },
+      "unknown_immediate_prefix_poi_count": 34,
+      "unknown_immediate_prefix_poi_examples": [
+        {
+          "prefix_source_ordinal": 460276,
+          "target_source_ordinal": 460908
+        },
+        {
+          "prefix_source_ordinal": 467424,
+          "target_source_ordinal": 467535
+        },
+        {
+          "prefix_source_ordinal": 467999,
+          "target_source_ordinal": 469265
+        },
+        {
+          "prefix_source_ordinal": 473612,
+          "target_source_ordinal": 473666
+        },
+        {
+          "prefix_source_ordinal": 493121,
+          "target_source_ordinal": 493577
+        },
+        {
+          "prefix_source_ordinal": 493800,
+          "target_source_ordinal": 493801
+        },
+        {
+          "prefix_source_ordinal": 495752,
+          "target_source_ordinal": 496137
+        },
+        {
+          "prefix_source_ordinal": 501921,
+          "target_source_ordinal": 501922
+        },
+        {
+          "prefix_source_ordinal": 503749,
+          "target_source_ordinal": 503761
+        },
+        {
+          "prefix_source_ordinal": 505330,
+          "target_source_ordinal": 506621
+        },
+        {
+          "prefix_source_ordinal": 509380,
+          "target_source_ordinal": 509381
+        },
+        {
+          "prefix_source_ordinal": 514800,
+          "target_source_ordinal": 514899
+        },
+        {
+          "prefix_source_ordinal": 514914,
+          "target_source_ordinal": 516070
+        },
+        {
+          "prefix_source_ordinal": 516711,
+          "target_source_ordinal": 516756
+        },
+        {
+          "prefix_source_ordinal": 518762,
+          "target_source_ordinal": 518884
+        },
+        {
+          "prefix_source_ordinal": 519974,
+          "target_source_ordinal": 519983
+        },
+        {
+          "prefix_source_ordinal": 519107,
+          "target_source_ordinal": 520254
+        },
+        {
+          "prefix_source_ordinal": 521232,
+          "target_source_ordinal": 522376
+        },
+        {
+          "prefix_source_ordinal": 526137,
+          "target_source_ordinal": 526464
+        },
+        {
+          "prefix_source_ordinal": 525727,
+          "target_source_ordinal": 527110
+        }
+      ]
+    }
+  ],
+  "date": "2026-09-10",
+  "decision": "PROTOCOL_FAILURE",
+  "gates": {
+    "A0_AUTHORITY_AND_LINEAGE": true,
+    "A10_EXACT_AXIS_PARTITIONS": false,
+    "A11_SUPPORT_FLOORS": false,
+    "A12_SOURCE_AND_INPUT_IMMUTABLE": true,
+    "A13_SCORE_FREE": true,
+    "A1_STHGCN_SOURCE_IDENTITY": true,
+    "A2_FROZEN_INPUT_IDENTITY": true,
+    "A3_SAMPLE_PROVENANCE_ROW_IDENTITY": true,
+    "A4_OFFICIAL_CURRENT_ENDPOINT_RULE": true,
+    "A5_EXACT_OFFICIAL_SPLIT_COUNTS": false,
+    "A6_UNIQUE_IMMEDIATE_PREFIX": true,
+    "A7_PREFIX_POI_TRAIN_KNOWN": false,
+    "A8_TRAIN_ONLY_USER_LABELS": true,
+    "A9_TRAIN_ONLY_POI_LABELS": true
+  },
+  "graph_materialized": false,
+  "inference_performed": false,
+  "interpretation": "PASS establishes official-target and six-task data admissibility only; it is not a model or ranking result.",
+  "model_executed": false,
+  "parent_failure_archive": "727c82e8e1c822fa1acc8bab7f1511c2a2388b3e",
+  "reason": "OFFICIAL_FILTERED_TARGET_COUNTS_NOT_REPRODUCED",
+  "recommendation_metrics_computed": false,
+  "registration_commit": "80a0dfccc306d961d95e77334188a93e7a624ad3",
+  "registry_semantic_sha256": "0a54b52e75e238ca5ee95ff9e1ce514eadb23d714048bbd766534494fadae80b",
+  "registry_sha256": "fc5f5efe379efb77fb17bd5cb90a306a85106e95b7f220a3e4e190be73d47b13",
+  "scenario_materialized": false,
+  "schema": "msahg.on-sthgcn.target-admissibility-v1r3-receipt.v1",
+  "scope_sha256": "db82773ddd18c1a203604d9d59aa3b019ff12d1bd972ce7399592a68e40760dd",
+  "sthgcn_source_commit": "27b595846d29019799485985bff49f9ed02c4ade",
+  "sthgcn_source_sha256_after": {
+    "README.md": "90d667566b38e9404ac93e0ef35523a17f597b5a220fb30e82acc9d81b10ee4e",
+    "dataset/lbsn_dataset.py": "6c1ecd998b50fc180eb56af3d05de7a96b67be9ae50a291bebe9192ea5074b9e",
+    "preprocess/preprocess_fn.py": "aaf6134b6912a69cdc77d34f6e62ac134329acee2e08175c626844944ebf0966",
+    "preprocess/preprocess_main.py": "d8ade2ff7f5e17db7322d38db6a0b2d003f7bd27133ea6a773d927a8f904bfba"
+  },
+  "sthgcn_source_sha256_before": {
+    "README.md": "90d667566b38e9404ac93e0ef35523a17f597b5a220fb30e82acc9d81b10ee4e",
+    "dataset/lbsn_dataset.py": "6c1ecd998b50fc180eb56af3d05de7a96b67be9ae50a291bebe9192ea5074b9e",
+    "preprocess/preprocess_fn.py": "aaf6134b6912a69cdc77d34f6e62ac134329acee2e08175c626844944ebf0966",
+    "preprocess/preprocess_main.py": "d8ade2ff7f5e17db7322d38db6a0b2d003f7bd27133ea6a773d927a8f904bfba"
+  },
+  "training_performed": false
+}
