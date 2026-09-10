@@ -1,0 +1,121 @@
+{
+  "activity_center_materialized": false,
+  "authorities": {
+    "implementation_commit": "d73f118afa9b51a1418acd5c1fa5eb32b5b0818b",
+    "parent_contract_commit": "d7d8959eab2256d2e8153485165d11028c258025",
+    "registration_commit": "fd5aa7739d031c1fa20336084823a63ee56e7acc",
+    "registry_sha256": "55eb73a7a32b36f3f99570dc802b809c31eaa2caa930bd57bed6b810414ce612",
+    "sthgcn_commit": "27b595846d29019799485985bff49f9ed02c4ade",
+    "v1_result_commit": "9e67e05875540cc87a21e15c4ff3623400c6ab49",
+    "v1_source_sha256": "288daa4ab0de251cbbb0d4d8a1735af1193d42aa0c258757443fd2a154e65f3e"
+  },
+  "checkpoint_accessed": false,
+  "counts": {
+    "original_split": {
+      "test": 10374,
+      "train": 83228,
+      "validation": 10339
+    },
+    "rows": 103941,
+    "visible_split": {
+      "ignore": 28620,
+      "test": 1566,
+      "train": 72206,
+      "validation": 1549
+    }
+  },
+  "cross_tab": {
+    "test": {
+      "ignore": 8808,
+      "test": 1566,
+      "train": 0,
+      "validation": 0
+    },
+    "train": {
+      "ignore": 11022,
+      "test": 0,
+      "train": 72206,
+      "validation": 0
+    },
+    "validation": {
+      "ignore": 8790,
+      "test": 0,
+      "train": 0,
+      "validation": 1549
+    }
+  },
+  "dataset": "nyc",
+  "decision": "PASS",
+  "gates": {
+    "R0_AUTHORITY": true,
+    "R10_SOURCE_IMMUTABLE": true,
+    "R11_NO_DOWNSTREAM_MATERIAL": true,
+    "R12_SCORE_FREE": true,
+    "R13_FAIL_CLOSED": true,
+    "R14_REPLAY_CHILD_DIRECTORY_HANDOFF": true,
+    "R15_V1R1_FAILURE_REPRODUCED": true,
+    "R16_REPAIR_DELTA_EXACT": true,
+    "R1_FRESH_OUTPUT": true,
+    "R2_V1_INPUT_IMMUTABLE": true,
+    "R3_EXACT_V1_REPLAY": true,
+    "R4_ROW_BIJECTION": true,
+    "R5_LEGAL_ORIGINAL_SPLIT": true,
+    "R6_VISIBLE_SPLIT_IMPLICATION": true,
+    "R7_IDENTITY_STABILITY": true,
+    "R8_COUNT_CONSERVATION": true,
+    "R9_TWO_RUN_DETERMINISM": true
+  },
+  "graph_materialized": false,
+  "inference_performed": false,
+  "interpretation": "PASS establishes original split provenance for every qualified V1 row only; it is not graph, model, or predictive evidence.",
+  "loss_computed": false,
+  "model_executed": false,
+  "original_split_provenance_materialized": true,
+  "reason_codes": [],
+  "recommendation_metrics_computed": false,
+  "replay_directory_repair": {
+    "preexisting_replay_child_rejected": true,
+    "repair_delta_exact": true,
+    "replay_child_absent_before_write": true,
+    "replay_child_created_once": true,
+    "temporary_parent_exists": true,
+    "v1r1_failure_reproduced": true
+  },
+  "runtime": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "python": "3.10.20"
+  },
+  "scenario_labels_materialized": false,
+  "schema": "msahg.sthgcn-sample-materializer-v1r2-provenance-receipt.v1",
+  "sidecar_sha256": "57c0b434918d5cd1bb421f2654c430a572e3e70f6c587ad398e078c8fd0f93d3",
+  "supersedes_v1r1_failure_archive_commit": "d7d8959eab2256d2e8153485165d11028c258025",
+  "synthetic_determinism": {
+    "first": {
+      "receipt.json": "a747452616ac38efea90fb6eba7d3f7c1328d439cbed4e3e01a7ef6dfa74b681",
+      "record_split_provenance.csv": "fe2acd69af36264a60957fb1306100bbce10d35f0d51f9c438a6aa06e236de2f"
+    },
+    "pass": true,
+    "rows": 5,
+    "second": {
+      "receipt.json": "a747452616ac38efea90fb6eba7d3f7c1328d439cbed4e3e01a7ef6dfa74b681",
+      "record_split_provenance.csv": "fe2acd69af36264a60957fb1306100bbce10d35f0d51f9c438a6aa06e236de2f"
+    }
+  },
+  "target_evaluation_performed": false,
+  "training_performed": false,
+  "v1_input_sha256": {
+    "label_encoding.json": "1d8ae8f4a04908868f9ad4e186944a9f3e84b472bd015b2bbad9b663fff3c64b",
+    "sample.csv": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65",
+    "test_sample.csv": "79063686fab16b7432a78e98b511b484ee79faa00515cc83b7df0bdbdcbb6c89",
+    "train_sample.csv": "ed67d5fb35670abc8ca5faf4dd9a928f194f4f4529b671e1e1261dbd9cdfe6f7",
+    "validate_sample.csv": "0cef8e32a8510844ed5c71d29cf61e7abfe8b175246173374a8f898e93d12e7d"
+  },
+  "v1_replay_sha256": {
+    "label_encoding.json": "1d8ae8f4a04908868f9ad4e186944a9f3e84b472bd015b2bbad9b663fff3c64b",
+    "sample.csv": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65",
+    "test_sample.csv": "79063686fab16b7432a78e98b511b484ee79faa00515cc83b7df0bdbdcbb6c89",
+    "train_sample.csv": "ed67d5fb35670abc8ca5faf4dd9a928f194f4f4529b671e1e1261dbd9cdfe6f7",
+    "validate_sample.csv": "0cef8e32a8510844ed5c71d29cf61e7abfe8b175246173374a8f898e93d12e7d"
+  }
+}

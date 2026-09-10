@@ -1,0 +1,77 @@
+{
+  "checkpoint_accessed": false,
+  "decision": "PASS",
+  "failed_gates": [],
+  "gates": {
+    "T0_REGISTRY_AND_LINEAGE": true,
+    "T10_TWO_RUN_BYTE_DETERMINISM": true,
+    "T11_IMPORT_BOUNDARY": true,
+    "T12_NO_REAL_DATA_SURFACE": true,
+    "T13_NO_DOWNSTREAM_ACTIVITY": true,
+    "T14_FAIL_CLOSED": true,
+    "T1_V1_AND_V1R1_SOURCES_FROZEN": true,
+    "T2_REPAIR_DELTA_EXACT": true,
+    "T3_REPLAY_CHILD_DIRECTORY_HANDOFF": true,
+    "T4_PREEXISTING_REPLAY_CHILD_REJECTED": true,
+    "T5_V1R1_FAILURE_REPRODUCED": true,
+    "T6_SIDECAR_COLUMNS": true,
+    "T7_ROW_BIJECTION": true,
+    "T8_VISIBLE_SPLIT_IMPLICATION": true,
+    "T9_INVALID_OR_DUPLICATE_PROVENANCE_REJECTED": true
+  },
+  "graph_materialized": false,
+  "implementation_commit": "d73f118afa9b51a1418acd5c1fa5eb32b5b0818b",
+  "implementation_source_sha256": "2cd6d32cc8742e6e1f3f6e95e57ff262df24c02bcf4f80d778f8d6ba0f37a91c",
+  "inference_performed": false,
+  "interpretation": "PASS establishes the V1R2 directory repair and synthetic provenance coherence only; no public record, graph, model, or metric was accessed.",
+  "loss_computed": false,
+  "model_executed": false,
+  "original_split_provenance_materialized": false,
+  "production_imports": [
+    "__future__",
+    "argparse",
+    "hashlib",
+    "importlib",
+    "json",
+    "numpy",
+    "os",
+    "pandas",
+    "pathlib",
+    "shutil",
+    "subprocess",
+    "sys",
+    "tempfile"
+  ],
+  "real_record_content_read": false,
+  "recommendation_metrics_computed": false,
+  "registry_sha256": "55eb73a7a32b36f3f99570dc802b809c31eaa2caa930bd57bed6b810414ce612",
+  "replay_directory_repair": {
+    "preexisting_replay_child_rejected": true,
+    "repair_delta_exact": true,
+    "replay_child_absent_before_write": true,
+    "replay_child_created_once": true,
+    "temporary_parent_exists": true,
+    "v1r1_failure_reproduced": true
+  },
+  "runtime": {
+    "python": "3.10.20"
+  },
+  "scenario_labels_materialized": false,
+  "schema": "msahg.sthgcn-sample-materializer-v1r2-target-free-receipt.v1",
+  "synthetic_determinism": {
+    "first": {
+      "receipt.json": "a747452616ac38efea90fb6eba7d3f7c1328d439cbed4e3e01a7ef6dfa74b681",
+      "record_split_provenance.csv": "fe2acd69af36264a60957fb1306100bbce10d35f0d51f9c438a6aa06e236de2f"
+    },
+    "pass": true,
+    "rows": 5,
+    "second": {
+      "receipt.json": "a747452616ac38efea90fb6eba7d3f7c1328d439cbed4e3e01a7ef6dfa74b681",
+      "record_split_provenance.csv": "fe2acd69af36264a60957fb1306100bbce10d35f0d51f9c438a6aa06e236de2f"
+    }
+  },
+  "target_evaluation_performed": false,
+  "training_performed": false,
+  "v1_source_sha256": "288daa4ab0de251cbbb0d4d8a1735af1193d42aa0c258757443fd2a154e65f3e",
+  "v1r1_source_sha256": "606de269b48b6d5394a292956b033b0c43daa86d703360969443ce80e1ddaf5e"
+}

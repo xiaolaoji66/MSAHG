@@ -1,0 +1,26 @@
+{
+  "datasets": {
+    "nyc": "PASS",
+    "tky": "PASS"
+  },
+  "decision": "PASS",
+  "graph_materialized": false,
+  "implementation_commit": "d73f118afa9b51a1418acd5c1fa5eb32b5b0818b",
+  "model_executed": false,
+  "original_split_provenance_materialized": true,
+  "recommendation_metrics_computed": false,
+  "registration_commit": "fd5aa7739d031c1fa20336084823a63ee56e7acc",
+  "replay_directory_repair": {
+    "preexisting_replay_child_rejected": true,
+    "repair_delta_exact": true,
+    "replay_child_absent_before_write": true,
+    "replay_child_created_once": true,
+    "temporary_parent_exists": true,
+    "v1r1_failure_reproduced": true
+  },
+  "scenario_labels_materialized": false,
+  "schema": "msahg.sthgcn-sample-materializer-v1r2-provenance-summary.v1",
+  "supersedes_v1r1_failure_archive_commit": "d7d8959eab2256d2e8153485165d11028c258025",
+  "target_evaluation_performed": false,
+  "training_performed": false
+}

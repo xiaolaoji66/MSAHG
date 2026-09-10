@@ -1,0 +1,121 @@
+{
+  "activity_center_materialized": false,
+  "authorities": {
+    "implementation_commit": "d73f118afa9b51a1418acd5c1fa5eb32b5b0818b",
+    "parent_contract_commit": "d7d8959eab2256d2e8153485165d11028c258025",
+    "registration_commit": "fd5aa7739d031c1fa20336084823a63ee56e7acc",
+    "registry_sha256": "55eb73a7a32b36f3f99570dc802b809c31eaa2caa930bd57bed6b810414ce612",
+    "sthgcn_commit": "27b595846d29019799485985bff49f9ed02c4ade",
+    "v1_result_commit": "9e67e05875540cc87a21e15c4ff3623400c6ab49",
+    "v1_source_sha256": "288daa4ab0de251cbbb0d4d8a1735af1193d42aa0c258757443fd2a154e65f3e"
+  },
+  "checkpoint_accessed": false,
+  "counts": {
+    "original_split": {
+      "test": 39518,
+      "train": 326258,
+      "validation": 39224
+    },
+    "rows": 405000,
+    "visible_split": {
+      "ignore": 116312,
+      "test": 7157,
+      "train": 274597,
+      "validation": 6934
+    }
+  },
+  "cross_tab": {
+    "test": {
+      "ignore": 32361,
+      "test": 7157,
+      "train": 0,
+      "validation": 0
+    },
+    "train": {
+      "ignore": 51661,
+      "test": 0,
+      "train": 274597,
+      "validation": 0
+    },
+    "validation": {
+      "ignore": 32290,
+      "test": 0,
+      "train": 0,
+      "validation": 6934
+    }
+  },
+  "dataset": "tky",
+  "decision": "PASS",
+  "gates": {
+    "R0_AUTHORITY": true,
+    "R10_SOURCE_IMMUTABLE": true,
+    "R11_NO_DOWNSTREAM_MATERIAL": true,
+    "R12_SCORE_FREE": true,
+    "R13_FAIL_CLOSED": true,
+    "R14_REPLAY_CHILD_DIRECTORY_HANDOFF": true,
+    "R15_V1R1_FAILURE_REPRODUCED": true,
+    "R16_REPAIR_DELTA_EXACT": true,
+    "R1_FRESH_OUTPUT": true,
+    "R2_V1_INPUT_IMMUTABLE": true,
+    "R3_EXACT_V1_REPLAY": true,
+    "R4_ROW_BIJECTION": true,
+    "R5_LEGAL_ORIGINAL_SPLIT": true,
+    "R6_VISIBLE_SPLIT_IMPLICATION": true,
+    "R7_IDENTITY_STABILITY": true,
+    "R8_COUNT_CONSERVATION": true,
+    "R9_TWO_RUN_DETERMINISM": true
+  },
+  "graph_materialized": false,
+  "inference_performed": false,
+  "interpretation": "PASS establishes original split provenance for every qualified V1 row only; it is not graph, model, or predictive evidence.",
+  "loss_computed": false,
+  "model_executed": false,
+  "original_split_provenance_materialized": true,
+  "reason_codes": [],
+  "recommendation_metrics_computed": false,
+  "replay_directory_repair": {
+    "preexisting_replay_child_rejected": true,
+    "repair_delta_exact": true,
+    "replay_child_absent_before_write": true,
+    "replay_child_created_once": true,
+    "temporary_parent_exists": true,
+    "v1r1_failure_reproduced": true
+  },
+  "runtime": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "python": "3.10.20"
+  },
+  "scenario_labels_materialized": false,
+  "schema": "msahg.sthgcn-sample-materializer-v1r2-provenance-receipt.v1",
+  "sidecar_sha256": "5f287bb802943a3e8f99ff307acf2f8c47f5c4e46eab62fd62ff00c7a0de211d",
+  "supersedes_v1r1_failure_archive_commit": "d7d8959eab2256d2e8153485165d11028c258025",
+  "synthetic_determinism": {
+    "first": {
+      "receipt.json": "a747452616ac38efea90fb6eba7d3f7c1328d439cbed4e3e01a7ef6dfa74b681",
+      "record_split_provenance.csv": "fe2acd69af36264a60957fb1306100bbce10d35f0d51f9c438a6aa06e236de2f"
+    },
+    "pass": true,
+    "rows": 5,
+    "second": {
+      "receipt.json": "a747452616ac38efea90fb6eba7d3f7c1328d439cbed4e3e01a7ef6dfa74b681",
+      "record_split_provenance.csv": "fe2acd69af36264a60957fb1306100bbce10d35f0d51f9c438a6aa06e236de2f"
+    }
+  },
+  "target_evaluation_performed": false,
+  "training_performed": false,
+  "v1_input_sha256": {
+    "label_encoding.json": "333e33a94f9386ef0b5e62124a91bfdb22c1697ce2bae5b15ff12e73f93f81d7",
+    "sample.csv": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0",
+    "test_sample.csv": "bceee1b237c7f280c46a4a54f4e8787e10d363e071ac8d9811e5329bfe8a9d91",
+    "train_sample.csv": "ff7ef1fd38920b6f204a187d2cefb5adf11d0dab494beac5b41c4ac32b12abf7",
+    "validate_sample.csv": "630b5553b1a098d15da3584d8b74b43cf9f9a8640416686009bab117ccc17d63"
+  },
+  "v1_replay_sha256": {
+    "label_encoding.json": "333e33a94f9386ef0b5e62124a91bfdb22c1697ce2bae5b15ff12e73f93f81d7",
+    "sample.csv": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0",
+    "test_sample.csv": "bceee1b237c7f280c46a4a54f4e8787e10d363e071ac8d9811e5329bfe8a9d91",
+    "train_sample.csv": "ff7ef1fd38920b6f204a187d2cefb5adf11d0dab494beac5b41c4ac32b12abf7",
+    "validate_sample.csv": "630b5553b1a098d15da3584d8b74b43cf9f9a8640416686009bab117ccc17d63"
+  }
+}

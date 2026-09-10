@@ -1,0 +1,43 @@
+{
+  "schema": "msahg.sthgcn-sample-materializer-v1r2-adjudication.v1",
+  "date": "2026-09-10",
+  "overall_decision": "PROTOCOL_FAILURE",
+  "materializer_decision": "PASS",
+  "independent_audit_decision": "FAIL",
+  "automatic_retry_performed": false,
+  "reason_code": "INDEPENDENT_AUDIT_GATE_ORDER_FALSE_NEGATIVE",
+  "observed": {
+    "target_free_gates_true": 15,
+    "target_free_gates_total": 15,
+    "nyc_real_gates_true": 17,
+    "nyc_real_gates_total": 17,
+    "tky_real_gates_true": 17,
+    "tky_real_gates_total": 17,
+    "nyc_audit_failed_checks": [
+      "gate_set"
+    ],
+    "tky_audit_failed_checks": [
+      "gate_set"
+    ]
+  },
+  "confirmed_cause": {
+    "producer_behavior": "provenance receipts are emitted by json.dump with sort_keys true",
+    "auditor_behavior": "the auditor compares loaded gate-key iteration order with the registry order using tuple equality",
+    "result": "the same 17 unique gate names are sorted lexicographically in JSON and therefore fail an order-sensitive comparison",
+    "gate_name_set_equal": true,
+    "all_gate_values_true": true
+  },
+  "interpretation": "The sidecars and their internal checksums were produced, but V1R2 is not promoted to qualified status because its registered independent auditor returned FAIL.",
+  "prohibited_activity": {
+    "scenario_labels_materialized": false,
+    "graph_materialized": false,
+    "model_executed": false,
+    "training_performed": false,
+    "inference_performed": false,
+    "loss_computed": false,
+    "checkpoint_accessed": false,
+    "recommendation_metrics_computed": false,
+    "target_evaluation_performed": false
+  },
+  "next_state": "V1R2_STOP_NEW_VERSIONED_AUDITOR_REPAIR_REQUIRED"
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "msahg.sthgcn-sample-materializer-v1r2-result-passport.v1",
+  "date": "2026-09-10",
+  "material_id": "STHGCN_SAMPLE_MATERIALIZER_V1R2_PROVENANCE_REAL_EXECUTION",
+  "verification_status": "PROTOCOL_FAILURE",
+  "authorities": {
+    "v1r2_registration_commit": "fd5aa7739d031c1fa20336084823a63ee56e7acc",
+    "v1r2_implementation_commit": "d73f118afa9b51a1418acd5c1fa5eb32b5b0818b",
+    "v1r1_failure_archive_commit": "d7d8959eab2256d2e8153485165d11028c258025",
+    "sthgcn_commit": "27b595846d29019799485985bff49f9ed02c4ade",
+    "v1_replay_commit": "a53acb3a3f637c2da372661ed95559f92881f8fa"
+  },
+  "runtime": {
+    "python": "3.10.20",
+    "pandas": "2.2.3",
+    "numpy": "1.26.4"
+  },
+  "outputs": {
+    "nyc_rows": 103941,
+    "tky_rows": 405000,
+    "nyc_sidecar_sha256": "57c0b434918d5cd1bb421f2654c430a572e3e70f6c587ad398e078c8fd0f93d3",
+    "tky_sidecar_sha256": "5f287bb802943a3e8f99ff307acf2f8c47f5c4e46eab62fd62ff00c7a0de211d",
+    "provenance_summary_sha256": "db8f952b5f6b0e2a88554997df59773144f04f23b0161a63b7aadb71e9b44a98",
+    "independent_audit_sha256": "2ac3e73a87035d951036f50b3e44c87452dc63cc913d07c6de23c67f8f870349",
+    "target_free_receipt_sha256": "7a33f5bc6c321393b3bdcce8b0f676b565bee206b56e58f80704e7fa27da7184"
+  },
+  "original_split_counts": {
+    "nyc": {
+      "train": 83228,
+      "validation": 10339,
+      "test": 10374
+    },
+    "tky": {
+      "train": 326258,
+      "validation": 39224,
+      "test": 39518
+    }
+  },
+  "execution": {
+    "target_free_decision": "PASS",
+    "materializer_decision": "PASS",
+    "independent_audit_decision": "FAIL",
+    "automatic_retry_performed": false,
+    "source_worktrees_clean_after_execution": true,
+    "checksums_verified": true
+  },
+  "interpretation_boundary": "The output is preserved as evidence but is not qualified for downstream use until a separately authorized auditor repair passes.",
+  "next_state": "V1R2_STOP_NEW_VERSIONED_AUDITOR_REPAIR_REQUIRED"
+}

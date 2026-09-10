@@ -1,0 +1,73 @@
+{
+  "datasets": {
+    "nyc": {
+      "checks": {
+        "all_gates": true,
+        "checksums": true,
+        "columns": true,
+        "decision": true,
+        "failure_superseded": true,
+        "file_allowlist": true,
+        "gate_set": false,
+        "identity_equal": true,
+        "no_downstream": true,
+        "original_split_complete": true,
+        "receipt_schema": true,
+        "repair_witness": true,
+        "row_count": true,
+        "sidecar_sha": true,
+        "unique_identity_pair": true,
+        "unique_ordinal": true,
+        "v1_replay_equals_input": true,
+        "visible_split_implication": true
+      },
+      "dataset": "nyc",
+      "original_split_counts": {
+        "test": 10374,
+        "train": 83228,
+        "validation": 10339
+      },
+      "pass": false,
+      "rows": 103941
+    },
+    "tky": {
+      "checks": {
+        "all_gates": true,
+        "checksums": true,
+        "columns": true,
+        "decision": true,
+        "failure_superseded": true,
+        "file_allowlist": true,
+        "gate_set": false,
+        "identity_equal": true,
+        "no_downstream": true,
+        "original_split_complete": true,
+        "receipt_schema": true,
+        "repair_witness": true,
+        "row_count": true,
+        "sidecar_sha": true,
+        "unique_identity_pair": true,
+        "unique_ordinal": true,
+        "v1_replay_equals_input": true,
+        "visible_split_implication": true
+      },
+      "dataset": "tky",
+      "original_split_counts": {
+        "test": 39518,
+        "train": 326258,
+        "validation": 39224
+      },
+      "pass": false,
+      "rows": 405000
+    }
+  },
+  "decision": "FAIL",
+  "graph_materialized": false,
+  "recommendation_metrics_computed": false,
+  "root_checksums": true,
+  "root_file_allowlist": true,
+  "scenario_labels_materialized": false,
+  "schema": "msahg.sthgcn-sample-materializer-v1r2-independent-audit.v1",
+  "summary_identity": true,
+  "training_performed": false
+}
