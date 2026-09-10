@@ -1,0 +1,114 @@
+{
+  "authorities": {
+    "msahg": {
+      "head": "f606afafd6b71e3fa34142207a8dc162d71cbe15",
+      "registration_ancestor": "87e21b86f39f7491e2460f0647ace0e14d6fbb17"
+    },
+    "sthgcn": {
+      "clean": "true",
+      "commit": "27b595846d29019799485985bff49f9ed02c4ade",
+      "origin": "https://github.com/alipay/Spatio-Temporal-Hypergraph-Model.git"
+    }
+  },
+  "decision": "PASS",
+  "gates": {
+    "Q0_MSAHG_AUTHORITY": true,
+    "Q10_NO_GUGEN_DEPENDENCY": true,
+    "Q11_SCORE_FREE": true,
+    "Q12_FAIL_CLOSED": true,
+    "Q1_STHGCN_AUTHORITY": true,
+    "Q2_LICENSE_AND_SOURCE_HASHES": true,
+    "Q3_ARCHIVE_MEMBERS": true,
+    "Q4_NYC_RAW_SPLIT_COUNTS": true,
+    "Q5_TKY_RAW_IDENTITY": true,
+    "Q6_SOURCE_SEMANTICS": true,
+    "Q7_SPLIT_ASSIGNMENT_AUDIT": true,
+    "Q8_FULL_GRAPH_INPUT_AUDIT": true,
+    "Q9_DATASET_IDENTITY_SEPARATION": true
+  },
+  "graph_materialized": false,
+  "nyc_archive": {
+    "raw/NYC_test.csv": {
+      "bytes": 2111049,
+      "max_local_time": "2013-02-14 07:32:00",
+      "min_local_time": "2012-12-21 08:29:31",
+      "pois": 2403,
+      "rows": 10374,
+      "sha256": "c285494e63475512c3c22b37885c70cf0ee89548cbcac109d72ba4e0d02f8f6e",
+      "trajectories": 1566,
+      "users": 461
+    },
+    "raw/NYC_train.csv": {
+      "bytes": 16896314,
+      "max_local_time": "2012-11-09 16:38:31",
+      "min_local_time": "2012-04-03 14:00:09",
+      "pois": 4980,
+      "rows": 83228,
+      "sha256": "bb1e7b44e484c9338b27dfd67298d6bfb2b958c07ec0aa3036b92d86269dcfa0",
+      "trajectories": 11022,
+      "users": 1047
+    },
+    "raw/NYC_val.csv": {
+      "bytes": 2106303,
+      "max_local_time": "2012-12-21 08:29:19",
+      "min_local_time": "2012-11-09 16:54:47",
+      "pois": 2558,
+      "rows": 10339,
+      "sha256": "3eeb4e39be8869e4259e9316d1aeda088e0606f7efdb93e3fd436e86cfc58b2e",
+      "trajectories": 1559,
+      "users": 513
+    }
+  },
+  "paper_faithful_empirical_reproduction": false,
+  "recommendation_metrics_computed": false,
+  "registered_hazards": {
+    "combined_sample_hypergraph_input_detected": true,
+    "tky_test_chained_assignment_detected": true,
+    "tky_validation_chained_assignment_detected": true
+  },
+  "sample_materialized": false,
+  "scenario_labels_materialized": false,
+  "schema": "msahg.sthgcn-sample-protocol.score-free-qualification.v1",
+  "source_hashes": {
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "README.md": "90d667566b38e9404ac93e0ef35523a17f597b5a220fb30e82acc9d81b10ee4e",
+    "conf/best_conf/nyc.yml": "4695cae00047eb94028429b6f00dd12e48324a1bcf23c7493889a933d06a04bd",
+    "conf/best_conf/tky.yml": "ab5745f924a8acdcdd14cce832614b7fe83ccbb082669789b98b89c29b7a4918",
+    "data/nyc/raw.zip": "974bc90b3e0cdec6ec29a0a953ac41d3f81880e17bdd4c7c0cd94f2afc9e17d2",
+    "data/tky/raw.zip": "823cd400a8d67b360c50217c1e8141e566a2b804ca8af9feac9ff9c0f76220c7",
+    "dataset/lbsn_dataset.py": "6c1ecd998b50fc180eb56af3d05de7a96b67be9ae50a291bebe9192ea5074b9e",
+    "layer/sampler.py": "70d6ff5911b9506aadfac90bbd6516b74b550fed89f588a4cdd9bc364f253546",
+    "preprocess/file_reader.py": "f14cbda6289f289bebe61b32312afff325c9c50c4b926b009e9d04680697180e",
+    "preprocess/generate_hypergraph.py": "0d41977dd07a22f83b90beb19140a86c650c534fde08829bec830681be6fd96a",
+    "preprocess/preprocess_fn.py": "aaf6134b6912a69cdc77d34f6e62ac134329acee2e08175c626844944ebf0966",
+    "preprocess/preprocess_main.py": "d8ade2ff7f5e17db7322d38db6a0b2d003f7bd27133ea6a773d927a8f904bfba",
+    "requirements.txt": "557988c4bdf82da8923db1a8ba4c6ee2b5dd64460dc47c75f1fda34d2fd8a9e0"
+  },
+  "source_semantics": {
+    "first_event_ignored": true,
+    "intended_global_80_10_10": true,
+    "label_fit_uses_train": true,
+    "nyc_uses_presplit_files": true,
+    "poi_keep_strictly_above_threshold": true,
+    "remove_unseen_user_and_poi": true,
+    "session_break_strictly_above_interval": true,
+    "target_time_filter_present": true,
+    "user_keep_strictly_above_threshold": true,
+    "validation_test_last_event_only": true
+  },
+  "status_after_pass": "SAMPLE_PROTOCOL_SOURCE_QUALIFIED_MATERIALIZER_NOT_AUTHORIZED",
+  "tky_archive": {
+    "categories": 385,
+    "member": "raw/dataset_TSMC2014_TKY.txt",
+    "member_sha256": "85542c605ce708d8584637756590383a84e9bbdb71342d0d8e78858ba2a0e5c8",
+    "pois": 61858,
+    "rows": 573703,
+    "users": 2293
+  },
+  "training_performed": false,
+  "warnings": [
+    "TKY source split uses non-portable Pandas chained assignment",
+    "STHGCN PyG graph construction starts from combined sample.csv",
+    "MSAHG six-scenario label identity remains unresolved"
+  ]
+}
