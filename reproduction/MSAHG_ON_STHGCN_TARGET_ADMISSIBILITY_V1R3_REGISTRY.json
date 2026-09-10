@@ -1,0 +1,162 @@
+{
+  "schema": "msahg.on-sthgcn.target-admissibility-v1r3-registry.v1",
+  "date": "2026-09-10",
+  "status": "PROSPECTIVE_SCORE_FREE_AUDIT_REGISTERED_EXECUTION_NOT_YET_AUTHORIZED",
+  "parent_commit": "727c82e8e1c822fa1acc8bab7f1511c2a2388b3e",
+  "supersedes_target_eligibility_assumption_from": [
+    "efdb7490155ca5006592506a4347425880ecb1cd",
+    "14b4de54aef4e1cf6640601b87655c4bb4934314"
+  ],
+  "preserved_failures": {
+    "v1": "515c72a01eb76b859e48f82af24d504a6b7b3ad5",
+    "v1r2": "727c82e8e1c822fa1acc8bab7f1511c2a2388b3e"
+  },
+  "authorities": {
+    "repository": "https://github.com/xiaolaoji66/MSAHG",
+    "scope_path": "reproduction/MSAHG_ON_STHGCN_TARGET_ADMISSIBILITY_V1R3_SCOPE.md",
+    "scope_sha256": "db82773ddd18c1a203604d9d59aa3b019ff12d1bd972ce7399592a68e40760dd",
+    "sthgcn_repository": "https://github.com/alipay/Spatio-Temporal-Hypergraph-Model",
+    "sthgcn_commit": "27b595846d29019799485985bff49f9ed02c4ade",
+    "prior_materializer_commit": "1f6fce9505eae929a8f131fc67556e513c4d1100",
+    "causal_contract_commit": "cccf03c605bb3b1d7374e34a5eac9c247ea3b48b"
+  },
+  "official_source_files": {
+    "preprocess/preprocess_fn.py": "aaf6134b6912a69cdc77d34f6e62ac134329acee2e08175c626844944ebf0966",
+    "preprocess/preprocess_main.py": "d8ade2ff7f5e17db7322d38db6a0b2d003f7bd27133ea6a773d927a8f904bfba",
+    "dataset/lbsn_dataset.py": "6c1ecd998b50fc180eb56af3d05de7a96b67be9ae50a291bebe9192ea5074b9e",
+    "README.md": "90d667566b38e9404ac93e0ef35523a17f597b5a220fb30e82acc9d81b10ee4e"
+  },
+  "server_paths": {
+    "sthgcn_source_root": "/mnt/data4t/wyh/sthgcn-source-27b59584-provenance-v1r1",
+    "v1_input_root": "/mnt/data4t/wyh/msahg_runs/sthgcn_sample_materializer_r1_replay-a53acb3-v1r1-input-pandas223",
+    "v1r2_provenance_root": "/mnt/data4t/wyh/msahg_runs/sthgcn_sample_materializer_v1r2_provenance-d73f118",
+    "output_root": "/mnt/data4t/wyh/msahg_runs/msahg_on_sthgcn_target_admissibility_v1r3-727c82e"
+  },
+  "frozen_real_inputs": {
+    "nyc": {
+      "rows": 103941,
+      "sample.csv": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65",
+      "label_encoding.json": "1d8ae8f4a04908868f9ad4e186944a9f3e84b472bd015b2bbad9b663fff3c64b",
+      "record_split_provenance.csv": "57c0b434918d5cd1bb421f2654c430a572e3e70f6c587ad398e078c8fd0f93d3"
+    },
+    "tky": {
+      "rows": 405000,
+      "sample.csv": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0",
+      "label_encoding.json": "333e33a94f9386ef0b5e62124a91bfdb22c1697ce2bae5b15ff12e73f93f81d7",
+      "record_split_provenance.csv": "5f287bb802943a3e8f99ff307acf2f8c47f5c4e46eab62fd62ff00c7a0de211d"
+    }
+  },
+  "official_filtered_target_counts": {
+    "nyc": {
+      "train": 72206,
+      "validation": 1400,
+      "test": 1347
+    },
+    "tky": {
+      "train": 274597,
+      "validation": 6868,
+      "test": 7038
+    }
+  },
+  "target_admissibility": {
+    "history_and_graph_rows": "complete_sample_csv",
+    "candidate_target_splits": [
+      "train",
+      "validation",
+      "test"
+    ],
+    "current_endpoint_rule": "user_and_poi_each_inside_train_fitted_vocabulary",
+    "vocabulary_membership": "offset_le_encoded_id_lt_offset_plus_class_count",
+    "padding_is_member": false,
+    "immediate_prefix_required": true,
+    "immediate_prefix_poi_must_be_train_known": true,
+    "target_deletion": false,
+    "earlier_prefix_substitution": false,
+    "padding_graph_node": false,
+    "threshold_search": false,
+    "posthoc_group_merge": false
+  },
+  "scenario_rules": {
+    "user": "unchanged_train_only_exact_Hotel_share_gt_0.05",
+    "time": "unchanged_immediate_prefix_weekday",
+    "poi": "unchanged_train_only_activity_center_radius_10km",
+    "tasks": [
+      "User/0",
+      "User/1",
+      "Time/0",
+      "Time/1",
+      "POI/0",
+      "POI/1"
+    ]
+  },
+  "support_floors": {
+    "train": {
+      "targets": 200,
+      "distinct_users": 30
+    },
+    "validation": {
+      "targets": 100,
+      "distinct_users": 30
+    },
+    "test": {
+      "targets": 100,
+      "distinct_users": 30
+    },
+    "applies_to": "each_registered_task"
+  },
+  "audit_gates": [
+    "A0_AUTHORITY_AND_LINEAGE",
+    "A1_STHGCN_SOURCE_IDENTITY",
+    "A2_FROZEN_INPUT_IDENTITY",
+    "A3_SAMPLE_PROVENANCE_ROW_IDENTITY",
+    "A4_OFFICIAL_CURRENT_ENDPOINT_RULE",
+    "A5_EXACT_OFFICIAL_SPLIT_COUNTS",
+    "A6_UNIQUE_IMMEDIATE_PREFIX",
+    "A7_PREFIX_POI_TRAIN_KNOWN",
+    "A8_TRAIN_ONLY_USER_LABELS",
+    "A9_TRAIN_ONLY_POI_LABELS",
+    "A10_EXACT_AXIS_PARTITIONS",
+    "A11_SUPPORT_FLOORS",
+    "A12_SOURCE_AND_INPUT_IMMUTABLE",
+    "A13_SCORE_FREE"
+  ],
+  "implementation_allowlist": [
+    "reproduction/audit_msahg_on_sthgcn_target_admissibility_v1r3.py",
+    "scripts/run_msahg_on_sthgcn_target_admissibility_v1r3.sh",
+    "tests/test_msahg_on_sthgcn_target_admissibility_v1r3.py",
+    "tests/test_msahg_on_sthgcn_target_admissibility_v1r3_governance.py"
+  ],
+  "execution": {
+    "datasets": [
+      "nyc",
+      "tky"
+    ],
+    "audit_invocations": 1,
+    "fresh_output_required": true,
+    "automatic_retry": false,
+    "preserve_failure": true
+  },
+  "authorization": {
+    "documentation": true,
+    "implementation": false,
+    "target_free_tests": false,
+    "official_source_read": false,
+    "real_public_csv_read": false,
+    "real_provenance_sidecar_read": false,
+    "scenario_support_computation": false,
+    "graph_materialization": false,
+    "scenario_materialization": false,
+    "model_implementation": false,
+    "training": false,
+    "inference": false,
+    "checkpoint_access": false,
+    "recommendation_metric_computation": false,
+    "target_evaluation": false,
+    "automatic_retry": false
+  },
+  "decisions": {
+    "protocol_failure": "STOP_PRESERVE_NO_RETRY",
+    "admissibility_failure": "DATA_NOT_ADMISSIBLE_FOR_CURRENT_SIX_TASK_RECONSTRUCTION_STOP",
+    "all_gates_pass": "TARGET_ADMISSIBILITY_QUALIFIED_FOR_SEPARATE_V1R3_MATERIALIZER_REPAIR"
+  }
+}
