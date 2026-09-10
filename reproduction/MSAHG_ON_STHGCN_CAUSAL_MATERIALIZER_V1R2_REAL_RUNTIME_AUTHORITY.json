@@ -1,0 +1,33 @@
+{
+  "schema": "msahg.on-sthgcn.causal-materializer-real-runtime.v1",
+  "date": "2026-09-10",
+  "status": "V1R2_AUTHORIZED_ONCE_FOR_NYC_AND_TKY",
+  "implementation_commit": "1f6fce9505eae929a8f131fc67556e513c4d1100",
+  "registry_path": "reproduction/MSAHG_ON_STHGCN_CAUSAL_MATERIALIZER_V1R1_IMPLEMENTATION_REGISTRY.json",
+  "registry_sha256": "f9ff7c5ffe4affc4ccf4ff0d44dd9089274b4e416437f34219fa6b5c33ddc1ba",
+  "real_runtime_registry_path": "reproduction/MSAHG_ON_STHGCN_CAUSAL_MATERIALIZER_V1R2_REAL_RUNTIME_REGISTRY.json",
+  "real_runtime_registry_sha256": "53efa4342aff9e2f8e6067a472996041961c25826407d3a0a3a7d36f507363ff",
+  "parent_failure_archive": "515c72a01eb76b859e48f82af24d504a6b7b3ad5",
+  "supersedes_registration_commit": "efdb7490155ca5006592506a4347425880ecb1cd",
+  "target_free_receipt_sha256": "a0bda148878cc1bff1e5e549d21ba3e9e3d83ed8c98f3209ebe20ab51f8e10df",
+  "datasets": [
+    "nyc",
+    "tky"
+  ],
+  "materializer_invocations_per_dataset": 1,
+  "independent_audit_invocations": 1,
+  "real_materialization_authorized": true,
+  "scenario_label_materialization_authorized": true,
+  "activity_center_materialization_authorized": true,
+  "graph_materialization_authorized": true,
+  "support_computation_authorized": true,
+  "independent_audit_authorized": true,
+  "model_implementation_authorized": false,
+  "training_authorized": false,
+  "inference_authorized": false,
+  "loss_authorized": false,
+  "checkpoint_access_authorized": false,
+  "recommendation_metric_computation_authorized": false,
+  "target_evaluation_authorized": false,
+  "automatic_retry_authorized": false
+}

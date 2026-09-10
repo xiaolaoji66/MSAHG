@@ -1,0 +1,141 @@
+{
+  "schema": "msahg.on-sthgcn.causal-materializer-v1r2-real-runtime-registry.v1",
+  "date": "2026-09-10",
+  "status": "V1R2_DUAL_BINDING_REPAIR_AND_ONE_REAL_RUN_AUTHORIZED",
+  "parent_commit": "515c72a01eb76b859e48f82af24d504a6b7b3ad5",
+  "supersedes_registration_commit": "efdb7490155ca5006592506a4347425880ecb1cd",
+  "prior_protocol_failure_archive": "515c72a01eb76b859e48f82af24d504a6b7b3ad5",
+  "repair": {
+    "reason": "V1 overloaded registry_sha256 with incompatible production and outer-runtime identities",
+    "production_registry_field": "registry_sha256",
+    "outer_runtime_registry_field": "real_runtime_registry_sha256",
+    "materialization_math_changed": false,
+    "inputs_changed": false,
+    "support_floors_changed": false,
+    "automatic_retry_of_v1": false
+  },
+  "authorities": {
+    "repository": "https://github.com/xiaolaoji66/MSAHG",
+    "scope_path": "reproduction/MSAHG_ON_STHGCN_CAUSAL_MATERIALIZER_V1R2_REAL_RUNTIME_SCOPE.md",
+    "scope_sha256": "3f530b07ccd4e755715c18a35857882c857c15bf4e167557dc50bc70b459a6ab",
+    "execution_authority_path": "reproduction/MSAHG_ON_STHGCN_CAUSAL_MATERIALIZER_V1R2_REAL_RUNTIME_AUTHORITY.json",
+    "materializer_registration_commit": "4dd32f64440687c5f65c659b7e28b0b83b90d713",
+    "materializer_implementation_commit": "1f6fce9505eae929a8f131fc67556e513c4d1100",
+    "materializer_implementation_registry_path": "reproduction/MSAHG_ON_STHGCN_CAUSAL_MATERIALIZER_V1R1_IMPLEMENTATION_REGISTRY.json",
+    "materializer_implementation_registry_sha256": "f9ff7c5ffe4affc4ccf4ff0d44dd9089274b4e416437f34219fa6b5c33ddc1ba",
+    "target_free_result_commit": "d7e2706d82656c718e70df621efbc90e29e74d6f",
+    "target_free_receipt_path": "reproduction/results/msahg_on_sthgcn_causal_materializer_v1r1_target_free_1f6fce9/target_free_receipt.json",
+    "target_free_receipt_sha256": "a0bda148878cc1bff1e5e549d21ba3e9e3d83ed8c98f3209ebe20ab51f8e10df",
+    "sthgcn_source_commit": "27b595846d29019799485985bff49f9ed02c4ade",
+    "msahg_historical_source_commit": "3d74d70c852c56adcc09d907488410be5eda2744"
+  },
+  "server_paths": {
+    "materializer_worktree": "/mnt/data4t/wyh/MSAHG-sthgcn-causal-materializer-v1r1-1f6fce9",
+    "sthgcn_source_root": "/mnt/data4t/wyh/sthgcn-source-27b59584-provenance-v1r1",
+    "v1_input_root": "/mnt/data4t/wyh/msahg_runs/sthgcn_sample_materializer_r1_replay-a53acb3-v1r1-input-pandas223",
+    "v1r2_provenance_root": "/mnt/data4t/wyh/msahg_runs/sthgcn_sample_materializer_v1r2_provenance-d73f118",
+    "output_root": "/mnt/data4t/wyh/msahg_runs/msahg_on_sthgcn_causal_materializer_v1r2_real-515c72a"
+  },
+  "frozen_real_inputs": {
+    "nyc": {
+      "rows": 103941,
+      "sample.csv": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65",
+      "label_encoding.json": "1d8ae8f4a04908868f9ad4e186944a9f3e84b472bd015b2bbad9b663fff3c64b",
+      "record_split_provenance.csv": "57c0b434918d5cd1bb421f2654c430a572e3e70f6c587ad398e078c8fd0f93d3"
+    },
+    "tky": {
+      "rows": 405000,
+      "sample.csv": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0",
+      "label_encoding.json": "333e33a94f9386ef0b5e62124a91bfdb22c1697ce2bae5b15ff12e73f93f81d7",
+      "record_split_provenance.csv": "5f287bb802943a3e8f99ff307acf2f8c47f5c4e46eab62fd62ff00c7a0de211d"
+    }
+  },
+  "implementation_allowlist": [
+    "reproduction/audit_msahg_on_sthgcn_causal_materializer_v1r2_real.py",
+    "scripts/run_msahg_on_sthgcn_causal_materializer_v1r2_real.sh",
+    "tests/test_msahg_on_sthgcn_causal_materializer_v1r2_real.py",
+    "tests/test_msahg_on_sthgcn_causal_materializer_v1r2_real_governance.py"
+  ],
+  "audit_gates": [
+    "R0_AUTHORITY",
+    "R1_INPUT_IDENTITY",
+    "R2_OUTPUT_INVENTORY",
+    "R3_MATERIALIZATION_RECEIPT",
+    "R4_SCENARIO_IDENTITY",
+    "R5_PREFIX_RECONSTRUCTION",
+    "R6_USER_RECONSTRUCTION",
+    "R7_TIME_RECONSTRUCTION",
+    "R8_SPATIAL_RECONSTRUCTION",
+    "R9_MARGINAL_ROUTING",
+    "R10_SUPPORT_REPRODUCTION",
+    "R11_COLLABORATIVE_RECONSTRUCTION",
+    "R12_TEMPORAL_RECONSTRUCTION",
+    "R13_GEOGRAPHY_RECONSTRUCTION",
+    "R14_TRANSITION_RECONSTRUCTION",
+    "R15_SPARSE_NORMALIZATION_AND_FORMAT",
+    "R16_SOURCE_IMMUTABLE",
+    "R17_SCORE_FREE",
+    "R18_SUPPORT_DECISION"
+  ],
+  "support_floors": {
+    "train": {
+      "targets": 200,
+      "distinct_users": 30
+    },
+    "validation": {
+      "targets": 100,
+      "distinct_users": 30
+    },
+    "test": {
+      "targets": 100,
+      "distinct_users": 30
+    },
+    "applies_to": "each of User/0, User/1, Time/0, Time/1, POI/0, POI/1",
+    "threshold_search": false,
+    "posthoc_group_merge": false
+  },
+  "execution": {
+    "datasets": [
+      "nyc",
+      "tky"
+    ],
+    "materializer_invocations_per_dataset": 1,
+    "independent_audit_invocations": 1,
+    "automatic_retry": false,
+    "fresh_output_required": true,
+    "preserve_failure": true,
+    "complete_server_roots_preserved": true,
+    "github_large_artifact_archive": false
+  },
+  "authorization": {
+    "documentation": true,
+    "target_free_repair_qualification": true,
+    "real_public_csv_access": true,
+    "real_provenance_sidecar_access": true,
+    "real_materialization": true,
+    "scenario_label_materialization": true,
+    "activity_center_materialization": true,
+    "graph_materialization": true,
+    "support_computation": true,
+    "independent_audit": true,
+    "small_receipt_archive": true,
+    "model_implementation": false,
+    "data_loader_implementation": false,
+    "aps_implementation": false,
+    "training": false,
+    "inference": false,
+    "loss": false,
+    "optimizer": false,
+    "checkpoint_access": false,
+    "recommendation_metric_computation": false,
+    "target_evaluation": false,
+    "threshold_search": false,
+    "posthoc_group_merge": false,
+    "automatic_retry": false
+  },
+  "decisions": {
+    "protocol_failure": "STOP_PRESERVE_NO_RETRY",
+    "support_failure": "DATA_NOT_ADMISSIBLE_FOR_SIX_TASK_SCORE",
+    "all_audit_and_support_gates_pass": "MATERIALIZATION_QUALIFIED_ONLY_MODEL_STILL_NOT_AUTHORIZED"
+  }
+}
