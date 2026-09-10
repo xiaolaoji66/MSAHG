@@ -1,0 +1,104 @@
+{
+  "schema": "msahg.sthgcn-sample-materializer-v1r1-provenance.v1",
+  "date": "2026-09-10",
+  "status": "IMPLEMENTATION_AND_ONE_SCORE_FREE_EXECUTION_AUTHORIZED",
+  "parent_commit": "cccf03c605bb3b1d7374e34a5eac9c247ea3b48b",
+  "authorities": {
+    "reproduction_repository": "https://github.com/xiaolaoji66/MSAHG",
+    "scope_path": "reproduction/STHGCN_SAMPLE_MATERIALIZER_V1R1_PROVENANCE_SCOPE.md",
+    "scope_sha256": "acfd620c2e1ca90c8312d3a1725f6b87948104c2decf0583f6931f0f7416ab35",
+    "causal_reconstruction_contract": "reproduction/MSAHG_ON_STHGCN_CAUSAL_RECONSTRUCTION_V1_CONTRACT.md",
+    "causal_reconstruction_contract_sha256": "f82fce5daac21172346a9fb788cf9675924e51497e7826324d52c85339ebc2e3",
+    "v1_source": "reproduction/sthgcn_sample_materializer_r1.py",
+    "v1_source_sha256": "288daa4ab0de251cbbb0d4d8a1735af1193d42aa0c258757443fd2a154e65f3e",
+    "v1_result_commit": "9e67e05875540cc87a21e15c4ff3623400c6ab49",
+    "v1_result_path": "reproduction/results/sthgcn_sample_materializer_r1_a53acb3",
+    "sthgcn_repository": "https://github.com/alipay/Spatio-Temporal-Hypergraph-Model",
+    "sthgcn_commit": "27b595846d29019799485985bff49f9ed02c4ade",
+    "archives": {
+      "nyc_sha256": "974bc90b3e0cdec6ec29a0a953ac41d3f81880e17bdd4c7c0cd94f2afc9e17d2",
+      "tky_sha256": "823cd400a8d67b360c50217c1e8141e566a2b804ca8af9feac9ff9c0f76220c7"
+    }
+  },
+  "v1_data_sha256": {
+    "nyc": {
+      "label_encoding.json": "1d8ae8f4a04908868f9ad4e186944a9f3e84b472bd015b2bbad9b663fff3c64b",
+      "sample.csv": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65",
+      "test_sample.csv": "79063686fab16b7432a78e98b511b484ee79faa00515cc83b7df0bdbdcbb6c89",
+      "train_sample.csv": "ed67d5fb35670abc8ca5faf4dd9a928f194f4f4529b671e1e1261dbd9cdfe6f7",
+      "validate_sample.csv": "0cef8e32a8510844ed5c71d29cf61e7abfe8b175246173374a8f898e93d12e7d"
+    },
+    "tky": {
+      "label_encoding.json": "333e33a94f9386ef0b5e62124a91bfdb22c1697ce2bae5b15ff12e73f93f81d7",
+      "sample.csv": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0",
+      "test_sample.csv": "bceee1b237c7f280c46a4a54f4e8787e10d363e071ac8d9811e5329bfe8a9d91",
+      "train_sample.csv": "ff7ef1fd38920b6f204a187d2cefb5adf11d0dab494beac5b41c4ac32b12abf7",
+      "validate_sample.csv": "630b5553b1a098d15da3584d8b74b43cf9f9a8640416686009bab117ccc17d63"
+    }
+  },
+  "expected_rows": {
+    "nyc": 103941,
+    "tky": 405000
+  },
+  "sidecar_columns": [
+    "check_ins_id",
+    "source_ordinal",
+    "raw_trajectory_id",
+    "SplitTag",
+    "OriginalSplitTag"
+  ],
+  "legal_original_splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "gates": [
+    "R0_AUTHORITY",
+    "R1_FRESH_OUTPUT",
+    "R2_V1_INPUT_IMMUTABLE",
+    "R3_EXACT_V1_REPLAY",
+    "R4_ROW_BIJECTION",
+    "R5_LEGAL_ORIGINAL_SPLIT",
+    "R6_VISIBLE_SPLIT_IMPLICATION",
+    "R7_IDENTITY_STABILITY",
+    "R8_COUNT_CONSERVATION",
+    "R9_TWO_RUN_DETERMINISM",
+    "R10_SOURCE_IMMUTABLE",
+    "R11_NO_DOWNSTREAM_MATERIAL",
+    "R12_SCORE_FREE",
+    "R13_FAIL_CLOSED"
+  ],
+  "output": {
+    "dataset_files": [
+      "record_split_provenance.csv",
+      "provenance_receipt.json",
+      "SHA256SUMS"
+    ],
+    "root_files": [
+      "provenance_summary.json",
+      "SHA256SUMS"
+    ],
+    "overwrite": false,
+    "automatic_retry": false
+  },
+  "authorization": {
+    "documentation": true,
+    "implementation": true,
+    "synthetic_qualification": true,
+    "one_score_free_nyc_tky_execution": true,
+    "failure_or_pass_archive": true,
+    "modify_v1": false,
+    "modify_upstream": false,
+    "scenario_materialization": false,
+    "graph_materialization": false,
+    "model_implementation": false,
+    "training": false,
+    "inference": false,
+    "loss": false,
+    "checkpoint_access": false,
+    "metric_computation": false,
+    "target_evaluation": false,
+    "automatic_real_retry": false
+  },
+  "next_if_pass": "SEPARATE_CAUSAL_GRAPH_MATERIALIZER_V1R1_AUTHORITY_REQUIRED"
+}
