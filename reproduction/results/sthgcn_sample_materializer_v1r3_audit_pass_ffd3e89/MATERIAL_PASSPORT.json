@@ -1,0 +1,62 @@
+{
+  "schema": "msahg.sthgcn-sample-materializer-v1r3-audit-result-passport.v1",
+  "date": "2026-09-10",
+  "material_id": "STHGCN_SAMPLE_MATERIALIZER_V1R3_AUDIT_REPAIR_REAL_EXECUTION",
+  "verification_status": "PASS",
+  "decision": "V1R3_PASS_V1R2_ORIGINAL_SPLIT_PROVENANCE_QUALIFIED",
+  "authorities": {
+    "v1r3_registration_commit": "af081053d06318ef72473859f462dbfef5ba22e0",
+    "v1r3_implementation_commit": "ffd3e89d020275a3213e7b8ad26040b317523c17",
+    "v1r2_failure_archive_commit": "cc1abb0d35626ec89d4b189e3674d29d3288c670",
+    "v1r2_registration_commit": "fd5aa7739d031c1fa20336084823a63ee56e7acc",
+    "v1r2_implementation_commit": "d73f118afa9b51a1418acd5c1fa5eb32b5b0818b"
+  },
+  "receipts": {
+    "server_target_free_receipt_sha256": "01f7c852aab2c242c0b17f9d87837f64e69ff3b35d9afcf124a9893efd554f2d",
+    "independent_audit_sha256": "25e3cbda656c569ed399829243d26259aeb332ce9ad28c830243d976e1e34d9b"
+  },
+  "frozen_inputs": {
+    "nyc_sidecar_sha256": "57c0b434918d5cd1bb421f2654c430a572e3e70f6c587ad398e078c8fd0f93d3",
+    "tky_sidecar_sha256": "5f287bb802943a3e8f99ff307acf2f8c47f5c4e46eab62fd62ff00c7a0de211d",
+    "nyc_v1_sample_sha256": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65",
+    "tky_v1_sample_sha256": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0"
+  },
+  "results": {
+    "target_free_gates_passed": 13,
+    "target_free_gates_total": 13,
+    "real_audit_execution_count": 1,
+    "nyc": {
+      "decision": "PASS",
+      "rows": 103941,
+      "original_split_counts": {
+        "train": 83228,
+        "validation": 10339,
+        "test": 10374
+      }
+    },
+    "tky": {
+      "decision": "PASS",
+      "rows": 405000,
+      "original_split_counts": {
+        "train": 326258,
+        "validation": 39224,
+        "test": 39518
+      }
+    },
+    "input_immutable": true,
+    "automatic_retry_performed": false,
+    "materializer_executed": false,
+    "sidecars_regenerated": false,
+    "graph_materialized": false,
+    "model_executed": false,
+    "training_performed": false,
+    "recommendation_metrics_computed": false,
+    "target_evaluation_performed": false
+  },
+  "supersession": {
+    "preserved_record": "The V1R2 independent-audit FAIL remains immutable.",
+    "revised_interpretation": "V1R3 proves that the V1R2 gate_set failure was an order-sensitive auditor false negative and qualifies the same unchanged provenance outputs."
+  },
+  "interpretation_boundary": "PASS qualifies preserved original-split provenance only; it is not graph, model, training, metric, or predictive evidence.",
+  "next_state": "SEPARATE_CAUSAL_GRAPH_MATERIALIZER_AUTHORITY_REQUIRED"
+}
