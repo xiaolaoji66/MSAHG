@@ -1,0 +1,267 @@
+{
+  "schema": "msahg.on-sthgcn.causal-reconstruction.v1",
+  "date": "2026-09-10",
+  "status": "PROSPECTIVE_REGISTERED_IMPLEMENTATION_AND_EXECUTION_NOT_AUTHORIZED",
+  "variant": "MARGINAL_AXIS_V1",
+  "authorities": {
+    "contract_path": "reproduction/MSAHG_ON_STHGCN_CAUSAL_RECONSTRUCTION_V1_CONTRACT.md",
+    "contract_sha256": "f82fce5daac21172346a9fb788cf9675924e51497e7826324d52c85339ebc2e3",
+    "parent_audit_commit": "e9a6c5293de1bcf50df2720f9f473571e308e3c8",
+    "parent_audit_path": "reproduction/MSAHG_ON_STHGCN_GRAPH_SCENARIO_PROTOCOL_R1_AUDIT.md",
+    "parent_audit_sha256": "db8f358e41f68205f1569b6ff1503fc41d7616c0b2e51239eaf2bbc3ba56c744",
+    "parent_registry_path": "reproduction/MSAHG_ON_STHGCN_GRAPH_SCENARIO_PROTOCOL_R1_REGISTRY.json",
+    "parent_registry_sha256": "445754e0ba38c53374003b0043a73c58e203aa5e483f8c1a8397f297d9cbc0c4",
+    "msahg_paper": {
+      "doi": "10.1609/aaai.v40i18.38552",
+      "title": "Multifaceted Scenario-Aware Hypergraph Learning for Next POI Recommendation",
+      "venue": "AAAI 2026"
+    },
+    "msahg_source": {
+      "repository": "https://github.com/COCOMiss/MSAHG",
+      "commit": "3d74d70c852c56adcc09d907488410be5eda2744"
+    },
+    "sthgcn_source": {
+      "repository": "https://github.com/alipay/Spatio-Temporal-Hypergraph-Model",
+      "commit": "27b595846d29019799485985bff49f9ed02c4ade"
+    },
+    "qualified_samples": {
+      "result_commit": "9e67e05875540cc87a21e15c4ff3623400c6ab49",
+      "result_path": "reproduction/results/sthgcn_sample_materializer_r1_a53acb3",
+      "full_output_sha256s_sha256": "89ddcadd49deb5bafd2ddcd3eb114848aacab16d0875c89cf143a7f362303800"
+    },
+    "paper_math_reference": {
+      "path": "reproduction/msahg_paper_math_r1.py",
+      "sha256": "19d120c84f01c27422585504a6ad5a5d3cd60f1adb7546c8d91d199cc551ec4e",
+      "role": "target-free model-shape reference only; not an execution authority"
+    }
+  },
+  "interpretation": {
+    "paper_faithful_reproduction": "BLOCKED",
+    "reconstruction_name": "MSAHG-on-STHGCN Causal Reconstruction V1 / Marginal-Axis V1",
+    "released_source_task_count": 6,
+    "split_graph_view_count": 8,
+    "joint_label_cell_count": 8,
+    "joint_label_role": "SUPPORT_METADATA_ONLY",
+    "overall_single_prediction": "NOT_DEFINED",
+    "paper_table_comparability": "NOT_EXACT_REPRODUCTION",
+    "trajectory_hyperedge_claim": "NOT_REPRODUCED"
+  },
+  "data_boundary": {
+    "split_and_endpoint_authority": "STHGCN_SAMPLE_MATERIALIZER_R1",
+    "static_fit_surface": "ALL_POST_FILTER_TRAINING_EVENTS",
+    "training_mode": "OFFLINE_TRANSDUCTIVE_TRAIN_ONLY",
+    "validation_test_graph_mutation": false,
+    "target_event_used_for_scenario_label": false,
+    "prefix_last_index": "j-1 for target position j"
+  },
+  "scenario_labels": {
+    "user": {
+      "axis": "User",
+      "group_0": "local",
+      "group_1": "tourist",
+      "category_match": "raw category name exactly Hotel",
+      "denominator": "all post-filter training events for the train-known user",
+      "tourist_predicate": "hotel_share > 0.05",
+      "boundary_tie": "local",
+      "provenance": "explicit reconstruction, not recovered author labels"
+    },
+    "time": {
+      "axis": "Time",
+      "group_0": "workday",
+      "group_1": "weekend",
+      "event": "last observed prefix event",
+      "workday_iso_weekdays": [0, 1, 2, 3, 4],
+      "weekend_iso_weekdays": [5, 6],
+      "half_hour_slot": "2*hour+floor(minute/30)",
+      "slot_count": 48
+    },
+    "spatial": {
+      "axis": "POI",
+      "group_0": "central",
+      "group_1": "peripheral",
+      "center": "coordinate-wise median over unique train-known POI coordinates; POI coordinate is coordinate-wise median over that POI's training events",
+      "poi_weighting": "uniform over unique train-known POIs",
+      "event": "last observed prefix POI",
+      "earth_radius_km": 6371.0088,
+      "label_radius_km": 10.0,
+      "central_predicate": "distance <= 10.0 km",
+      "forbidden_claim_labels": ["downtown", "suburban"]
+    }
+  },
+  "graph_semantics": {
+    "common": {
+      "construction_surface": "training events only",
+      "base_values": "binary",
+      "duplicate_rule": "set membership, not counts",
+      "graph_keep_rate": 1.0,
+      "zero_degree_inverse": 0.0,
+      "sparse_order": "lexicographic coalesced"
+    },
+    "collaborative": {
+      "conceptual_count": 3,
+      "shape": "P x U",
+      "global": "user visited POI in at least one training event",
+      "split": "same full shape; populate only columns whose users belong to the split label",
+      "global_relation": "Boolean union of group 0 and group 1",
+      "paper_trajectory_hyperedge": false
+    },
+    "temporal_poi": {
+      "conceptual_count": 3,
+      "shape": "48 x P",
+      "global": "training event POI by half-hour slot",
+      "split": "event-local workday versus weekend"
+    },
+    "temporal_user": {
+      "conceptual_count": 3,
+      "shape": "48 x U",
+      "global": "training event user by half-hour slot",
+      "split": "event-local workday versus weekend"
+    },
+    "geography": {
+      "conceptual_count": 3,
+      "shape": "P x P",
+      "global_radius_km": 2.5,
+      "split": "edge retained only when both endpoints share central/peripheral label",
+      "self_loops": true,
+      "symmetric": true,
+      "normalization": "left random-walk D^-1 A"
+    },
+    "transition": {
+      "conceptual_count": 1,
+      "shared": true,
+      "edge_unit": "distinct directed consecutive training POI pair",
+      "nonconsecutive_pairs": false,
+      "self_transitions": true,
+      "source_incidence_shape": "P x E",
+      "target_incidence_shape": "P x E",
+      "source_read_operator": "row_normalize(B_source^T), shape E x P",
+      "target_write_operator": "row_normalize(B_target), shape P x E",
+      "propagation": "target_write @ source_read @ POI_values",
+      "orientation_requires_asymmetric_witness": true
+    },
+    "incidence_normalization": {
+      "rule": "independently row-normalize each registered matrix direction",
+      "zero_row": "remains zero"
+    }
+  },
+  "task_routing": {
+    "tasks": [
+      "User/0",
+      "User/1",
+      "Time/0",
+      "Time/1",
+      "POI/0",
+      "POI/1"
+    ],
+    "User/0": {
+      "collaborative": "group_0",
+      "temporal": "global",
+      "geography": "global",
+      "transition": "shared"
+    },
+    "User/1": {
+      "collaborative": "group_1",
+      "temporal": "global",
+      "geography": "global",
+      "transition": "shared"
+    },
+    "Time/0": {
+      "collaborative": "global",
+      "temporal": "workday",
+      "geography": "global",
+      "transition": "shared"
+    },
+    "Time/1": {
+      "collaborative": "global",
+      "temporal": "weekend",
+      "geography": "global",
+      "transition": "shared"
+    },
+    "POI/0": {
+      "collaborative": "global",
+      "temporal": "global",
+      "geography": "central",
+      "transition": "shared"
+    },
+    "POI/1": {
+      "collaborative": "global",
+      "temporal": "global",
+      "geography": "peripheral",
+      "transition": "shared"
+    },
+    "physical_target_task_copies": 3,
+    "within_axis_membership": "exactly one group",
+    "joint_composite_forward": false
+  },
+  "support_floors": {
+    "marginal_group": {
+      "train": {
+        "targets": 200,
+        "distinct_users": 30
+      },
+      "validation": {
+        "targets": 100,
+        "distinct_users": 30
+      },
+      "test": {
+        "targets": 100,
+        "distinct_users": 30
+      }
+    },
+    "joint_cell_claim": {
+      "evaluation_targets": 100,
+      "evaluation_distinct_users": 30,
+      "blocks_marginal_protocol": false
+    },
+    "threshold_search": false,
+    "posthoc_group_merge": false
+  },
+  "target_free_gates": [
+    "C0_AUTHORITY",
+    "C1_NO_EVAL_FIT",
+    "C2_PREFIX_LABEL",
+    "C3_USER_RULE",
+    "C4_TIME_RULE",
+    "C5_SPATIAL_RULE",
+    "C6_LABEL_PARTITION",
+    "C7_JOINT_METADATA_ONLY",
+    "C8_COLLABORATIVE",
+    "C9_TEMPORAL",
+    "C10_GEOGRAPHY",
+    "C11_TRANSITION",
+    "C12_ROUTING",
+    "C13_DETERMINISM",
+    "C14_CAUSAL_PERTURBATION",
+    "C15_SOURCE_IMMUTABLE",
+    "C16_SCORE_FREE",
+    "C17_FAIL_CLOSED"
+  ],
+  "decisions": {
+    "target_free_gate_failure": "PROTOCOL_FAILURE_STOP",
+    "marginal_support_failure": "DATA_NOT_ADMISSIBLE_FOR_SIX_TASK_SCORE_STOP",
+    "target_free_and_support_pass": "MATERIALIZATION_QUALIFIED_ONLY",
+    "automatic_retry": false,
+    "result_driven_rule_change": false
+  },
+  "authorization": {
+    "contract_documentation": true,
+    "registry_documentation": true,
+    "materializer_implementation": false,
+    "synthetic_tests": false,
+    "public_csv_regeneration_for_new_scope": false,
+    "scenario_label_materialization": false,
+    "activity_center_materialization": false,
+    "graph_materialization": false,
+    "model_implementation": false,
+    "aps_implementation": false,
+    "training": false,
+    "loss_computation": false,
+    "metric_computation": false,
+    "target_evaluation": false,
+    "checkpoint_selection": false,
+    "joint_scenario_routing": false,
+    "nyc_score_bearing_execution": false,
+    "tky_score_bearing_execution": false
+  },
+  "next_stage": "SEPARATE_ADD_ONLY_TARGET_FREE_MATERIALIZER_IMPLEMENTATION_APPROVAL_REQUIRED"
+}
