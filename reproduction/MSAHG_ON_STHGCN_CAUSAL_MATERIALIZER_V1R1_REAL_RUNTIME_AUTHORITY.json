@@ -1,0 +1,30 @@
+{
+  "schema": "msahg.on-sthgcn.causal-materializer-real-runtime.v1",
+  "date": "2026-09-10",
+  "status": "AUTHORIZED_ONCE_FOR_NYC_AND_TKY",
+  "implementation_commit": "1f6fce9505eae929a8f131fc67556e513c4d1100",
+  "registry_path": "reproduction/MSAHG_ON_STHGCN_CAUSAL_MATERIALIZER_V1R1_REAL_RUNTIME_REGISTRY.json",
+  "registry_sha256": "6e3c4d003355d26efb34b28d9b0c1c1508c5bdd3073f216cad24353c0a37d1a4",
+  "parent_result_commit": "d7e2706d82656c718e70df621efbc90e29e74d6f",
+  "target_free_receipt_sha256": "a0bda148878cc1bff1e5e549d21ba3e9e3d83ed8c98f3209ebe20ab51f8e10df",
+  "datasets": [
+    "nyc",
+    "tky"
+  ],
+  "materializer_invocations_per_dataset": 1,
+  "independent_audit_invocations": 1,
+  "real_materialization_authorized": true,
+  "scenario_label_materialization_authorized": true,
+  "activity_center_materialization_authorized": true,
+  "graph_materialization_authorized": true,
+  "support_computation_authorized": true,
+  "independent_audit_authorized": true,
+  "model_implementation_authorized": false,
+  "training_authorized": false,
+  "inference_authorized": false,
+  "loss_authorized": false,
+  "checkpoint_access_authorized": false,
+  "recommendation_metric_computation_authorized": false,
+  "target_evaluation_authorized": false,
+  "automatic_retry_authorized": false
+}
