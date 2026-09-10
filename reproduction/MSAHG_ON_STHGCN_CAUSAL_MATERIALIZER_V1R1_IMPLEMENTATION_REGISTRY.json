@@ -1,0 +1,131 @@
+{
+  "schema": "msahg.on-sthgcn.causal-materializer-v1r1-implementation.v1",
+  "date": "2026-09-10",
+  "status": "IMPLEMENTATION_AND_TARGET_FREE_QUALIFICATION_AUTHORIZED",
+  "parent_commit": "9bb6248b7cd8730b9c05676926f213afe3e476fc",
+  "authorities": {
+    "reproduction_repository": "https://github.com/xiaolaoji66/MSAHG",
+    "scope_path": "reproduction/MSAHG_ON_STHGCN_CAUSAL_MATERIALIZER_V1R1_IMPLEMENTATION_SCOPE.md",
+    "scope_sha256": "1192d00dc626f6a4eb4ab1c94807bb227c4bb68efba9948abb94959801a3c755",
+    "causal_contract_commit": "cccf03c605bb3b1d7374e34a5eac9c247ea3b48b",
+    "causal_contract_path": "reproduction/MSAHG_ON_STHGCN_CAUSAL_RECONSTRUCTION_V1_CONTRACT.md",
+    "causal_contract_sha256": "f82fce5daac21172346a9fb788cf9675924e51497e7826324d52c85339ebc2e3",
+    "causal_registry_path": "reproduction/MSAHG_ON_STHGCN_CAUSAL_RECONSTRUCTION_V1_REGISTRY.json",
+    "causal_registry_sha256": "38c05840c16989cba0d09b21222ce705906d6ec099dc714d8d569aee67c303d8",
+    "v1r3_result_commit": "9bb6248b7cd8730b9c05676926f213afe3e476fc",
+    "v1r3_result_path": "reproduction/results/sthgcn_sample_materializer_v1r3_audit_pass_ffd3e89",
+    "v1r3_passport_sha256": "6422bc825f4b27ea7513dc8b5b6f6ecdae3604212197eb1b5597119c60529239",
+    "v1r3_audit_sha256": "25e3cbda656c569ed399829243d26259aeb332ce9ad28c830243d976e1e34d9b",
+    "v1_result_commit": "9e67e05875540cc87a21e15c4ff3623400c6ab49",
+    "v1_full_output_manifest_sha256": "89ddcadd49deb5bafd2ddcd3eb114848aacab16d0875c89cf143a7f362303800",
+    "v1_materializer_source_sha256": "288daa4ab0de251cbbb0d4d8a1735af1193d42aa0c258757443fd2a154e65f3e",
+    "msahg_source_commit": "3d74d70c852c56adcc09d907488410be5eda2744",
+    "sthgcn_source_commit": "27b595846d29019799485985bff49f9ed02c4ade"
+  },
+  "frozen_real_inputs": {
+    "nyc": {
+      "sample.csv": "4923e232f04e6a1d28de73a2545240e021066087706a824bcb01f6b0cf9f8f65",
+      "label_encoding.json": "1d8ae8f4a04908868f9ad4e186944a9f3e84b472bd015b2bbad9b663fff3c64b",
+      "record_split_provenance.csv": "57c0b434918d5cd1bb421f2654c430a572e3e70f6c587ad398e078c8fd0f93d3",
+      "rows": 103941
+    },
+    "tky": {
+      "sample.csv": "b50fbd66c09463f1e2258a3fda33f3d4a11cd33cb2c20e1ede8873dab7cb47b0",
+      "label_encoding.json": "333e33a94f9386ef0b5e62124a91bfdb22c1697ce2bae5b15ff12e73f93f81d7",
+      "record_split_provenance.csv": "5f287bb802943a3e8f99ff307acf2f8c47f5c4e46eab62fd62ff00c7a0de211d",
+      "rows": 405000
+    }
+  },
+  "implementation_allowlist": [
+    "reproduction/audit_msahg_on_sthgcn_causal_materializer_v1r1_target_free.py",
+    "reproduction/msahg_on_sthgcn_causal_materializer_v1r1.py",
+    "scripts/run_msahg_on_sthgcn_causal_materializer_v1r1_target_free.sh",
+    "tests/test_msahg_on_sthgcn_causal_materializer_v1r1.py",
+    "tests/test_msahg_on_sthgcn_causal_materializer_v1r1_governance.py"
+  ],
+  "format": {
+    "variant": "MARGINAL_AXIS_V1",
+    "sparse_shard_extension": ".npz",
+    "sparse_entries": [
+      "indices.npy",
+      "values.npy",
+      "shape.npy"
+    ],
+    "raw_index_dtype": "int64",
+    "raw_value_dtype": "uint8",
+    "normalized_value_dtype": "float64",
+    "zip_compression": "stored",
+    "zip_timestamp": "1980-01-01T00:00:00",
+    "json_sort_keys": true,
+    "jsonl_order": "source_ordinal ascending"
+  },
+  "target_free_gates": [
+    "C0_AUTHORITY",
+    "C1_NO_EVAL_FIT",
+    "C2_PREFIX_LABEL",
+    "C3_USER_RULE",
+    "C4_TIME_RULE",
+    "C5_SPATIAL_RULE",
+    "C6_LABEL_PARTITION",
+    "C7_JOINT_METADATA_ONLY",
+    "C8_COLLABORATIVE",
+    "C9_TEMPORAL",
+    "C10_GEOGRAPHY",
+    "C11_TRANSITION",
+    "C12_ROUTING",
+    "C13_DETERMINISM",
+    "C14_CAUSAL_PERTURBATION",
+    "C15_SOURCE_IMMUTABLE",
+    "C16_SCORE_FREE",
+    "C17_FAIL_CLOSED"
+  ],
+  "real_support_floors": {
+    "marginal_group": {
+      "train": {
+        "targets": 200,
+        "distinct_users": 30
+      },
+      "validation": {
+        "targets": 100,
+        "distinct_users": 30
+      },
+      "test": {
+        "targets": 100,
+        "distinct_users": 30
+      }
+    },
+    "threshold_search": false,
+    "posthoc_group_merge": false
+  },
+  "authorization": {
+    "documentation": true,
+    "materializer_implementation": true,
+    "synthetic_tests": true,
+    "server_target_free_qualification": true,
+    "target_free_receipt_archive": true,
+    "real_materialization_authorized": false,
+    "real_public_csv_access": false,
+    "real_provenance_sidecar_access": false,
+    "scenario_label_materialization": false,
+    "activity_center_materialization": false,
+    "graph_materialization": false,
+    "support_adjudication": false,
+    "model_implementation": false,
+    "data_loader_implementation": false,
+    "aps_implementation": false,
+    "training": false,
+    "inference": false,
+    "loss": false,
+    "optimizer": false,
+    "checkpoint_access": false,
+    "metric_computation": false,
+    "target_evaluation": false,
+    "automatic_retry": false
+  },
+  "decisions": {
+    "target_free_pass": "IMPLEMENTATION_COHERENT_REAL_MATERIALIZATION_STILL_NOT_AUTHORIZED",
+    "target_free_failure": "PROTOCOL_FAILURE_STOP",
+    "real_support_status": "NOT_MEASURED"
+  },
+  "next_if_pass": "SEPARATE_REAL_MATERIALIZATION_RUNTIME_AUTHORITY_REQUIRED"
+}
